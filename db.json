@@ -1,0 +1,392 @@
+{
+  "processors": [
+    {
+      "id": "1",
+      "Image": "/image/processor/1.jpg",
+      "Product Name": "CPU/Processor 1",
+      "Category": "Electronics",
+      "Price": 199.99,
+      "Status": "In Stock",
+      "Rating": 4.5
+    },
+    {
+      "id": "2",
+      "Image": "/image/processor/2.jpg",
+      "Product Name": "CPU/Processor 2",
+      "Category": "Electronics",
+      "Price": 179.99,
+      "Status": "In Stock",
+      "Rating": 4.2
+    },
+    {
+      "id": "3",
+      "Image": "/image/processor/3.jpg",
+      "Product Name": "CPU/Processor 3",
+      "Category": "Electronics",
+      "Price": 229.99,
+      "Status": "Out of Stock",
+      "Rating": 4.8
+    },
+    {
+      "id": "4",
+      "Image": "/image/processor/4.jpg",
+      "Product Name": "CPU/Processor 4",
+      "Category": "Electronics",
+      "Price": 249.99,
+      "Status": "In Stock",
+      "Rating": 4.7
+    },
+    {
+      "id": "5",
+      "Image": "/image/processor/5.jpg",
+      "Product Name": "CPU/Processor 5",
+      "Category": "Electronics",
+      "Price": 189.99,
+      "Status": "In Stock",
+      "Rating": 4.3
+    },
+    {
+      "id": "6",
+      "Image": "/image/processor/6.jpg",
+      "Product Name": "CPU/Processor 6",
+      "Category": "Electronics",
+      "Price": 209.99,
+      "Status": "In Stock",
+      "Rating": 4.6
+    },
+    {
+      "id": "7",
+      "Image": "/image/processor/7.jpg",
+      "Product Name": "CPU/Processor 7",
+      "Category": "Electronics",
+      "Price": 219.99,
+      "Status": "Out of Stock",
+      "Rating": 4.4
+    }
+  ],
+  "motherboards": [
+    {
+      "id": "1",
+      "Image": "/image/motherboard/1.jpg",
+      "Product Name": "Motherboard 1",
+      "Category": "Electronics",
+      "Price": 129.99,
+      "Status": "In Stock",
+      "Rating": 4.6
+    },
+    {
+      "id": "2",
+      "Image": "/image/motherboard/2.jpg",
+      "Product Name": "Motherboard 2",
+      "Category": "Electronics",
+      "Price": 149.99,
+      "Status": "In Stock",
+      "Rating": 4.7
+    },
+    {
+      "id": "3",
+      "Image": "/image/motherboard/3.jpg",
+      "Product Name": "Motherboard 3",
+      "Category": "Electronics",
+      "Price": 169.99,
+      "Status": "Out of Stock",
+      "Rating": 4.2
+    },
+    {
+      "id": "4",
+      "Image": "/image/motherboard/4.jpg",
+      "Product Name": "Motherboard 4",
+      "Category": "Electronics",
+      "Price": 199.99,
+      "Status": "In Stock",
+      "Rating": 4.5
+    },
+    {
+      "id": "5",
+      "Image": "/image/motherboard/5.jpg",
+      "Product Name": "Motherboard 5",
+      "Category": "Electronics",
+      "Price": 139.99,
+      "Status": "In Stock",
+      "Rating": 4.3
+    },
+    {
+      "id": "6",
+      "Image": "/image/motherboard/6.jpg",
+      "Product Name": "Motherboard 6",
+      "Category": "Electronics",
+      "Price": 179.99,
+      "Status": "Out of Stock",
+      "Rating": 4.8
+    },
+    {
+      "id": "7",
+      "Image": "/image/motherboard/7.jpg",
+      "Product Name": "Motherboard 7",
+      "Category": "Electronics",
+      "Price": 159.99,
+      "Status": "In Stock",
+      "Rating": 4.4
+    }
+  ],
+  "rams": [
+    {
+      "id": "1",
+      "Image": "/image/ram/1.jpg",
+      "Product Name": "RAM 1",
+      "Category": "Electronics",
+      "Price": 79.99,
+      "Status": "In Stock",
+      "Rating": 4.5
+    },
+    {
+      "id": "2",
+      "Image": "/image/ram/2.jpg",
+      "Product Name": "RAM 2",
+      "Category": "Electronics",
+      "Price": 89.99,
+      "Status": "Out of Stock",
+      "Rating": 4.2
+    },
+    {
+      "id": "3",
+      "Image": "/image/ram/3.jpg",
+      "Product Name": "RAM 3",
+      "Category": "Electronics",
+      "Price": 99.99,
+      "Status": "In Stock",
+      "Rating": 4.7
+    },
+    {
+      "id": "4",
+      "Image": "/image/ram/4.jpg",
+      "Product Name": "RAM 4",
+      "Category": "Electronics",
+      "Price": 69.99,
+      "Status": "In Stock",
+      "Rating": 4.4
+    },
+    {
+      "id": "5",
+      "Image": "/image/ram/5.jpg",
+      "Product Name": "RAM 5",
+      "Category": "Electronics",
+      "Price": 109.99,
+      "Status": "Out of Stock",
+      "Rating": 4.8
+    },
+    {
+      "id": "6",
+      "Image": "/image/ram/6.jpg",
+      "Product Name": "RAM 6",
+      "Category": "Electronics",
+      "Price": 84.99,
+      "Status": "In Stock",
+      "Rating": 4.6
+    },
+    {
+      "id": "7",
+      "Image": "/image/ram/7.jpg",
+      "Product Name": "RAM 7",
+      "Category": "Electronics",
+      "Price": 94.99,
+      "Status": "In Stock",
+      "Rating": 4.3
+    }
+  ],
+  "powerSupplyUnits": [
+    {
+      "id": "1",
+      "Image": "/image/powerSupply/1.jpg",
+      "Product Name": "Power Supply Unit 1",
+      "Category": "Electronics",
+      "Price": 89.99,
+      "Status": "In Stock",
+      "Rating": 4.5
+    },
+    {
+      "id": "2",
+      "Image": "/image/powerSupply/2.jpg",
+      "Product Name": "Power Supply Unit 2",
+      "Category": "Electronics",
+      "Price": 99.99,
+      "Status": "Out of Stock",
+      "Rating": 4.4
+    },
+    {
+      "id": "3",
+      "Image": "/image/powerSupply/3.jpg",
+      "Product Name": "Power Supply Unit 3",
+      "Category": "Electronics",
+      "Price": 79.99,
+      "Status": "In Stock",
+      "Rating": 4.2
+    },
+    {
+      "id": "4",
+      "Image": "/image/powerSupply/4.jpg",
+      "Product Name": "Power Supply Unit 4",
+      "Category": "Electronics",
+      "Price": 109.99,
+      "Status": "In Stock",
+      "Rating": 4.6
+    },
+    {
+      "id": "5",
+      "Image": "/image/powerSupply/5.jpg",
+      "Product Name": "Power Supply Unit 5",
+      "Category": "Electronics",
+      "Price": 94.99,
+      "Status": "Out of Stock",
+      "Rating": 4.3
+    },
+    {
+      "id": "6",
+      "Image": "/image/powerSupply/6.jpg",
+      "Product Name": "Power Supply Unit 6",
+      "Category": "Electronics",
+      "Price": 84.99,
+      "Status": "In Stock",
+      "Rating": 4.7
+    },
+    {
+      "id": "7",
+      "Image": "/image/powerSupply/7.jpg",
+      "Product Name": "Power Supply Unit 7",
+      "Category": "Electronics",
+      "Price": 89.99,
+      "Status": "In Stock",
+      "Rating": 4.8
+    }
+  ],
+  "storageDevices": [
+    {
+      "id": "1",
+      "Image": "/image/storage/1.jpg",
+      "Product Name": "Storage Device 1",
+      "Category": "Electronics",
+      "Price": 69.99,
+      "Status": "Out of Stock",
+      "Rating": 4.2
+    },
+    {
+      "id": "2",
+      "Image": "/image/storage/2.jpg",
+      "Product Name": "Storage Device 2",
+      "Category": "Electronics",
+      "Price": 79.99,
+      "Status": "In Stock",
+      "Rating": 4.6
+    },
+    {
+      "id": "3",
+      "Image": "/image/storage/3.jpg",
+      "Product Name": "Storage Device 3",
+      "Category": "Electronics",
+      "Price": 89.99,
+      "Status": "In Stock",
+      "Rating": 4.3
+    },
+    {
+      "id": "4",
+      "Image": "/image/storage/4.jpg",
+      "Product Name": "Storage Device 4",
+      "Category": "Electronics",
+      "Price": 99.99,
+      "Status": "Out of Stock",
+      "Rating": 4.8
+    },
+    {
+      "id": "5",
+      "Image": "/image/storage/5.jpg",
+      "Product Name": "Storage Device 5",
+      "Category": "Electronics",
+      "Price": 84.99,
+      "Status": "In Stock",
+      "Rating": 4.7
+    },
+    {
+      "id": "6",
+      "Image": "/image/storage/6.jpg",
+      "Product Name": "Storage Device 6",
+      "Category": "Electronics",
+      "Price": 94.99,
+      "Status": "In Stock",
+      "Rating": 4.4
+    },
+    {
+      "id": "7",
+      "Image": "/image/storage/7.jpg",
+      "Product Name": "Storage Device 7",
+      "Category": "Electronics",
+      "Price": 79.99,
+      "Status": "In Stock",
+      "Rating": 4.5
+    }
+  ],
+  "monitors": [
+    {
+      "id": "1",
+      "Image": "/image/monitor/1.jpg",
+      "Product Name": "Monitor 1",
+      "Category": "Electronics",
+      "Price": 249.99,
+      "Status": "In Stock",
+      "Rating": 4.7
+    },
+    {
+      "id": "2",
+      "Image": "/image/monitor/2.jpg",
+      "Product Name": "Monitor 2",
+      "Category": "Electronics",
+      "Price": 199.99,
+      "Status": "In Stock",
+      "Rating": 4.5
+    },
+    {
+      "id": "3",
+      "Image": "/image/monitor/3.jpg",
+      "Product Name": "Monitor 3",
+      "Category": "Electronics",
+      "Price": 179.99,
+      "Status": "Out of Stock",
+      "Rating": 4.2
+    },
+    {
+      "id": "4",
+      "Image": "/image/monitor/4.jpg",
+      "Product Name": "Monitor 4",
+      "Category": "Electronics",
+      "Price": 299.99,
+      "Status": "In Stock",
+      "Rating": 4.8
+    },
+    {
+      "id": "5",
+      "Image": "/image/monitor/5.jpg",
+      "Product Name": "Monitor 5",
+      "Category": "Electronics",
+      "Price": 159.99,
+      "Status": "In Stock",
+      "Rating": 4.4
+    },
+    {
+      "id": "6",
+      "Image": "/image/monitor/6.jpg",
+      "Product Name": "Monitor 6",
+      "Category": "Electronics",
+      "Price": 219.99,
+      "Status": "In Stock",
+      "Rating": 4.6
+    },
+    {
+      "id": "7",
+      "Image": "/image/monitor/7.jpg",
+      "Product Name": "Monitor 7",
+      "Category": "Electronics",
+      "Price": 249.99,
+      "Status": "Out of Stock",
+      "Rating": 4.3
+    }
+  ]
+}

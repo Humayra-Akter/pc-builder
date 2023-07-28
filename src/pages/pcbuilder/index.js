@@ -1,5 +1,6 @@
 import { Button } from "antd";
 import Link from "next/link";
+import DashboardLayout from "../../../components/Layouts/DashboardLayout";
 
 const ProductPage = () => {
   return (
@@ -13,3 +14,7 @@ const ProductPage = () => {
 };
 
 export default ProductPage;
+
+ProductPage.getLayout = function getLayout(page) {
+  return <DashboardLayout>{page}</DashboardLayout>;
+};
