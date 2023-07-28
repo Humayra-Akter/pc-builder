@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 
-import { Breadcrumb, Layout, Menu, theme } from "antd";
+import { Breadcrumb, Button, Layout, Menu, theme } from "antd";
 import Link from "next/link";
+
 const { Header, Content, Footer, Sider } = Layout;
 function getItem(label, key, icon, children) {
   return {
@@ -12,12 +13,13 @@ function getItem(label, key, icon, children) {
   };
 }
 const items = [
-  getItem("Processor", "1", <Link href="/processor"></Link>),
-  getItem("Motherboard", "2", <Link href="/motherboard"></Link>),
-  getItem("RAM", "3", <Link href="/ram"></Link>),
-  getItem("Power Supply Unit", "4", <Link href="/powerSupplyUnit"></Link>),
-  getItem("Storage Device", "5", <Link href="/storageDevice"></Link>),
-  getItem("Monitor", "6", <Link href="/monitor"></Link>),
+  getItem("All", "1", <Link href="/pcbuilder"></Link>),
+  getItem("Processor", "2", <Link href="/processor"></Link>),
+  getItem("Motherboard", "3", <Link href="/motherboard"></Link>),
+  getItem("RAM", "4", <Link href="/ram"></Link>),
+  getItem("Power Supply Unit", "5", <Link href="/powerSupplyUnit"></Link>),
+  getItem("Storage Device", "6", <Link href="/storageDevice"></Link>),
+  getItem("Monitor", "7", <Link href="/monitor"></Link>),
 ];
 
 const DashboardLayout = ({ children }) => {
@@ -37,6 +39,7 @@ const DashboardLayout = ({ children }) => {
         onCollapse={(value) => setCollapsed(value)}
       >
         <div className="demo-logo-vertical" />
+
         <Menu
           style={{ color: "white", fontFamily: "cursive", paddingTop: "150px" }}
           theme="dark"
@@ -64,7 +67,11 @@ const DashboardLayout = ({ children }) => {
               margin: "16px 0",
             }}
           >
-            <Breadcrumb.Item>Choose Your Need!!!</Breadcrumb.Item>
+            <Breadcrumb.Item>
+              <Button>
+                <Link href="/">Choose Your Need!!!</Link>
+              </Button>
+            </Breadcrumb.Item>
           </Breadcrumb>
           <div
             style={{
