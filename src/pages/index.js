@@ -1,11 +1,19 @@
 import RootLayout from "../../components/Layouts/RootLayout";
-import Processor from "./processor";
+import Image from "next/image";
+import AllProcessors from "@/components/UI/AllProcessors";
 
 const HomePage = ({ allProcessors }) => {
   return (
     <div style={{ color: "black", fontFamily: "cursive" }}>
       <h1>Hi Homieeeeeeeeeeeeeee</h1>
-      <Processor allProcessors={allProcessors} />
+      <Image
+        src="/image/pc-ge922de72c_1280.jpg"
+        width={500}
+        height={200}
+        responsive
+        alt="processors image"
+      />
+      <AllProcessors allProcessors={allProcessors}></AllProcessors>
     </div>
   );
 };

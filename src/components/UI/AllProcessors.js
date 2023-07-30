@@ -1,18 +1,3 @@
-// import { Button } from "antd";
-// import Link from "next/link";
-// import DashboardLayout from "../../../components/Layouts/DashboardLayout";
-
-// const ProductPage = () => {
-//   return (
-//     <div>
-//       <h1>productssssssssss🧷 </h1>
-//       <Button type="primary">
-//         <Link href="/">Home</Link>
-//       </Button>
-//     </div>
-//   );
-// };
-import React from "react";
 import { Card, Col, Row } from "antd";
 import Image from "next/image";
 import {
@@ -22,11 +7,9 @@ import {
   ProfileOutlined,
 } from "@ant-design/icons";
 import Link from "next/link";
-import DashboardLayout from "../../../components/Layouts/DashboardLayout";
 
-const { Meta } = Card;
-
-const PcBuilderPage = ({ allProcessors }) => {
+const AllProcessors = ({ allProcessors }) => {
+  const { Meta } = Card;
   return (
     <>
       <h1
@@ -38,7 +21,7 @@ const PcBuilderPage = ({ allProcessors }) => {
       >
         #TODAY HIGHLIGHT
       </h1>
-      {/* <Row
+      <Row
         gutter={{
           xs: 8,
           sm: 16,
@@ -47,7 +30,7 @@ const PcBuilderPage = ({ allProcessors }) => {
         }}
       >
         {allProcessors?.map((processors) => (
-          <Col key={processors.id} className="gutter-row" span={6}>
+          <Col key={processors.id} className="gutter-row" span={8}>
             <Card
               hoverable
               cover={
@@ -56,7 +39,7 @@ const PcBuilderPage = ({ allProcessors }) => {
                   width={500}
                   height={200}
                   responsive
-                  alt="news image"
+                  alt="processors image"
                 />
               }
             >
@@ -80,15 +63,26 @@ const PcBuilderPage = ({ allProcessors }) => {
                 }}
               >
                 <span>
-                  <CalendarOutlined /> {processors?.name}
+                  <CalendarOutlined /> {processors?.category}
                 </span>
                 <span>
-                  <CommentOutlined /> {processors?.price} COMMENTS
+                  <CommentOutlined /> {processors?.status} COMMENTS
                 </span>
                 <span>
-                  <ProfileOutlined /> {processors?.status}
+                  <ProfileOutlined /> {processors?.price}
                 </span>
               </p>
+
+              {/* <p
+                style={{
+                  fontSize: "15px",
+                }}
+              >
+                {processors?.description.length > 100
+                  ? processors?.description.slice(0, 70) + "..."
+                  : processors?.description}
+              </p>
+
               <Link href={`/processors/${processors?.id}`}>
                 <p
                   style={{
@@ -105,60 +99,13 @@ const PcBuilderPage = ({ allProcessors }) => {
                 >
                   Keep reading <ArrowRightOutlined />
                 </p>
-              </Link>
+              </Link> */}
             </Card>
           </Col>
         ))}
-      </Row> */}
-      <Row gutter={16}>
-        <Col span={8}>
-          {allProcessors?.map((processors) => {
-            <Card
-              hoverable
-              style={{
-                width: 240,
-              }}
-              cover={<img alt="example" src={processors.image} />}
-            >
-              <Meta
-                title="Europe Street beat"
-                description="www.instagram.com"
-              />
-            </Card>;
-          })}
-        </Col>
-        <Col span={8}>
-          <Card title="Card title" bordered={false}>
-            Card content
-          </Card>
-        </Col>
-        <Col span={8}>
-          <Card title="Card title" bordered={false}>
-            Card content
-          </Card>
-        </Col>
       </Row>
-      ;
-      <Card
-        hoverable
-        style={{
-          width: 240,
-        }}
-        cover={
-          <img
-            alt="example"
-            src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png"
-          />
-        }
-      >
-        <Meta title="Europe Street beat" description="www.instagram.com" />
-      </Card>
     </>
   );
 };
 
-export default PcBuilderPage;
-
-PcBuilderPage.getLayout = function getLayout(page) {
-  return <DashboardLayout>{page}</DashboardLayout>;
-};
+export default AllProcessors;
