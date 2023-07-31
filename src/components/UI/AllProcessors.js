@@ -34,6 +34,8 @@ const AllProcessors = ({ allProcessors }) => {
               style={{
                 margin: "30px 0",
                 fontFamily: "cursive",
+                color: "#fff",
+                background: "black",
               }}
               hoverable
               cover={
@@ -46,22 +48,22 @@ const AllProcessors = ({ allProcessors }) => {
                 />
               }
             >
-              <Meta
+              <h1
                 style={{
                   margin: "10px 0",
                   fontFamily: "cursive",
-                  color: "darkBlue",
-                  fontWeight: "black",
+                  color: "#fff",
                 }}
-                title={processors?.name}
-              />
+              >
+                {processors?.name}
+              </h1>
               <div
                 className="line"
                 style={{
-                  height: "5px",
+                  height: "2px",
                   margin: "20px 0",
                   width: "100%",
-                  background: "darkBlue",
+                  background: "white",
                 }}
               ></div>
               <p
@@ -70,7 +72,7 @@ const AllProcessors = ({ allProcessors }) => {
                   margin: "10px 0",
                   width: "100%",
                   fontFamily: "cursive",
-                  color: "darkBlue",
+                  color: "#fff",
                   fontWeight: "black",
                   justifyContent: "space-between",
                 }}
@@ -90,6 +92,7 @@ const AllProcessors = ({ allProcessors }) => {
                 style={{
                   fontSize: "15px",
                   fontFamily: "cursive",
+                  color: "#fff",
                   marginTop: "20px",
                   textAlign: "justify",
                 }}
@@ -99,15 +102,16 @@ const AllProcessors = ({ allProcessors }) => {
                   : processors?.description}
               </p>
               <Link href={`/processor/${processors?.id}`}>
-                <p
+                <h2
                   style={{
                     fontSize: "15px",
                     marginTop: "20px",
                     width: "100%",
                     justifyItems: "center",
                     alignItems: "center",
-                    backgroundColor: "darkBlue",
-                    color: "white",
+                    backgroundColor: "white",
+                    color: "black",
+                    fontWeight: "bold",
                     padding: "2px 5px",
                     letterSpacing: "3px",
                     textAlign: "center",
@@ -116,7 +120,7 @@ const AllProcessors = ({ allProcessors }) => {
                   }}
                 >
                   details
-                </p>
+                </h2>
               </Link>
             </Card>
           </Col>

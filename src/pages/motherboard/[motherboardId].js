@@ -14,6 +14,7 @@ const MotherboardDetails = ({ motherboards }) => {
         margin: "50px 0",
         width: "100%",
         padding: "100px",
+        background: "black",
       }}
     >
       <h1
@@ -21,7 +22,7 @@ const MotherboardDetails = ({ motherboards }) => {
           textAlign: "center",
           fontSize: "50px",
           marginBottom: " 50px",
-          color: "darkBlue",
+          color: "#fff",
           fontFamily: "cursive",
         }}
       >
@@ -56,7 +57,7 @@ const MotherboardDetails = ({ motherboards }) => {
                 margin: "10px 0",
                 width: "100%",
                 fontFamily: "cursive",
-                color: "darkBlue",
+                color: "white",
                 fontWeight: "black",
                 justifyContent: "space-between",
               }}
@@ -74,19 +75,19 @@ const MotherboardDetails = ({ motherboards }) => {
             <div
               className="line"
               style={{
-                height: "5px",
+                height: "3px",
                 margin: "20px 0",
                 width: "100%",
-                background: "#000",
+                background: "#fff",
               }}
             ></div>
             <p
               style={{
-                fontSize: "25px",
+                fontSize: "23px",
                 fontFamily: "cursive",
                 marginTop: "60px",
                 textAlign: "justify",
-                color: "black",
+                color: "white",
               }}
             >
               {motherboards?.description}
@@ -97,7 +98,7 @@ const MotherboardDetails = ({ motherboards }) => {
                 fontFamily: "cursive",
                 marginTop: "60px",
                 textAlign: "justify",
-                color: "black",
+                color: "white",
                 fontWeight: "bolder",
               }}
             >

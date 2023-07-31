@@ -20,7 +20,7 @@ HomePage.getLayout = function getLayout(page) {
   return <RootLayout>{page}</RootLayout>;
 };
 export const getStaticProps = async () => {
-  const res = await fetch("http://localhost:5000/processors");
+  const res = await fetch("http://localhost:5000/banners");
   const data = await res.json();
   return {
     props: {

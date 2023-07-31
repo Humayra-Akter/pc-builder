@@ -430,5 +430,79 @@
       "status": "Out of Stock",
       "rating": 4.3
     }
+  ],
+  "banners": [
+    {
+      "id": "1",
+      "image": "/image/banner/cpu.jpg",
+      "name": "ProView XG1",
+      "category": "CPU",
+      "price": 249.99,
+      "status": "In Stock",
+      "rating": 4.7
+    },
+    {
+      "id": "2",
+      "image": "/image/banner/monitor.png",
+      "name": "EliteScreen",
+      "category": "Monitor",
+      "price": 199.99,
+      "status": "In Stock",
+      "rating": 4.5
+    },
+    {
+      "id": "3",
+      "image": "/image/banner/motherboard.jpg",
+      "name": "UltimaView",
+      "category": "MBoard",
+      "price": 179.99,
+      "status": "Out of Stock",
+      "rating": 4.2
+    },
+    {
+      "id": "4",
+      "image": "/image/banner/powerSupply.jpg",
+      "name": "UltraVision",
+      "category": "Electronics",
+      "price": 159.99,
+      "status": "In Stock",
+      "rating": 4.4
+    },
+    {
+      "id": "5",
+      "image": "/image/banner/ram.png",
+      "name": "Display LT6",
+      "category": "RAM",
+      "price": 219.99,
+      "status": "In Stock",
+      "rating": 4.6
+    },
+    {
+      "id": "6",
+      "image": "/image/banner/storage.png",
+      "name": "SpeedView",
+      "category": "Storage",
+      "price": 249.99,
+      "status": "Out of Stock",
+      "rating": 4.3
+    },
+    {
+      "id": "7",
+      "image": "/image/banner/cpu-g6288c1fa9_1280.jpg",
+      "name": "SpeedView",
+      "category": "Power",
+      "price": 249.99,
+      "status": "Out of Stock",
+      "rating": 4.3
+    },
+    {
+      "id": "8",
+      "image": "/image/banner/circuit-board-g51138a303_1280.jpg",
+      "name": "Power XZ4",
+      "category": "PC",
+      "price": 299.99,
+      "status": "In Stock",
+      "rating": 4.8
+    }
   ]
 }

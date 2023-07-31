@@ -31,6 +31,7 @@ const DashboardLayout = ({ children }) => {
     <Layout
       style={{
         minHeight: "100vh",
+        background: "black",
       }}
     >
       <Sider
@@ -41,7 +42,11 @@ const DashboardLayout = ({ children }) => {
         <div className="demo-logo-vertical" />
 
         <Menu
-          style={{ color: "white", fontFamily: "cursive", paddingTop: "150px" }}
+          style={{
+            color: "white",
+            fontFamily: "cursive",
+            paddingTop: "150px",
+          }}
           theme="dark"
           defaultSelectedKeys={["1"]}
           mode="inline"
@@ -49,14 +54,6 @@ const DashboardLayout = ({ children }) => {
         />
       </Sider>
       <Layout>
-        <Header
-          style={{
-            padding: 0,
-            background: colorBgContainer,
-            color: "black",
-            fontFamily: "cursive",
-          }}
-        />
         <Content
           style={{
             margin: "0 16px",
