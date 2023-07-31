@@ -7,7 +7,7 @@ import {
 } from "@ant-design/icons";
 import Link from "next/link";
 
-const AllProcessors = ({ allProcessors }) => {
+const AllRams = ({ allRams }) => {
   const { Meta } = Card;
   return (
     <>
@@ -18,7 +18,7 @@ const AllProcessors = ({ allProcessors }) => {
           margin: " 30px 0px",
         }}
       >
-        processors
+        rams
       </h1>
       <Row
         gutter={{
@@ -28,8 +28,8 @@ const AllProcessors = ({ allProcessors }) => {
           lg: 32,
         }}
       >
-        {allProcessors?.map((processors) => (
-          <Col key={processors.id} className="gutter-row" span={8}>
+        {allRams?.map((rams) => (
+          <Col key={rams.id} className="gutter-row" span={8}>
             <Card
               style={{
                 margin: "30px 0",
@@ -38,11 +38,11 @@ const AllProcessors = ({ allProcessors }) => {
               hoverable
               cover={
                 <Image
-                  src={processors?.image}
+                  src={rams?.image}
                   width={500}
                   height={200}
                   responsive
-                  alt="processors image"
+                  alt="rams image"
                 />
               }
             >
@@ -53,7 +53,7 @@ const AllProcessors = ({ allProcessors }) => {
                   color: "darkBlue",
                   fontWeight: "black",
                 }}
-                title={processors?.name}
+                title={rams?.name}
               />
               <div
                 className="line"
@@ -76,13 +76,13 @@ const AllProcessors = ({ allProcessors }) => {
                 }}
               >
                 <span>
-                  <CalendarOutlined /> {processors?.category}
+                  <CalendarOutlined /> {rams?.category}
                 </span>
                 <span>
-                  <CommentOutlined /> {processors?.status}
+                  <CommentOutlined /> {rams?.status}
                 </span>
                 <span>
-                  <ProfileOutlined /> {processors?.price}
+                  <ProfileOutlined /> {rams?.price}
                 </span>
               </p>
 
@@ -94,11 +94,11 @@ const AllProcessors = ({ allProcessors }) => {
                   textAlign: "justify",
                 }}
               >
-                {processors?.description.length > 100
-                  ? processors?.description.slice(0, 70) + "..."
-                  : processors?.description}
+                {rams?.description.length > 100
+                  ? rams?.description.slice(0, 70) + "..."
+                  : rams?.description}
               </p>
-              <Link href={`/processor/${processors?.id}`}>
+              <Link href={`/ram/${rams?.id}`}>
                 <p
                   style={{
                     fontSize: "15px",
@@ -126,4 +126,4 @@ const AllProcessors = ({ allProcessors }) => {
   );
 };
 
-export default AllProcessors;
+export default AllRams;

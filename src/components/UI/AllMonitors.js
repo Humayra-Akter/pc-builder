@@ -7,7 +7,7 @@ import {
 } from "@ant-design/icons";
 import Link from "next/link";
 
-const AllProcessors = ({ allProcessors }) => {
+const AllMonitors = ({ allMonitors }) => {
   const { Meta } = Card;
   return (
     <>
@@ -18,7 +18,7 @@ const AllProcessors = ({ allProcessors }) => {
           margin: " 30px 0px",
         }}
       >
-        processors
+        monitors
       </h1>
       <Row
         gutter={{
@@ -28,8 +28,8 @@ const AllProcessors = ({ allProcessors }) => {
           lg: 32,
         }}
       >
-        {allProcessors?.map((processors) => (
-          <Col key={processors.id} className="gutter-row" span={8}>
+        {allMonitors?.map((monitors) => (
+          <Col key={monitors.id} className="gutter-row" span={8}>
             <Card
               style={{
                 margin: "30px 0",
@@ -38,11 +38,11 @@ const AllProcessors = ({ allProcessors }) => {
               hoverable
               cover={
                 <Image
-                  src={processors?.image}
+                  src={monitors?.image}
                   width={500}
                   height={200}
                   responsive
-                  alt="processors image"
+                  alt="monitors image"
                 />
               }
             >
@@ -53,7 +53,7 @@ const AllProcessors = ({ allProcessors }) => {
                   color: "darkBlue",
                   fontWeight: "black",
                 }}
-                title={processors?.name}
+                title={monitors?.name}
               />
               <div
                 className="line"
@@ -76,13 +76,13 @@ const AllProcessors = ({ allProcessors }) => {
                 }}
               >
                 <span>
-                  <CalendarOutlined /> {processors?.category}
+                  <CalendarOutlined /> {monitors?.category}
                 </span>
                 <span>
-                  <CommentOutlined /> {processors?.status}
+                  <CommentOutlined /> {monitors?.status}
                 </span>
                 <span>
-                  <ProfileOutlined /> {processors?.price}
+                  <ProfileOutlined /> {monitors?.price}
                 </span>
               </p>
 
@@ -94,11 +94,11 @@ const AllProcessors = ({ allProcessors }) => {
                   textAlign: "justify",
                 }}
               >
-                {processors?.description.length > 100
-                  ? processors?.description.slice(0, 70) + "..."
-                  : processors?.description}
+                {monitors?.description.length > 100
+                  ? monitors?.description.slice(0, 70) + "..."
+                  : monitors?.description}
               </p>
-              <Link href={`/processor/${processors?.id}`}>
+              <Link href={`/monitor/${monitors?.id}`}>
                 <p
                   style={{
                     fontSize: "15px",
@@ -126,4 +126,4 @@ const AllProcessors = ({ allProcessors }) => {
   );
 };
 
-export default AllProcessors;
+export default AllMonitors;

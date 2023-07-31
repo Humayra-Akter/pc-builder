@@ -1,13 +1,14 @@
 import { Card, Col, Row } from "antd";
 import Image from "next/image";
 import {
+  ArrowRightOutlined,
   CalendarOutlined,
   CommentOutlined,
   ProfileOutlined,
 } from "@ant-design/icons";
 import Link from "next/link";
 
-const AllProcessors = ({ allProcessors }) => {
+const AllMotherboards = ({ allMotherboards }) => {
   const { Meta } = Card;
   return (
     <>
@@ -18,7 +19,7 @@ const AllProcessors = ({ allProcessors }) => {
           margin: " 30px 0px",
         }}
       >
-        processors
+        motherboards
       </h1>
       <Row
         gutter={{
@@ -28,8 +29,8 @@ const AllProcessors = ({ allProcessors }) => {
           lg: 32,
         }}
       >
-        {allProcessors?.map((processors) => (
-          <Col key={processors.id} className="gutter-row" span={8}>
+        {allMotherboards?.map((motherboards) => (
+          <Col key={motherboards.id} className="gutter-row" span={8}>
             <Card
               style={{
                 margin: "30px 0",
@@ -38,11 +39,11 @@ const AllProcessors = ({ allProcessors }) => {
               hoverable
               cover={
                 <Image
-                  src={processors?.image}
+                  src={motherboards?.image}
                   width={500}
                   height={200}
                   responsive
-                  alt="processors image"
+                  alt="motherboards image"
                 />
               }
             >
@@ -53,7 +54,7 @@ const AllProcessors = ({ allProcessors }) => {
                   color: "darkBlue",
                   fontWeight: "black",
                 }}
-                title={processors?.name}
+                title={motherboards?.name}
               />
               <div
                 className="line"
@@ -61,7 +62,7 @@ const AllProcessors = ({ allProcessors }) => {
                   height: "5px",
                   margin: "20px 0",
                   width: "100%",
-                  background: "darkBlue",
+                  background: "#000",
                 }}
               ></div>
               <p
@@ -76,13 +77,13 @@ const AllProcessors = ({ allProcessors }) => {
                 }}
               >
                 <span>
-                  <CalendarOutlined /> {processors?.category}
+                  <CalendarOutlined /> {motherboards?.category}
                 </span>
                 <span>
-                  <CommentOutlined /> {processors?.status}
+                  <CommentOutlined /> {motherboards?.status}
                 </span>
                 <span>
-                  <ProfileOutlined /> {processors?.price}
+                  <ProfileOutlined /> {motherboards?.price}
                 </span>
               </p>
 
@@ -94,11 +95,12 @@ const AllProcessors = ({ allProcessors }) => {
                   textAlign: "justify",
                 }}
               >
-                {processors?.description.length > 100
-                  ? processors?.description.slice(0, 70) + "..."
-                  : processors?.description}
+                {motherboards?.description.length > 100
+                  ? motherboards?.description.slice(0, 70) + "..."
+                  : motherboards?.description}
               </p>
-              <Link href={`/processor/${processors?.id}`}>
+
+              <Link href={`/motherboard/${motherboards?.id}`}>
                 <p
                   style={{
                     fontSize: "15px",
@@ -116,6 +118,7 @@ const AllProcessors = ({ allProcessors }) => {
                   }}
                 >
                   details
+                  <ArrowRightOutlined />
                 </p>
               </Link>
             </Card>
@@ -126,4 +129,4 @@ const AllProcessors = ({ allProcessors }) => {
   );
 };
 
-export default AllProcessors;
+export default AllMotherboards;

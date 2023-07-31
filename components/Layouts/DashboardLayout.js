@@ -13,7 +13,7 @@ function getItem(label, key, icon, children) {
   };
 }
 const items = [
-  getItem("All", "1", <Link href="/pcbuilder"></Link>),
+  // getItem("All", "1", <Link href="/pcbuilder"></Link>),
   getItem("Processor", "2", <Link href="/processor"></Link>),
   getItem("Motherboard", "3", <Link href="/motherboard"></Link>),
   getItem("RAM", "4", <Link href="/ram"></Link>),

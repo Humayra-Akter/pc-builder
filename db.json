@@ -3,7 +3,8 @@
     {
       "id": "1",
       "image": "/image/processor/1.jpg",
-      "name": "CPU/Processor 1",
+      "name": "Professional CPU/Processor 1",
+      "description": "Experience top-notch performance and efficiency with this high-end CPU/Processor. Ideal for power users and enthusiasts seeking unparalleled computing capabilities.",
       "category": "Electronics",
       "price": 199.99,
       "status": "In Stock",
@@ -12,7 +13,8 @@
     {
       "id": "2",
       "image": "/image/processor/2.jpg",
-      "name": "CPU/Processor 2",
+      "name": "Elite CPU/Processor 2",
+      "description": "Unleash the full potential of your system with this cutting-edge CPU/Processor. Designed to deliver exceptional speed and responsiveness for demanding tasks.",
       "category": "Electronics",
       "price": 179.99,
       "status": "In Stock",
@@ -21,7 +23,8 @@
     {
       "id": "3",
       "image": "/image/processor/3.jpg",
-      "name": "CPU/Processor 3",
+      "name": "Premium CPU/Processor 3",
+      "description": "Upgrade your computing experience with this premium CPU/Processor. Out of stock, but worth the wait for its unrivaled performance and efficiency.",
       "category": "Electronics",
       "price": 229.99,
       "status": "Out of Stock",
@@ -30,7 +33,8 @@
     {
       "id": "4",
       "image": "/image/processor/4.jpg",
-      "name": "CPU/Processor 4",
+      "name": "Advanced CPU/Processor 4",
+      "description": "Take your productivity and gaming to the next level with this advanced CPU/Processor. Loaded with features to handle intensive workloads with ease.",
       "category": "Electronics",
       "price": 249.99,
       "status": "In Stock",
@@ -39,7 +43,8 @@
     {
       "id": "5",
       "image": "/image/processor/5.jpg",
-      "name": "CPU/Processor 5",
+      "name": "Efficient CPU/Processor 5",
+      "description": "Achieve a perfect balance of performance and power efficiency with this efficient CPU/Processor. Ideal for long computing sessions without compromising speed.",
       "category": "Electronics",
       "price": 189.99,
       "status": "In Stock",
@@ -48,7 +53,8 @@
     {
       "id": "6",
       "image": "/image/processor/6.jpg",
-      "name": "CPU/Processor 6",
+      "name": "Pro Performance CPU/Processor 6",
+      "description": "Get ready to dominate your tasks and workflows with this Pro Performance CPU/Processor. Experience seamless multitasking like never before.",
       "category": "Electronics",
       "price": 209.99,
       "status": "In Stock",
@@ -57,7 +63,8 @@
     {
       "id": "7",
       "image": "/image/processor/7.jpg",
-      "name": "CPU/Processor 7",
+      "name": "High-End CPU/Processor 7",
+      "description": "Experience the pinnacle of computing power with this high-end CPU/Processor. Out of stock, but worth the wait for unmatched performance.",
       "category": "Electronics",
       "price": 219.99,
       "status": "Out of Stock",
@@ -68,7 +75,8 @@
     {
       "id": "1",
       "image": "/image/motherboard/1.jpg",
-      "name": "Motherboard 1",
+      "name": "ProBoard XZ1",
+      "description": "Unlock the true potential of your system with the ProBoard XZ1. This high-performance motherboard offers cutting-edge features and robust build quality, making it the perfect choice for power users and gamers alike.",
       "category": "Electronics",
       "price": 129.99,
       "status": "In Stock",
@@ -77,7 +85,8 @@
     {
       "id": "2",
       "image": "/image/motherboard/2.jpg",
-      "name": "Motherboard 2",
+      "name": "EliteBoard ZR2",
+      "description": "Experience unparalleled stability and seamless performance with the EliteBoard ZR2 motherboard. Designed for enthusiasts, it offers advanced overclocking capabilities and premium components for top-tier performance.",
       "category": "Electronics",
       "price": 149.99,
       "status": "In Stock",
@@ -86,7 +95,8 @@
     {
       "id": "3",
       "image": "/image/motherboard/3.jpg",
-      "name": "Motherboard 3",
+      "name": "UltimaBoard XG3",
+      "description": "The UltimaBoard XG3 is the ultimate choice for enthusiasts and content creators. With lightning-fast data transfer speeds and support for high-end components, this motherboard is engineered to deliver unparalleled performance.",
       "category": "Electronics",
       "price": 169.99,
       "status": "Out of Stock",
@@ -95,7 +105,8 @@
     {
       "id": "4",
       "image": "/image/motherboard/4.jpg",
-      "name": "Motherboard 4",
+      "name": "PrimeBoard ZT4",
+      "description": "Get ready to enter a new realm of gaming and productivity with the PrimeBoard ZT4 motherboard. Its robust design and innovative features ensure a smooth and lag-free computing experience.",
       "category": "Electronics",
       "price": 199.99,
       "status": "In Stock",
@@ -104,7 +115,8 @@
     {
       "id": "5",
       "image": "/image/motherboard/5.jpg",
-      "name": "Motherboard 5",
+      "name": "SpeedBoard RZ5",
+      "description": "Achieve lightning-fast performance and responsiveness with the SpeedBoard RZ5 motherboard. Built for speed enthusiasts, it offers excellent connectivity options and future-proof technology.",
       "category": "Electronics",
       "price": 139.99,
       "status": "In Stock",
@@ -113,7 +125,8 @@
     {
       "id": "6",
       "image": "/image/motherboard/6.jpg",
-      "name": "Motherboard 6",
+      "name": "ProMastery GX6",
+      "description": "Experience mastery over your system with the ProMastery GX6 motherboard. Equipped with advanced features and durable components, it ensures reliability and optimal performance under any workload.",
       "category": "Electronics",
       "price": 179.99,
       "status": "Out of Stock",
@@ -122,7 +135,8 @@
     {
       "id": "7",
       "image": "/image/motherboard/7.jpg",
-      "name": "Motherboard 7",
+      "name": "UltraBoard TQ7",
+      "description": "The UltraBoard TQ7 motherboard sets a new standard for excellence. Featuring a sleek design and innovative technologies, it caters to enthusiasts seeking the best of both aesthetics and performance.",
       "category": "Electronics",
       "price": 159.99,
       "status": "In Stock",
@@ -133,7 +147,8 @@
     {
       "id": "1",
       "image": "/image/ram/1.jpg",
-      "name": "RAM 1",
+      "name": "Performance RAM Plus",
+      "description": "Experience exceptional multitasking and faster data access with the Performance RAM Plus. This high-speed memory module is designed for power users and content creators seeking peak performance.",
       "category": "Electronics",
       "price": 79.99,
       "status": "In Stock",
@@ -142,7 +157,8 @@
     {
       "id": "2",
       "image": "/image/ram/2.jpg",
-      "name": "RAM 2",
+      "name": "UltraBoost RAM Pro",
+      "description": "Take your system's performance to new heights with the UltraBoost RAM Pro. Featuring advanced overclocking capabilities, this memory module ensures unparalleled responsiveness.",
       "category": "Electronics",
       "price": 89.99,
       "status": "Out of Stock",
@@ -151,7 +167,8 @@
     {
       "id": "3",
       "image": "/image/ram/3.jpg",
-      "name": "RAM 3",
+      "name": "MegaSpeed RAM Xtreme",
+      "description": "The MegaSpeed RAM Xtreme sets a new standard for speed and reliability. Ideal for gamers and professionals, it delivers blazing-fast performance for demanding tasks.",
       "category": "Electronics",
       "price": 99.99,
       "status": "In Stock",
@@ -160,7 +177,8 @@
     {
       "id": "4",
       "image": "/image/ram/4.jpg",
-      "name": "RAM 4",
+      "name": "EcoEfficiency RAM Lite",
+      "description": "Maximize efficiency and productivity with the EcoEfficiency RAM Lite. This energy-efficient memory module ensures optimal performance while keeping power consumption in check.",
       "category": "Electronics",
       "price": 69.99,
       "status": "In Stock",
@@ -169,7 +187,8 @@
     {
       "id": "5",
       "image": "/image/ram/5.jpg",
-      "name": "RAM 5",
+      "name": "PowerX RAM Dominator",
+      "description": "Unleash the full potential of your system with the PowerX RAM Dominator. Designed for enthusiasts and high-performance computing, it guarantees seamless multitasking and data handling.",
       "category": "Electronics",
       "price": 109.99,
       "status": "Out of Stock",
@@ -178,7 +197,8 @@
     {
       "id": "6",
       "image": "/image/ram/6.jpg",
-      "name": "RAM 6",
+      "name": "TurboBoost RAM Pro",
+      "description": "Accelerate your system's performance with the TurboBoost RAM Pro. Built for speed and responsiveness, it ensures smooth operation during intense workloads and gaming sessions.",
       "category": "Electronics",
       "price": 84.99,
       "status": "In Stock",
@@ -187,7 +207,8 @@
     {
       "id": "7",
       "image": "/image/ram/7.jpg",
-      "name": "RAM 7",
+      "name": "XtremePerformance RAM Plus",
+      "description": "Experience the ultimate in performance with the XtremePerformance RAM Plus. Perfect for high-end systems, it offers unrivaled speed and reliability for heavy multitasking.",
       "category": "Electronics",
       "price": 94.99,
       "status": "In Stock",
@@ -198,7 +219,8 @@
     {
       "id": "1",
       "image": "/image/powerSupply/1.jpg",
-      "name": "Power Supply Unit 1",
+      "name": "ProPower XG1",
+      "description": "Experience reliable and efficient power delivery with the ProPower XG1. This high-quality power supply unit ensures stable performance and optimal power distribution for your system.",
       "category": "Electronics",
       "price": 89.99,
       "status": "In Stock",
@@ -207,7 +229,8 @@
     {
       "id": "2",
       "image": "/image/powerSupply/2.jpg",
-      "name": "Power Supply Unit 2",
+      "name": "ElitePower XR2",
+      "description": "Unleash the full potential of your system with the ElitePower XR2. Designed for enthusiasts and high-performance rigs, it delivers consistent power even under heavy loads.",
       "category": "Electronics",
       "price": 99.99,
       "status": "Out of Stock",
@@ -216,7 +239,8 @@
     {
       "id": "3",
       "image": "/image/powerSupply/3.jpg",
-      "name": "Power Supply Unit 3",
+      "name": "MegaPower XL3",
+      "description": "The MegaPower XL3 sets a new standard for power supply units. With its advanced features and robust design, it ensures stable performance and optimal efficiency.",
       "category": "Electronics",
       "price": 79.99,
       "status": "In Stock",
@@ -225,7 +249,8 @@
     {
       "id": "4",
       "image": "/image/powerSupply/4.jpg",
-      "name": "Power Supply Unit 4",
+      "name": "TurboPower XT4",
+      "description": "Get ready for turbocharged performance with the TurboPower XT4. This power supply unit is designed to handle demanding tasks and provide consistent power output.",
       "category": "Electronics",
       "price": 109.99,
       "status": "In Stock",
@@ -234,7 +259,8 @@
     {
       "id": "5",
       "image": "/image/powerSupply/5.jpg",
-      "name": "Power Supply Unit 5",
+      "name": "UltraPower ZE5",
+      "description": "The UltraPower ZE5 is engineered for stability and efficiency. With its silent operation and high-quality components, it ensures a smooth and reliable computing experience.",
       "category": "Electronics",
       "price": 94.99,
       "status": "Out of Stock",
@@ -243,7 +269,8 @@
     {
       "id": "6",
       "image": "/image/powerSupply/6.jpg",
-      "name": "Power Supply Unit 6",
+      "name": "SpeedPower RP6",
+      "description": "Maximize your system's potential with the SpeedPower RP6. This power supply unit offers high efficiency and optimal power output to meet the demands of modern systems.",
       "category": "Electronics",
       "price": 84.99,
       "status": "In Stock",
@@ -252,7 +279,8 @@
     {
       "id": "7",
       "image": "/image/powerSupply/7.jpg",
-      "name": "Power Supply Unit 7",
+      "name": "XtremePower TD7",
+      "description": "The XtremePower TD7 delivers extreme performance and reliability. Ideal for high-end builds and gaming rigs, it guarantees stable power for even the most power-hungry components.",
       "category": "Electronics",
       "price": 89.99,
       "status": "In Stock",
@@ -263,7 +291,8 @@
     {
       "id": "1",
       "image": "/image/storage/1.jpg",
-      "name": "Storage Device 1",
+      "name": "SwiftStorage XE1",
+      "description": "The SwiftStorage XE1 offers high-speed data access and ample storage capacity for your digital needs. Designed for professionals and enthusiasts, it ensures seamless data management and reliability.",
       "category": "Electronics",
       "price": 69.99,
       "status": "Out of Stock",
@@ -272,7 +301,8 @@
     {
       "id": "2",
       "image": "/image/storage/2.jpg",
-      "name": "Storage Device 2",
+      "name": "TurboStorage XR2",
+      "description": "Experience lightning-fast storage performance with the TurboStorage XR2. Equipped with cutting-edge technology, it delivers faster file transfers and reduced load times for applications.",
       "category": "Electronics",
       "price": 79.99,
       "status": "In Stock",
@@ -281,7 +311,8 @@
     {
       "id": "3",
       "image": "/image/storage/3.jpg",
-      "name": "Storage Device 3",
+      "name": "UltraStorage ZT3",
+      "description": "The UltraStorage ZT3 offers both speed and reliability for your data storage needs. Perfect for multimedia professionals and gamers, it ensures smooth performance and data security.",
       "category": "Electronics",
       "price": 89.99,
       "status": "In Stock",
@@ -290,7 +321,8 @@
     {
       "id": "4",
       "image": "/image/storage/4.jpg",
-      "name": "Storage Device 4",
+      "name": "PowerStorage XT4",
+      "description": "The PowerStorage XT4 is your ultimate companion for large-scale data storage. With its high capacity and fast data access, it is perfect for data-intensive tasks and projects.",
       "category": "Electronics",
       "price": 99.99,
       "status": "Out of Stock",
@@ -299,7 +331,8 @@
     {
       "id": "5",
       "image": "/image/storage/5.jpg",
-      "name": "Storage Device 5",
+      "name": "EliteStorage RD5",
+      "description": "Elevate your storage experience with the EliteStorage RD5. Featuring advanced caching technology, it provides smooth and responsive performance, ideal for creative professionals.",
       "category": "Electronics",
       "price": 84.99,
       "status": "In Stock",
@@ -308,7 +341,8 @@
     {
       "id": "6",
       "image": "/image/storage/6.jpg",
-      "name": "Storage Device 6",
+      "name": "ProStorage LT6",
+      "description": "The ProStorage LT6 combines speed and reliability to meet the demands of modern computing. Ideal for multitasking and content creation, it ensures smooth data access and management.",
       "category": "Electronics",
       "price": 94.99,
       "status": "In Stock",
@@ -317,7 +351,8 @@
     {
       "id": "7",
       "image": "/image/storage/7.jpg",
-      "name": "Storage Device 7",
+      "name": "SpeedStorage GR7",
+      "description": "Accelerate your productivity with the SpeedStorage GR7. This high-performance storage device delivers exceptional read and write speeds, perfect for power users and enthusiasts.",
       "category": "Electronics",
       "price": 79.99,
       "status": "In Stock",
@@ -328,7 +363,8 @@
     {
       "id": "1",
       "image": "/image/monitor/1.jpg",
-      "name": "Monitor 1",
+      "name": "ProView XG1",
+      "description": "Immerse yourself in stunning visuals with the ProView XG1 monitor. Designed for professionals and gamers, it offers a high-quality display and seamless performance for a superior viewing experience.",
       "category": "Electronics",
       "price": 249.99,
       "status": "In Stock",
@@ -337,7 +373,8 @@
     {
       "id": "2",
       "image": "/image/monitor/2.jpg",
-      "name": "Monitor 2",
+      "name": "EliteScreen XR2",
+      "description": "Experience the pinnacle of visual excellence with the EliteScreen XR2 monitor. With its high-resolution display and fast refresh rates, it delivers smooth visuals and precise color accuracy.",
       "category": "Electronics",
       "price": 199.99,
       "status": "In Stock",
@@ -346,7 +383,8 @@
     {
       "id": "3",
       "image": "/image/monitor/3.jpg",
-      "name": "Monitor 3",
+      "name": "UltimaView XT3",
+      "description": "The UltimaView XT3 offers a superior visual experience with its immersive display and wide viewing angles. Perfect for creative professionals, it ensures accurate color representation for your projects.",
       "category": "Electronics",
       "price": 179.99,
       "status": "Out of Stock",
@@ -355,7 +393,8 @@
     {
       "id": "4",
       "image": "/image/monitor/4.jpg",
-      "name": "Monitor 4",
+      "name": "PowerDisplay XZ4",
+      "description": "Unleash the power of high-performance graphics with the PowerDisplay XZ4 monitor. Featuring fast response times and high refresh rates, it offers smooth visuals for gaming and multimedia.",
       "category": "Electronics",
       "price": 299.99,
       "status": "In Stock",
@@ -364,7 +403,8 @@
     {
       "id": "5",
       "image": "/image/monitor/5.jpg",
-      "name": "Monitor 5",
+      "name": "UltraVision ZR5",
+      "description": "The UltraVision ZR5 monitor combines style and performance. With its slim design and vibrant display, it is perfect for both work and entertainment, providing a captivating visual experience.",
       "category": "Electronics",
       "price": 159.99,
       "status": "In Stock",
@@ -373,7 +413,8 @@
     {
       "id": "6",
       "image": "/image/monitor/6.jpg",
-      "name": "Monitor 6",
+      "name": "ProDisplay LT6",
+      "description": "Enhance your productivity with the ProDisplay LT6 monitor. Designed for multitasking, it offers a spacious display and crisp visuals, making it ideal for professionals and content creators.",
       "category": "Electronics",
       "price": 219.99,
       "status": "In Stock",
@@ -382,7 +423,8 @@
     {
       "id": "7",
       "image": "/image/monitor/7.jpg",
-      "name": "Monitor 7",
+      "name": "SpeedView GR7",
+      "description": "The SpeedView GR7 monitor delivers outstanding performance and vibrant colors. With its slim bezels and smooth display, it complements any workspace and elevates your visual experience.",
       "category": "Electronics",
       "price": 249.99,
       "status": "Out of Stock",

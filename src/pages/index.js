@@ -1,19 +1,15 @@
 import RootLayout from "../../components/Layouts/RootLayout";
-import Image from "next/image";
-import AllProcessors from "@/components/UI/AllProcessors";
+import Banner from "@/components/UI/Banner";
+import HomeProducts from "@/components/UI/HomeProducts";
+import { useGetProcessorsQuery } from "@/redux/api/api";
 
 const HomePage = ({ allProcessors }) => {
+  const { data, isError, isLoading } = useGetProcessorsQuery();
+  console.log(data);
   return (
     <div style={{ color: "black", fontFamily: "cursive" }}>
-      <h1>Hi Homieeeeeeeeeeeeeee</h1>
-      <Image
-        src="/image/pc-ge922de72c_1280.jpg"
-        width={500}
-        height={200}
-        responsive
-        alt="processors image"
-      />
-      <AllProcessors allProcessors={allProcessors}></AllProcessors>
+      <Banner></Banner>
+      <HomeProducts allProcessors={allProcessors}></HomeProducts>
     </div>
   );
 };
@@ -26,7 +22,6 @@ HomePage.getLayout = function getLayout(page) {
 export const getStaticProps = async () => {
   const res = await fetch("http://localhost:5000/processors");
   const data = await res.json();
-  console.log(data);
   return {
     props: {
       allProcessors: data,

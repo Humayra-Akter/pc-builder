@@ -7,7 +7,7 @@ import {
 } from "@ant-design/icons";
 import Link from "next/link";
 
-const AllProcessors = ({ allProcessors }) => {
+const HomeProducts = ({ allProcessors }) => {
   const { Meta } = Card;
   return (
     <>
@@ -18,7 +18,7 @@ const AllProcessors = ({ allProcessors }) => {
           margin: " 30px 0px",
         }}
       >
-        processors
+        #TODAY HIGHLIGHT
       </h1>
       <Row
         gutter={{
@@ -28,13 +28,9 @@ const AllProcessors = ({ allProcessors }) => {
           lg: 32,
         }}
       >
-        {allProcessors?.map((processors) => (
+        {allProcessors?.slice(0, 3).map((processors) => (
           <Col key={processors.id} className="gutter-row" span={8}>
             <Card
-              style={{
-                margin: "30px 0",
-                fontFamily: "cursive",
-              }}
               hoverable
               cover={
                 <Image
@@ -46,22 +42,14 @@ const AllProcessors = ({ allProcessors }) => {
                 />
               }
             >
-              <Meta
-                style={{
-                  margin: "10px 0",
-                  fontFamily: "cursive",
-                  color: "darkBlue",
-                  fontWeight: "black",
-                }}
-                title={processors?.name}
-              />
+              <Meta title={processors?.name} />
               <div
                 className="line"
                 style={{
                   height: "5px",
                   margin: "20px 0",
                   width: "100%",
-                  background: "darkBlue",
+                  background: "#000",
                 }}
               ></div>
               <p
@@ -69,9 +57,7 @@ const AllProcessors = ({ allProcessors }) => {
                   display: "flex",
                   margin: "10px 0",
                   width: "100%",
-                  fontFamily: "cursive",
-                  color: "darkBlue",
-                  fontWeight: "black",
+                  color: "gray",
                   justifyContent: "space-between",
                 }}
               >
@@ -79,45 +65,40 @@ const AllProcessors = ({ allProcessors }) => {
                   <CalendarOutlined /> {processors?.category}
                 </span>
                 <span>
-                  <CommentOutlined /> {processors?.status}
+                  <CommentOutlined /> {processors?.status} COMMENTS
                 </span>
                 <span>
                   <ProfileOutlined /> {processors?.price}
                 </span>
               </p>
 
-              <p
+              {/* <p
                 style={{
                   fontSize: "15px",
-                  fontFamily: "cursive",
-                  marginTop: "20px",
-                  textAlign: "justify",
                 }}
               >
                 {processors?.description.length > 100
                   ? processors?.description.slice(0, 70) + "..."
                   : processors?.description}
               </p>
-              <Link href={`/processor/${processors?.id}`}>
+
+              <Link href={`/processors/${processors?.id}`}>
                 <p
                   style={{
                     fontSize: "15px",
                     marginTop: "20px",
                     width: "100%",
-                    justifyItems: "center",
-                    alignItems: "center",
-                    backgroundColor: "darkBlue",
+                    backgroundColor: "black",
                     color: "white",
                     padding: "2px 5px",
                     letterSpacing: "3px",
                     textAlign: "center",
                     fontWeight: "300",
-                    borderRadius: "100px",
                   }}
                 >
-                  details
+                  Keep reading <ArrowRightOutlined />
                 </p>
-              </Link>
+              </Link> */}
             </Card>
           </Col>
         ))}
@@ -126,4 +107,4 @@ const AllProcessors = ({ allProcessors }) => {
   );
 };
 
-export default AllProcessors;
+export default HomeProducts;

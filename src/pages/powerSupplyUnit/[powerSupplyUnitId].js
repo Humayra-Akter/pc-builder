@@ -7,7 +7,7 @@ import {
 import { Col, Row } from "antd";
 import Image from "next/image";
 
-const ProcessorDetail = ({ processors }) => {
+const PowerSupplyUnitDetail = ({ powerSupplyUnits }) => {
   return (
     <div
       style={{
@@ -25,7 +25,7 @@ const ProcessorDetail = ({ processors }) => {
           fontFamily: "cursive",
         }}
       >
-        {processors?.name}
+        {powerSupplyUnits?.name}
       </h1>
       <Row
         gutter={{
@@ -38,17 +38,17 @@ const ProcessorDetail = ({ processors }) => {
         <Col className="gutter-row" span={12}>
           <div>
             <Image
-              src={processors?.image}
-              width={600}
-              height={400}
+              src={powerSupplyUnits?.image}
+              width={500}
+              height={300}
               responsive
-              alt="processor image"
+              alt="powerSupplyUnits image"
             />
           </div>
         </Col>
         <Col className="gutter-row" span={12}>
           <div>
-            <h1>{processors?.name}</h1>
+            <h1>{powerSupplyUnits?.name}</h1>
 
             <p
               style={{
@@ -62,14 +62,13 @@ const ProcessorDetail = ({ processors }) => {
               }}
             >
               <span>
-                <CommentOutlined /> {processors?.price}
+                <CalendarOutlined /> {powerSupplyUnits?.status}
               </span>
               <span>
-                <CalendarOutlined />
-                {processors?.status}
+                <CommentOutlined /> {powerSupplyUnits?.price}
               </span>
               <span>
-                <ProfileOutlined /> {processors?.category}
+                <ProfileOutlined /> {powerSupplyUnits?.category}
               </span>
             </p>
             <div
@@ -78,10 +77,9 @@ const ProcessorDetail = ({ processors }) => {
                 height: "5px",
                 margin: "20px 0",
                 width: "100%",
-                background: "darkBlue",
+                background: "#000",
               }}
             ></div>
-
             <p
               style={{
                 fontSize: "25px",
@@ -91,7 +89,7 @@ const ProcessorDetail = ({ processors }) => {
                 color: "black",
               }}
             >
-              {processors?.description}
+              {powerSupplyUnits?.description}
             </p>
             <p
               style={{
@@ -114,7 +112,7 @@ const ProcessorDetail = ({ processors }) => {
                   color: "red",
                 }}
               >
-                {processors?.rating}
+                {powerSupplyUnits?.rating}
               </small>
             </p>
           </div>
@@ -124,18 +122,18 @@ const ProcessorDetail = ({ processors }) => {
   );
 };
 
-export default ProcessorDetail;
+export default PowerSupplyUnitDetail;
 
-ProcessorDetail.getLayout = function getLayout(page) {
+PowerSupplyUnitDetail.getLayout = function getLayout(page) {
   return <RootLayout>{page}</RootLayout>;
 };
 
 export const getStaticPaths = async () => {
-  const res = await fetch("http://localhost:5000/processors");
-  const processors = await res.json();
+  const res = await fetch("http://localhost:5000/powerSupplyUnits");
+  const powerSupplyUnits = await res.json();
 
-  const paths = processors.map((processor) => ({
-    params: { processorId: processor.id },
+  const paths = powerSupplyUnits.map((powerSupplyUnit) => ({
+    params: { powerSupplyUnitId: powerSupplyUnit.id },
   }));
 
   return { paths, fallback: false };
@@ -144,13 +142,13 @@ export const getStaticPaths = async () => {
 export const getStaticProps = async (context) => {
   const { params } = context;
   const res = await fetch(
-    `http://localhost:5000/processors/${params.processorId}`
+    `http://localhost:5000/powerSupplyUnits/${params.powerSupplyUnitId}`
   );
   const data = await res.json();
   console.log(data);
   return {
     props: {
-      processors: data,
+      powerSupplyUnits: data,
     },
   };
 };
