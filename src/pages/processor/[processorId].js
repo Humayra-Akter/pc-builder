@@ -6,8 +6,20 @@ import {
 } from "@ant-design/icons";
 import { Col, Row } from "antd";
 import Image from "next/image";
+import { useState } from "react";
+import { useRouter } from "next/router";
+import { useDispatch } from "react-redux";
+import { addToCart } from "../../redux/reducers/cartActions";
 
 const ProcessorDetail = ({ processors }) => {
+  const [isAddingToCart, setIsAddingToCart] = useState(false);
+  const router = useRouter();
+  const dispatch = useDispatch();
+
+  const handleAddToCart = () => {
+    dispatch(addToCart(processors.id));
+  };
+
   return (
     <div
       style={{
@@ -94,6 +106,7 @@ const ProcessorDetail = ({ processors }) => {
             >
               {processors?.description}
             </p>
+
             <p
               style={{
                 fontSize: "16px",
@@ -118,6 +131,24 @@ const ProcessorDetail = ({ processors }) => {
                 {processors?.rating}
               </small>
             </p>
+            <input
+              type="button"
+              value={isAddingToCart ? "Adding..." : "ADD TO CART"}
+              style={{
+                margin: "10px 0px",
+                width: "100%",
+                fontWeight: "800",
+                letterSpacing: "3px",
+                fontSize: "15px",
+                backgroundColor: "white",
+                color: "black",
+                margin: "20px 0px",
+                borderRadius: "30px",
+                padding: "0px 5px ",
+              }}
+              disabled={isAddingToCart}
+              onClick={handleAddToCart}
+            />
           </div>
         </Col>
       </Row>

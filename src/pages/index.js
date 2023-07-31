@@ -9,6 +9,7 @@ const HomePage = ({ allProcessors }) => {
   return (
     <div style={{ color: "black", fontFamily: "cursive" }}>
       <Banner></Banner>
+
       <HomeProducts allProcessors={allProcessors}></HomeProducts>
     </div>
   );
