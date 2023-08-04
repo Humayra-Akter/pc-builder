@@ -11,27 +11,27 @@ const HomeProducts = ({ allProcessors }) => {
   const { Meta } = Card;
   return (
     <>
-      <Link href="/processor">
-        <h1
-          style={{
-            textAlign: "center",
-            fontSize: "50px",
-            marginTop: " 100px",
-            marginBottom: "40px",
-          }}
-        >
-          OUR PRODUCTS
-        </h1>
-        <Row
-          gutter={{
-            xs: 8,
-            sm: 16,
-            md: 24,
-            lg: 32,
-          }}
-        >
-          {allProcessors?.map((processors) => (
-            <Col key={processors.id} className="gutter-row" span={3}>
+      <h1
+        style={{
+          textAlign: "center",
+          fontSize: "50px",
+          marginTop: " 100px",
+          marginBottom: "40px",
+        }}
+      >
+        OUR PRODUCTS
+      </h1>
+      <Row
+        gutter={{
+          xs: 8,
+          sm: 16,
+          md: 24,
+          lg: 32,
+        }}
+      >
+        {allProcessors?.map((processors) => (
+          <Col key={processors.id} className="gutter-row" span={3}>
+            <Link href="/pcbuilder">
               <Card
                 style={{
                   fontFamily: "cursive",
@@ -83,10 +83,10 @@ const HomeProducts = ({ allProcessors }) => {
                   </span>
                 </p>
               </Card>
-            </Col>
-          ))}
-        </Row>
-      </Link>
+            </Link>
+          </Col>
+        ))}
+      </Row>
     </>
   );
 };

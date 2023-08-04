@@ -30,78 +30,77 @@ const AllProcessors = ({ allProcessors }) => {
       >
         {allProcessors?.map((processors) => (
           <Col key={processors.id} className="gutter-row" span={8}>
-            <Card
-              style={{
-                margin: "30px 0",
-                fontFamily: "cursive",
-                color: "#fff",
-                background: "black",
-              }}
-              hoverable
-              cover={
-                <Image
-                  src={processors?.image}
-                  width={500}
-                  height={200}
-                  responsive
-                  alt="processors image"
-                />
-              }
-            >
-              <h1
+            <Link href={`/processor/${processors?.id}`}>
+              <Card
                 style={{
-                  margin: "10px 0",
+                  margin: "30px 0",
                   fontFamily: "cursive",
                   color: "#fff",
+                  background: "black",
                 }}
+                hoverable
+                cover={
+                  <Image
+                    src={processors?.image}
+                    width={500}
+                    height={200}
+                    responsive
+                    alt="processors image"
+                  />
+                }
               >
-                {processors?.name}
-              </h1>
-              <div
-                className="line"
-                style={{
-                  height: "2px",
-                  margin: "20px 0",
-                  width: "100%",
-                  background: "white",
-                }}
-              ></div>
-              <p
-                style={{
-                  display: "flex",
-                  margin: "10px 0",
-                  width: "100%",
-                  fontFamily: "cursive",
-                  color: "#fff",
-                  fontWeight: "black",
-                  justifyContent: "space-between",
-                }}
-              >
-                <span>
-                  <CalendarOutlined /> {processors?.category}
-                </span>
-                <span>
-                  <CommentOutlined /> {processors?.status}
-                </span>
-                <span>
-                  <ProfileOutlined /> {processors?.price}
-                </span>
-              </p>
-
-              <p
-                style={{
-                  fontSize: "15px",
-                  fontFamily: "cursive",
-                  color: "#fff",
-                  marginTop: "20px",
-                  textAlign: "justify",
-                }}
-              >
-                {processors?.description.length > 100
-                  ? processors?.description.slice(0, 70) + "..."
-                  : processors?.description}
-              </p>
-              <Link href={`/processor/${processors?.id}`}>
+                <h1
+                  style={{
+                    margin: "10px 0",
+                    fontFamily: "cursive",
+                    color: "#fff",
+                  }}
+                >
+                  {processors?.name}
+                </h1>
+                <div
+                  className="line"
+                  style={{
+                    height: "2px",
+                    margin: "20px 0",
+                    width: "100%",
+                    background: "white",
+                  }}
+                ></div>
+                <p
+                  style={{
+                    display: "flex",
+                    margin: "10px 0",
+                    width: "100%",
+                    fontFamily: "cursive",
+                    color: "#fff",
+                    fontWeight: "black",
+                    justifyContent: "space-between",
+                  }}
+                >
+                  <span>
+                    <CalendarOutlined /> {processors?.category}
+                  </span>
+                  <span>
+                    <CommentOutlined /> {processors?.status}
+                  </span>
+                  <span>
+                    <ProfileOutlined /> {processors?.price}
+                  </span>
+                </p>
+                <p
+                  style={{
+                    fontSize: "15px",
+                    fontFamily: "cursive",
+                    color: "#fff",
+                    marginTop: "20px",
+                    textAlign: "justify",
+                  }}
+                >
+                  {processors?.description.length > 100
+                    ? processors?.description.slice(0, 70) + "..."
+                    : processors?.description}
+                </p>
                 <h2
                   style={{
                     fontSize: "15px",
@@ -121,8 +120,8 @@ const AllProcessors = ({ allProcessors }) => {
                 >
                   details
                 </h2>
-              </Link>
-            </Card>
+              </Card>
+            </Link>
           </Col>
         ))}
       </Row>

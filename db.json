@@ -1,4 +1,93 @@
 {
+  "featuredProducts": [
+    {
+      "id": 1,
+      "image": "/image/processor/1.jpg",
+      "productName": "Product 1",
+      "category": "CPU / Processor",
+      "price": 199.99,
+      "status": "In Stock",
+      "rating": 4.5
+    },
+    {
+      "id": 2,
+      "image": "/image/processor/1.jpg",
+      "productName": "Product 2",
+      "category": "RAM",
+      "price": 89.99,
+      "status": "In Stock",
+      "rating": 4.2
+    },
+    {
+      "id": 3,
+      "image": "/image/processor/1.jpg",
+      "productName": "Product 3",
+      "category": "Power Supply Unit",
+      "price": 129.99,
+      "status": "Out of Stock",
+      "rating": 3.8
+    },
+    {
+      "id": 4,
+      "image": "/image/processor/1.jpg",
+      "productName": "Product 4",
+      "category": "Storage Device",
+      "price": 149.99,
+      "status": "In Stock",
+      "rating": 4.7
+    },
+    {
+      "id": 5,
+      "image": "/image/processor/1.jpg",
+      "productName": "Product 5",
+      "category": "Monitor",
+      "price": 279.99,
+      "status": "In Stock",
+      "rating": 4.9
+    },
+    {
+      "id": 6,
+      "image": "/image/processor/1.jpg",
+      "productName": "Product 6",
+      "category": "Motherboard",
+      "price": 179.99,
+      "status": "In Stock",
+      "rating": 4.6
+    }
+  ],
+  "featuredCategories": [
+    {
+      "id": 1,
+      "categoryName": "CPU / Processor",
+      "image": "/image/processor/1.jpg"
+    },
+    {
+      "id": 2,
+      "categoryName": "Motherboard",
+      "image": "/image/processor/1.jpg"
+    },
+    {
+      "id": 3,
+      "categoryName": "RAM",
+      "image": "/image/processor/1.jpg"
+    },
+    {
+      "id": 4,
+      "categoryName": "Power Supply Unit",
+      "image": "/image/processor/1.jpg"
+    },
+    {
+      "id": 5,
+      "categoryName": "Storage Device",
+      "image": "/image/processor/1.jpg"
+    },
+    {
+      "id": 6,
+      "categoryName": "Monitor",
+      "image": "/image/processor/1.jpg"
+    }
+  ],
+
   "processors": [
     {
       "id": "1",

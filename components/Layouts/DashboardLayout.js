@@ -69,6 +69,11 @@ const DashboardLayout = ({ children }) => {
                 <Link href="/">Choose Your Need!!!</Link>
               </Button>
             </Breadcrumb.Item>
+            <Breadcrumb.Item>
+              <Button>
+                <Link href="/pcbuilder">pc-builder</Link>
+              </Button>
+            </Breadcrumb.Item>
           </Breadcrumb>
           <div
             style={{

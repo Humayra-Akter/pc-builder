@@ -9,16 +9,9 @@ import Image from "next/image";
 import { useState } from "react";
 import { useRouter } from "next/router";
 import { useDispatch } from "react-redux";
-import { addToCart } from "../../redux/reducers/cartActions";
 
 const ProcessorDetail = ({ processors }) => {
-  const [isAddingToCart, setIsAddingToCart] = useState(false);
   const router = useRouter();
-  const dispatch = useDispatch();
-
-  const handleAddToCart = () => {
-    dispatch(addToCart(processors.id));
-  };
 
   return (
     <div
@@ -133,7 +126,8 @@ const ProcessorDetail = ({ processors }) => {
             </p>
             <input
               type="button"
-              value={isAddingToCart ? "Adding..." : "ADD TO CART"}
+              // value={isAddingToCart ? "Adding..." : "ADD TO CART"}
+              value="ADD TO CART"
               style={{
                 margin: "10px 0px",
                 width: "100%",
@@ -146,8 +140,8 @@ const ProcessorDetail = ({ processors }) => {
                 borderRadius: "30px",
                 padding: "0px 5px ",
               }}
-              disabled={isAddingToCart}
-              onClick={handleAddToCart}
+              // disabled={isAddingToCart}
+              // onClick={handleAddToCart}
             />
           </div>
         </Col>
