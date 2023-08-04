@@ -1,4 +1,4 @@
-import { Card, Col, Row } from "antd";
+import { Button, Card, Col, Row } from "antd";
 import Image from "next/image";
 import {
   CalendarOutlined,
@@ -6,8 +6,10 @@ import {
   ProfileOutlined,
 } from "@ant-design/icons";
 import Link from "next/link";
+import { useCartContext } from "./CartContext";
 
 const AllMonitors = ({ allMonitors }) => {
+  const { addToCart } = useCartContext();
   const { Meta } = Card;
   return (
     <>
@@ -101,6 +103,28 @@ const AllMonitors = ({ allMonitors }) => {
                   ? monitors?.description.slice(0, 70) + "..."
                   : monitors?.description}
               </p>
+              <Button
+                onClick={() => {
+                  addToCart(monitors);
+                }}
+                style={{
+                  fontSize: "15px",
+                  marginTop: "20px",
+                  width: "100%",
+                  justifyItems: "center",
+                  alignItems: "center",
+                  backgroundColor: "white",
+                  color: "black",
+                  fontWeight: "bold",
+                  padding: "2px 5px",
+                  letterSpacing: "3px",
+                  textAlign: "center",
+                  fontWeight: "300",
+                  borderRadius: "100px",
+                }}
+              >
+                Add to Cart
+              </Button>
               <Link href={`/monitor/${monitors?.id}`}>
                 <h2
                   style={{
@@ -119,7 +143,7 @@ const AllMonitors = ({ allMonitors }) => {
                     borderRadius: "100px",
                   }}
                 >
-                  details
+                  Details
                 </h2>
               </Link>
             </Card>

@@ -1,4 +1,4 @@
-import { Card, Col, Row } from "antd";
+import { Button, Card, Col, Row } from "antd";
 import Image from "next/image";
 import {
   CalendarOutlined,
@@ -6,8 +6,10 @@ import {
   ProfileOutlined,
 } from "@ant-design/icons";
 import Link from "next/link";
+import { useCartContext } from "./CartContext";
 
 const AllPowerSupplyUnit = ({ allPowerSupplyUnits }) => {
+  const { addToCart } = useCartContext();
   const { Meta } = Card;
   return (
     <>
@@ -101,6 +103,28 @@ const AllPowerSupplyUnit = ({ allPowerSupplyUnits }) => {
                   ? powerSupplyUnits?.description.slice(0, 70) + "..."
                   : powerSupplyUnits?.description}
               </p>
+              <Button
+                onClick={() => {
+                  addToCart(powerSupplyUnits);
+                }}
+                style={{
+                  fontSize: "15px",
+                  marginTop: "20px",
+                  width: "100%",
+                  justifyItems: "center",
+                  alignItems: "center",
+                  backgroundColor: "white",
+                  color: "black",
+                  fontWeight: "bold",
+                  padding: "2px 5px",
+                  letterSpacing: "3px",
+                  textAlign: "center",
+                  fontWeight: "300",
+                  borderRadius: "100px",
+                }}
+              >
+                Add to Cart
+              </Button>
               <Link href={`/powerSupplyUnit/${powerSupplyUnits?.id}`}>
                 <h2
                   style={{

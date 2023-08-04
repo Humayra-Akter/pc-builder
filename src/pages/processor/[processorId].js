@@ -124,25 +124,6 @@ const ProcessorDetail = ({ processors }) => {
                 {processors?.rating}
               </small>
             </p>
-            <input
-              type="button"
-              // value={isAddingToCart ? "Adding..." : "ADD TO CART"}
-              value="ADD TO CART"
-              style={{
-                margin: "10px 0px",
-                width: "100%",
-                fontWeight: "800",
-                letterSpacing: "3px",
-                fontSize: "15px",
-                backgroundColor: "white",
-                color: "black",
-                margin: "20px 0px",
-                borderRadius: "30px",
-                padding: "0px 5px ",
-              }}
-              // disabled={isAddingToCart}
-              // onClick={handleAddToCart}
-            />
           </div>
         </Col>
       </Row>

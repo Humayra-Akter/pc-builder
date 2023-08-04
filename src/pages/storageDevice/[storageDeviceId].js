@@ -6,8 +6,11 @@ import {
 } from "@ant-design/icons";
 import { Col, Row } from "antd";
 import Image from "next/image";
+import { useRouter } from "next/router";
 
 const StorageDeviceDetails = ({ storageDevices }) => {
+  const router = useRouter();
+
   return (
     <div
       style={{

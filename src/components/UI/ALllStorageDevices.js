@@ -1,4 +1,4 @@
-import { Card, Col, Row } from "antd";
+import { Button, Card, Col, Row } from "antd";
 import Image from "next/image";
 import {
   CalendarOutlined,
@@ -6,9 +6,12 @@ import {
   ProfileOutlined,
 } from "@ant-design/icons";
 import Link from "next/link";
+import { useCartContext } from "./CartContext";
 
 const ALllStorageDevices = ({ allStorageDevices }) => {
+  const { addToCart } = useCartContext();
   const { Meta } = Card;
+
   return (
     <>
       <h1
@@ -101,27 +104,50 @@ const ALllStorageDevices = ({ allStorageDevices }) => {
                   ? storageDevices?.description.slice(0, 70) + "..."
                   : storageDevices?.description}
               </p>
-              <Link href={`/storageDevice/${storageDevices?.id}`}>
-                <h2
-                  style={{
-                    fontSize: "15px",
-                    marginTop: "20px",
-                    width: "100%",
-                    justifyItems: "center",
-                    alignItems: "center",
-                    backgroundColor: "white",
-                    color: "black",
-                    fontWeight: "bold",
-                    padding: "2px 5px",
-                    letterSpacing: "3px",
-                    textAlign: "center",
-                    fontWeight: "300",
-                    borderRadius: "100px",
-                  }}
-                >
-                  details
-                </h2>
-              </Link>
+              <Button
+                onClick={() => {
+                  addToCart(storageDevices);
+                }}
+                style={{
+                  fontSize: "15px",
+                  marginTop: "20px",
+                  width: "100%",
+                  justifyItems: "center",
+                  alignItems: "center",
+                  backgroundColor: "white",
+                  color: "black",
+                  fontWeight: "bold",
+                  padding: "2px 5px",
+                  letterSpacing: "3px",
+                  textAlign: "center",
+                  fontWeight: "300",
+                  borderRadius: "100px",
+                }}
+              >
+                Add to Cart
+              </Button>
+
+              <h2
+                style={{
+                  fontSize: "15px",
+                  marginTop: "20px",
+                  width: "100%",
+                  justifyItems: "center",
+                  alignItems: "center",
+                  backgroundColor: "white",
+                  color: "black",
+                  fontWeight: "bold",
+                  padding: "2px 5px",
+                  letterSpacing: "3px",
+                  textAlign: "center",
+                  fontWeight: "300",
+                  borderRadius: "100px",
+                }}
+              >
+                <Link href={`/storageDevice/${storageDevices?.id}`}>
+                  Details
+                </Link>
+              </h2>
             </Card>
           </Col>
         ))}
