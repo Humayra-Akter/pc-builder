@@ -22,14 +22,31 @@ const Cart = () => {
   };
 
   const calculateOverallTotal = () => {
-    return cart.reduce(
-      (total, component) => total + calculateComponentTotal(component),
-      0
-    );
+    const categoryTotals = {};
+    let overallTotal = 0;
+
+    cart.forEach((component) => {
+      const componentTotal = calculateComponentTotal(component);
+      overallTotal += componentTotal;
+
+      if (categoryTotals[component.category]) {
+        categoryTotals[component.category] += componentTotal;
+      } else {
+        categoryTotals[component.category] = componentTotal;
+      }
+    });
+
+    return { overallTotal, categoryTotals };
   };
-  const isPlaceOrderEnabled = selectedCategories.length === 6;
+
+  const isPlaceOrderEnabled =
+    selectedCategories.length === 6 &&
+    selectedCategories.every((category) =>
+      cart.some((component) => component.category === category)
+    );
 
   const { Meta } = Card;
+  const { overallTotal, categoryTotals } = calculateOverallTotal();
 
   return (
     <div>
@@ -63,7 +80,7 @@ const Cart = () => {
               hoverable
             >
               <div className="border-r pr-5 shrink-0">
-                <Image src={component?.image} alt="" width={200} height={150} />
+                <Image src={component?.image} alt="" width={235} height={150} />
               </div>
 
               <h1
@@ -71,28 +88,56 @@ const Cart = () => {
                   margin: "10px 0",
                   fontFamily: "cursive",
                   color: "#fff",
+                  textAlign: "center",
                 }}
               >
                 {component?.name}
               </h1>
 
-              <Space>
+              <Space
+                style={{
+                  paddingLeft: "75px",
+                }}
+              >
                 <Button
                   icon={<MinusOutlined />}
                   onClick={() => decrementQuantity(component.id)}
                 />
-                <span>{component.quantity}</span>
+                <span
+                  style={{
+                    margin: "10px 0",
+                    fontFamily: "cursive",
+                    color: "#fff",
+                    textAlign: "center",
+                  }}
+                >
+                  {component.quantity}
+                </span>
                 <Button
                   icon={<PlusOutlined />}
                   onClick={() => incrementQuantity(component.id)}
                 />
               </Space>
-              <p className="text-xl">
+              <p
+                style={{
+                  margin: "10px 0",
+                  fontFamily: "cursive",
+                  color: "#fff",
+                  textAlign: "center",
+                }}
+                className="text-xl"
+              >
                 Total Price: ${calculateComponentTotal(component)}
               </p>
               <div className="border-l pl-5 flex flex-col justify-between">
                 <Button
-                  style={{ backgroundColor: "red" }}
+                  style={{
+                    backgroundColor: "red",
+                    width: "230px",
+                    fontFamily: "cursive",
+                    color: "#fff",
+                    fontWeight: "800",
+                  }}
                   onClick={() => removeFromCart(component.id)}
                 >
                   <DeleteOutlined /> Remove
@@ -103,12 +148,15 @@ const Cart = () => {
         ))}
       </Row>
       <div className="mt-6">
-        <Typography.Text strong>
-          Total Price: ${calculateOverallTotal()}
-        </Typography.Text>
-        <Button type="primary" disabled={!isPlaceOrderEnabled}>
-          Place Order
-        </Button>
+        <Typography.Text strong>Total Price: ${overallTotal}</Typography.Text>
+      </div>
+      <div>
+        <h2>Category Totals:</h2>
+        {Object.entries(categoryTotals).map(([category, total]) => (
+          <p key={category}>
+            {category}: ${total}
+          </p>
+        ))}
       </div>
     </div>
   );

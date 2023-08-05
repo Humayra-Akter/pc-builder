@@ -9,7 +9,7 @@ import Link from "next/link";
 import { useCartContext } from "./CartContext";
 
 const AllPowerSupplyUnit = ({ allPowerSupplyUnits }) => {
-  const { addToCart } = useCartContext();
+  const { cart, addToCart, incrementQuantity } = useCartContext();
   const { Meta } = Card;
   return (
     <>
@@ -104,6 +104,7 @@ const AllPowerSupplyUnit = ({ allPowerSupplyUnits }) => {
                   : powerSupplyUnits?.description}
               </p>
               <Button
+                disabled={cart.some((item) => item.id === powerSupplyUnits.id)}
                 onClick={() => {
                   addToCart(powerSupplyUnits);
                 }}
@@ -123,7 +124,9 @@ const AllPowerSupplyUnit = ({ allPowerSupplyUnits }) => {
                   borderRadius: "100px",
                 }}
               >
-                Add to Cart
+                {cart.some((item) => item.id === powerSupplyUnits.id)
+                  ? "Added to Cart"
+                  : "Add to Cart"}
               </Button>
               <Link href={`/powerSupplyUnit/${powerSupplyUnits?.id}`}>
                 <h2

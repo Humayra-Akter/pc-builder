@@ -9,7 +9,7 @@ import Link from "next/link";
 import { useCartContext } from "./CartContext";
 
 const AllProcessors = ({ allProcessors }) => {
-  const { addToCart } = useCartContext();
+  const { cart, addToCart, incrementQuantity } = useCartContext();
   const { Meta } = Card;
 
   return (
@@ -104,6 +104,7 @@ const AllProcessors = ({ allProcessors }) => {
                   : processors?.description}
               </p>
               <Button
+                disabled={cart.some((item) => item.id === processors.id)}
                 onClick={() => {
                   addToCart(processors);
                 }}
@@ -123,7 +124,9 @@ const AllProcessors = ({ allProcessors }) => {
                   borderRadius: "100px",
                 }}
               >
-                Add to Cart
+                {cart.some((item) => item.id === processors.id)
+                  ? "Added to Cart"
+                  : "Add to Cart"}
               </Button>
               <Button
                 style={{

@@ -10,7 +10,7 @@ import Link from "next/link";
 import { useCartContext } from "./CartContext";
 
 const AllMotherboards = ({ allMotherboards }) => {
-  const { addToCart } = useCartContext();
+  const { cart, addToCart, incrementQuantity } = useCartContext();
   const { Meta } = Card;
   return (
     <>
@@ -105,6 +105,7 @@ const AllMotherboards = ({ allMotherboards }) => {
                   : motherboards?.description}
               </p>
               <Button
+                disabled={cart.some((item) => item.id === motherboards.id)}
                 onClick={() => {
                   addToCart(motherboards);
                 }}
@@ -124,7 +125,9 @@ const AllMotherboards = ({ allMotherboards }) => {
                   borderRadius: "100px",
                 }}
               >
-                Add to Cart
+                {cart.some((item) => item.id === motherboards.id)
+                  ? "Added to Cart"
+                  : "Add to Cart"}
               </Button>
               <Link href={`/motherboard/${motherboards?.id}`}>
                 <h2

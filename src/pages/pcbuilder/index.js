@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Button, Card, Col, Row } from "antd";
 import DashboardLayout from "../../../components/Layouts/DashboardLayout";
 import Link from "next/link";
@@ -29,51 +29,158 @@ const PcBuilderPage = ({
         selectedCategories.includes("Monitor")
     );
   };
+
+  useEffect(() => {
+    checkCategoriesSelection();
+  }, [selectedCategories]);
+
   return (
     <div className="pc-builder-page">
-      <Row gutter={8}>
-        <Col span={4}>
-          <Card title="CPU / Processor">
+      <Row gutter={16}>
+        <Col span={8}>
+          <Card
+            style={{
+              textAlign: "center",
+              backgroundColor: "black",
+            }}
+          >
+            <h1
+              style={{
+                textAlign: "center",
+                margin: "10px",
+                marginBottom: "30px",
+                font: "cursive",
+                color: "white",
+                fontWeight: "900",
+              }}
+            >
+              CPU / Processor
+            </h1>
             <Button>
               <Link href="/processor">Select</Link>
             </Button>
           </Card>
         </Col>
 
-        <Col span={4}>
-          <Card title="Motherboard">
+        <Col span={8}>
+          <Card
+            style={{
+              textAlign: "center",
+              backgroundColor: "black",
+            }}
+          >
+            <h1
+              style={{
+                textAlign: "center",
+                margin: "10px",
+                font: "cursive",
+                marginBottom: "30px",
+                color: "white",
+                fontWeight: "900",
+              }}
+            >
+              Motherboard
+            </h1>
             <Button>
               <Link href="/motherboard">Select</Link>
             </Button>
           </Card>
         </Col>
 
-        <Col span={4}>
-          <Card title="RAM">
+        <Col span={8}>
+          <Card
+            style={{
+              textAlign: "center",
+              backgroundColor: "black",
+            }}
+          >
+            <h1
+              style={{
+                textAlign: "center",
+                margin: "10px",
+                font: "cursive",
+                marginBottom: "30px",
+                color: "white",
+                fontWeight: "900",
+              }}
+            >
+              RAM
+            </h1>
             <Button>
               <Link href="/ram">Select</Link>
             </Button>
           </Card>
         </Col>
 
-        <Col span={4}>
-          <Card title="Power Supply Unit">
+        <Col span={8}>
+          <Card
+            style={{
+              textAlign: "center",
+              backgroundColor: "black",
+            }}
+          >
+            <h1
+              style={{
+                textAlign: "center",
+                margin: "10px",
+                font: "cursive",
+                marginBottom: "30px",
+                color: "white",
+                fontWeight: "900",
+              }}
+            >
+              Power Supply Unit
+            </h1>
             <Button>
               <Link href="/powerSupplyUnit">Select</Link>
             </Button>
           </Card>
         </Col>
 
-        <Col span={4}>
-          <Card title="Storage Device">
+        <Col span={8}>
+          <Card
+            style={{
+              textAlign: "center",
+              backgroundColor: "black",
+            }}
+          >
+            <h1
+              style={{
+                textAlign: "center",
+                margin: "10px",
+                marginBottom: "30px",
+                font: "cursive",
+                color: "white",
+                fontWeight: "900",
+              }}
+            >
+              Storage Device
+            </h1>
             <Button>
               <Link href="/storageDevice">Select</Link>
             </Button>
           </Card>
         </Col>
 
-        <Col span={4}>
-          <Card title="Monitor">
+        <Col span={8}>
+          <Card
+            style={{
+              textAlign: "center",
+              backgroundColor: "black",
+            }}
+          >
+            <h1
+              style={{
+                textAlign: "center",
+                margin: "10px",
+                marginBottom: "30px",
+                font: "cursive",
+                color: "white",
+                fontWeight: "900",
+              }}
+            >
+              Monitor
+            </h1>
             <Button>
               <Link href="/monitor">Select</Link>
             </Button>
@@ -83,6 +190,13 @@ const PcBuilderPage = ({
       <Cart></Cart>
       <Button
         type="primary"
+        style={{
+          marginTop: "40px",
+          backgroundColor: "black",
+          font: "cursive",
+          color: "white",
+          fontWeight: "900",
+        }}
         disabled={!isPlaceOrderEnabled}
         onClick={() => console.log("Place order clicked")}
       >

@@ -7,8 +7,20 @@ export const useCartContext = () => useContext(CartContext);
 export const CartProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
   const [selectedCategories, setSelectedCategories] = useState([]);
+
   const addToCart = (component) => {
-    setCart((prevCart) => [...prevCart, component]);
+    const existingItem = cart.find((item) => item.id === component.id);
+
+    if (existingItem) {
+      const updatedCart = cart.map((item) =>
+        item.id === component.id
+          ? { ...item, quantity: item.quantity + 1 }
+          : item
+      );
+      setCart(updatedCart);
+    } else {
+      setCart((prevCart) => [...prevCart, { ...component, quantity: 1 }]);
+    }
 
     setSelectedCategories((prevCategories) => {
       if (!prevCategories.includes(component.category)) {
