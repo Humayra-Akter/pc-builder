@@ -147,14 +147,21 @@ const Cart = () => {
           </Col>
         ))}
       </Row>
-      <div className="mt-6">
+      {/* <div>
         <Typography.Text strong>Total Price: ${overallTotal}</Typography.Text>
-      </div>
-      <div>
-        <h2>Category Totals:</h2>
+      </div> */}
+      <div
+        style={{
+          paddingLeft: "10px",
+          fontFamily: "cursive",
+          marginTop: "50px",
+          color: "#000",
+          fontWeight: "900",
+        }}
+      >
         {Object.entries(categoryTotals).map(([category, total]) => (
           <p key={category}>
-            {category}: ${total}
+            <h2>Category Totals : ${total}</h2>
           </p>
         ))}
       </div>

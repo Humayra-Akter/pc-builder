@@ -7,36 +7,70 @@ import Cart from "@/components/UI/Cart";
 
 const { Meta } = Card;
 
-const PcBuilderPage = ({
-  allProcessors,
-  allMonitors,
-  allMotherboards,
-  allRams,
-  allPowerSupplyUnits,
-  allStorageDevices,
-}) => {
+const PcBuilderPage = () => {
   const { addToCart, selectedCategories } = useCartContext();
   const [isPlaceOrderEnabled, setIsPlaceOrderEnabled] = useState(false);
 
-  // Check if at least one component is selected for each category
-  const checkCategoriesSelection = () => {
-    setIsPlaceOrderEnabled(
-      selectedCategories.includes("CPU / Processor") &&
-        selectedCategories.includes("Motherboard") &&
-        selectedCategories.includes("RAM") &&
-        selectedCategories.includes("Power Supply Unit") &&
-        selectedCategories.includes("Storage Device") &&
-        selectedCategories.includes("Monitor")
-    );
-  };
+  // const checkCategoriesSelection = () => {
+  //   setIsPlaceOrderEnabled(
+  //     selectedCategories.includes("CPU / Processor") &&
+  //       selectedCategories.includes("Motherboard") &&
+  //       selectedCategories.includes("RAM") &&
+  //       selectedCategories.includes("Power Supply Unit") &&
+  //       selectedCategories.includes("Storage Device") &&
+  //       selectedCategories.includes("Monitor")
+  //   );
+  // };
 
   useEffect(() => {
-    checkCategoriesSelection();
+    // at least one component is selected
+    setIsPlaceOrderEnabled(
+      selectedCategories.length === 6 &&
+        selectedCategories.every((category) =>
+          selectedCategories.includes(category)
+        )
+    );
   }, [selectedCategories]);
 
   return (
     <div className="pc-builder-page">
       <Row gutter={16}>
+        {/* Map over categories */}
+        {[
+          "processor",
+          "motherboard",
+          "ram",
+          "powerSupplyUnit",
+          "storageDevice",
+          "monitor",
+        ].map((category) => (
+          <Col key={category} span={8}>
+            <Card
+              style={{
+                textAlign: "center",
+                backgroundColor: "black",
+              }}
+            >
+              <h1
+                style={{
+                  textAlign: "center",
+                  margin: "10px",
+                  marginBottom: "30px",
+                  font: "cursive",
+                  color: "white",
+                  fontWeight: "900",
+                }}
+              >
+                {category}
+              </h1>
+              <Button>
+                <Link href={`/${category.replace(/\s/g, "")}`}>Select</Link>
+              </Button>
+            </Card>
+          </Col>
+        ))}
+      </Row>
+      {/* <Row gutter={16}>
         <Col span={8}>
           <Card
             style={{
@@ -186,7 +220,7 @@ const PcBuilderPage = ({
             </Button>
           </Card>
         </Col>
-      </Row>
+      </Row> */}
       <Cart></Cart>
       <Button
         type="primary"
@@ -197,10 +231,10 @@ const PcBuilderPage = ({
           color: "white",
           fontWeight: "900",
         }}
-        disabled={!isPlaceOrderEnabled}
+        // disabled={!isPlaceOrderEnabled}
         onClick={() => console.log("Place order clicked")}
       >
-        Place Order
+        <Link href="/orderConfirmation">Place Order</Link>
       </Button>
     </div>
   );
@@ -212,31 +246,31 @@ PcBuilderPage.getLayout = function getLayout(page) {
   return <DashboardLayout>{page}</DashboardLayout>;
 };
 
-export const getServerSideProps = async () => {
-  const processorRes = await fetch("http://localhost:5000/processors");
-  const monitorRes = await fetch("http://localhost:5000/monitors");
-  const motherboardRes = await fetch("http://localhost:5000/motherboards");
-  const ramRes = await fetch("http://localhost:5000/rams");
-  const powerSupplyUnitsRes = await fetch(
-    "http://localhost:5000/powerSupplyUnits"
-  );
-  const storageDevicesRes = await fetch("http://localhost:5000/storageDevices");
+// export const getServerSideProps = async () => {
+//   const processorRes = await fetch("http://localhost:5000/processors");
+//   const monitorRes = await fetch("http://localhost:5000/monitors");
+//   const motherboardRes = await fetch("http://localhost:5000/motherboards");
+//   const ramRes = await fetch("http://localhost:5000/rams");
+//   const powerSupplyUnitsRes = await fetch(
+//     "http://localhost:5000/powerSupplyUnits"
+//   );
+//   const storageDevicesRes = await fetch("http://localhost:5000/storageDevices");
 
-  const processorData = await processorRes.json();
-  const monitorData = await monitorRes.json();
-  const motherboardData = await motherboardRes.json();
-  const ramData = await ramRes.json();
-  const powerSupplyUnitsData = await powerSupplyUnitsRes.json();
-  const storageDevicesData = await storageDevicesRes.json();
+//   const processorData = await processorRes.json();
+//   const monitorData = await monitorRes.json();
+//   const motherboardData = await motherboardRes.json();
+//   const ramData = await ramRes.json();
+//   const powerSupplyUnitsData = await powerSupplyUnitsRes.json();
+//   const storageDevicesData = await storageDevicesRes.json();
 
-  return {
-    props: {
-      allProcessors: processorData,
-      allMonitors: monitorData,
-      allMotherboards: motherboardData,
-      allRams: ramData,
-      allPowerSupplyUnits: powerSupplyUnitsData,
-      allStorageDevices: storageDevicesData,
-    },
-  };
-};
+//   return {
+//     props: {
+//       allProcessors: processorData,
+//       allMonitors: monitorData,
+//       allMotherboards: motherboardData,
+//       allRams: ramData,
+//       allPowerSupplyUnits: powerSupplyUnitsData,
+//       allStorageDevices: storageDevicesData,
+//     },
+//   };
+// };

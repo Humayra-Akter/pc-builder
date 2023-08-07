@@ -40,53 +40,6 @@ export const CartProvider = ({ children }) => {
       return prevCategories.filter((category) => category !== categoryToRemove);
     });
   };
-  // const addToCart = (component) => {
-  //   const existingItemIndex = cart.findIndex(
-  //     (item) => item.id === component.id
-  //   );
-
-  //   if (existingItemIndex !== -1) {
-  //     // If the component is already in the cart, update its quantity
-  //     const updatedCart = [...cart];
-  //     updatedCart[existingItemIndex].quantity += 1;
-  //     setCart(updatedCart);
-  //   } else {
-  //     // If the component is not in the cart, add it with a quantity of 1
-  //     setCart((prevCart) => [...prevCart, { ...component, quantity: 1 }]);
-  //   }
-
-  //   setSelectedCategories((prevCategories) => {
-  //     if (!prevCategories.includes(component.category)) {
-  //       return [...prevCategories, component.category];
-  //     }
-  //     return prevCategories;
-  //   });
-  // };
-
-  // const removeFromCart = (componentId) => {
-  //   setCart((prevCart) => {
-  //     const updatedCart = prevCart.map((item) => {
-  //       if (item.id === componentId) {
-  //         // Decrement the quantity when removing the component
-  //         item.quantity -= 1;
-
-  //         // Remove the component from the cart completely if the quantity becomes zero
-  //         if (item.quantity === 0) {
-  //           setSelectedCategories((prevCategories) => {
-  //             const categoryToRemove = item.category;
-  //             return prevCategories.filter(
-  //               (category) => category !== categoryToRemove
-  //             );
-  //           });
-
-  //           return null;
-  //         }
-  //       }
-  //       return item;
-  //     });
-  //     return updatedCart.filter((item) => item !== null);
-  //   });
-  // };
 
   const incrementQuantity = (componentId) => {
     setCart((prevCart) => {
