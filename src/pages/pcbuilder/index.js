@@ -4,6 +4,8 @@ import DashboardLayout from "../../../components/Layouts/DashboardLayout";
 import Link from "next/link";
 import { useCartContext } from "../../components/UI/CartContext";
 import Cart from "@/components/UI/Cart";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const { Meta } = Card;
 
@@ -24,13 +26,16 @@ const PcBuilderPage = () => {
 
   useEffect(() => {
     // at least one component is selected
-    setIsPlaceOrderEnabled(
-      selectedCategories.length === 6 &&
-        selectedCategories.every((category) =>
-          selectedCategories.includes(category)
-        )
-    );
+    setIsPlaceOrderEnabled(selectedCategories.length === 6);
   }, [selectedCategories]);
+
+  const notify = () => {
+    if (selectedCategories.length == 6) {
+      toast.success("Proceed to your order!");
+    } else if (selectedCategories.length != 6) {
+      toast.warning("You have not selected all category");
+    }
+  };
 
   return (
     <div className="pc-builder-page">
@@ -231,11 +236,12 @@ const PcBuilderPage = () => {
           color: "white",
           fontWeight: "900",
         }}
-        // disabled={!isPlaceOrderEnabled}
-        onClick={() => console.log("Place order clicked")}
+        disabled={selectedCategories.length != 1}
+        onClick={notify}
       >
         <Link href="/orderConfirmation">Place Order</Link>
       </Button>
+      <ToastContainer />
     </div>
   );
 };

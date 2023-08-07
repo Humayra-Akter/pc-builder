@@ -16,6 +16,9 @@ const RootLayout = ({ children }) => {
       >
         <div className="demo-logo" />
         <Menu theme="dark" mode="horizontal" defaultSelectedKeys={["2"]}>
+          <Link style={{ paddingRight: "50px" }} href="/">
+            🖥
+          </Link>
           <Link style={{ paddingRight: "50px" }} href="/pcbuilder">
             PC Builder
           </Link>
@@ -37,8 +40,8 @@ const RootLayout = ({ children }) => {
           <Link style={{ paddingRight: "50px" }} href="/monitor">
             Monitor
           </Link>
-          <Link style={{ paddingRight: "50px" }} href="/others">
-            Others
+          <Link style={{ paddingRight: "50px" }} href="/about">
+            About
           </Link>
         </Menu>
       </Header>

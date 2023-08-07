@@ -1,6 +1,11 @@
+import OrderConfirmationPage from "@/components/UI/OrderConfirmationPage";
+import RootLayout from "../../../components/Layouts/RootLayout";
 
-const orderConfirmatio = () => {
-  return <div></div>;
+const orderConfirmation = () => {
+  return <OrderConfirmationPage></OrderConfirmationPage>;
 };
 
-export default orderConfirmatio;
+export default orderConfirmation;
+orderConfirmation.getLayout = function getLayout(page) {
+  return <RootLayout>{page}</RootLayout>;
+};
