@@ -10,7 +10,8 @@ import "react-toastify/dist/ReactToastify.css";
 const { Meta } = Card;
 
 const PcBuilderPage = () => {
-  const { addToCart, selectedCategories } = useCartContext();
+  const { selectedCategories } = useCartContext();
+  const [userId, setUserId] = useState("user123");
   const [isPlaceOrderEnabled, setIsPlaceOrderEnabled] = useState(false);
 
   // const checkCategoriesSelection = () => {
@@ -29,6 +30,61 @@ const PcBuilderPage = () => {
     setIsPlaceOrderEnabled(selectedCategories.length === 6);
   }, [selectedCategories]);
 
+  const handleAddToCart = async () => {
+    try {
+      const productIdsToAdd = selectedCategories
+        .map((category) => {
+          const categoryData = yourProductData[category];
+          if (categoryData) {
+            return categoryData.map((product) => product.id);
+          }
+          return [];
+        })
+        .flat();
+
+      if (productIdsToAdd.length === 0) {
+        toast.error("No items selected to add to cart");
+        return;
+      }
+
+      const response = await fetch("http://localhost:3000/api/addToCart", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ productIds: productIdsToAdd }),
+      });
+
+      if (response.ok) {
+        toast.success("Items added successfully!");
+      } else {
+        toast.error("Error adding items to cart");
+      }
+    } catch (error) {
+      console.error("Error adding items to cart:", error);
+    }
+  };
+
+  const handleRemoveFromCart = async (productId) => {
+    try {
+      const response = await fetch("http://localhost:3000/api/removeFromCart", {
+        method: "DELETE",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ productId }),
+      });
+
+      if (response.ok) {
+        toast.success("Item removed successfully!");
+      } else {
+        toast.error("Error removing item from cart");
+      }
+    } catch (error) {
+      console.error("Error removing item from cart:", error);
+    }
+  };
+
   const notify = () => {
     if (selectedCategories.length == 6) {
       toast.success("Proceed to your order!");
@@ -40,7 +96,6 @@ const PcBuilderPage = () => {
   return (
     <div className="pc-builder-page">
       <Row gutter={16}>
-        {/* Map over categories */}
         {[
           "processor",
           "motherboard",
@@ -68,6 +123,7 @@ const PcBuilderPage = () => {
               >
                 {category}
               </h1>
+
               <Button>
                 <Link href={`/${category.replace(/\s/g, "")}`}>Select</Link>
               </Button>
@@ -241,6 +297,30 @@ const PcBuilderPage = () => {
       >
         <Link href="/orderConfirmation">Place Order</Link>
       </Button>
+      {/* <Button
+        style={{
+          marginTop: "40px",
+          backgroundColor: "black",
+          font: "cursive",
+          color: "white",
+          fontWeight: "900",
+        }}
+        onClick={() => handleAddToCart(selectedCategories)}
+      >
+        Add to Cart
+      </Button>
+      <Button
+        style={{
+          marginTop: "40px",
+          backgroundColor: "black",
+          font: "cursive",
+          color: "white",
+          fontWeight: "900",
+        }}
+        onClick={() => handleRemoveFromCart(selectedCategories)}
+      >
+        Remove from Cart
+      </Button> */}
       <ToastContainer />
     </div>
   );

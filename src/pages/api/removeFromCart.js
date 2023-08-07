@@ -1,28 +1,40 @@
-import { ObjectId } from "mongodb";
-import { connectToDatabase } from "../../utils/db";
+const { MongoClient, ServerApiVersion } = require("mongodb");
+const uri =
+  "mongodb+srv://pcbuilder:7ZOCfLY8YsOy04L3@cluster0.guksi.mongodb.net/?retryWrites=true&w=majority";
 
-export default async function handler(req, res) {
+const client = new MongoClient(uri, {
+  serverApi: {
+    version: ServerApiVersion.v1,
+    strict: true,
+    deprecationErrors: true,
+  },
+});
+
+export default async function removeFromCart(req, res) {
   if (req.method !== "DELETE") {
     return res.status(405).json({ message: "Method Not Allowed" });
   }
 
-  const { productId, userId } = req.body;
+  const { productId } = req.body;
 
-  if (!productId || !userId) {
-    return res.status(400).json({ message: "Invalid productId or userId" });
+  if (!productId) {
+    return res
+      .status(400)
+      .json({ message: "Invalid productId in request body" });
   }
 
   const { db } = await connectToDatabase();
 
   try {
     const cartCollection = db.collection("cart");
+
     await cartCollection.deleteOne({
-      userId,
-      productId: new ObjectId(productId),
+      productId,
     });
-    return res.status(200).json({ message: "Item removed from cart" });
+
+    res.status(200).json({ message: "Item removed from cart" });
   } catch (error) {
     console.error("Error removing item from cart:", error);
-    return res.status(500).json({ message: "Internal Server Error" });
+    res.status(500).json({ message: "Internal Server Error" });
   }
 }

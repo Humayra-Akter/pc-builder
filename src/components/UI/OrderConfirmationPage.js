@@ -35,36 +35,83 @@ const OrderConfirmationPage = () => {
   };
 
   return (
-    <div className="flex justify-center items-center h-[calc(100vh-80px)] gap-10">
-      <h1
-        className="mb-2 text-2xl uppercase text-center
-          py-6 text-blue-900 font-bold"
+    <div>
+      <Form
+        style={{
+          fontSize: "15px",
+          margin: "20px",
+          width: "100%",
+          justifyItems: "center",
+          alignItems: "center",
+          backgroundColor: "black",
+          color: "white",
+          padding: "70px 50px",
+          letterSpacing: "2px",
+          textAlign: "center",
+        }}
+        onFinish={handleSubmit}
       >
-        Order Confirmation
-      </h1>
-      <Form onFinish={handleSubmit}>
-        <Form.Item label="Name" required>
-          <Input
-            name="name"
-            value={formData.name}
-            onChange={handleFormChange}
-          />
-        </Form.Item>
-        <Form.Item label="Address" required>
-          <Input.TextArea
-            name="address"
-            value={formData.address}
-            onChange={handleFormChange}
-            rows={4}
-          />
-        </Form.Item>
-        {/* Add other form fields as needed */}
+        <h1
+          style={{
+            fontSize: "30px",
+            fontWeight: "800",
+            backgroundColor: "black",
+            color: "white",
+            textAlign: "center",
+          }}
+        >
+          Order Confirmation
+        </h1>
+        <div
+          style={{
+            fontSize: "15px",
+            margin: "20px",
+            width: "90%",
+            justifyItems: "center",
+            alignItems: "center",
+            backgroundColor: "white",
+            padding: "50px 50px",
+            margin: "50px 50px",
+            letterSpacing: "2px",
+            textAlign: "center",
+            color: "black",
+            fontWeight: "700",
+            borderRadius: "30px",
+          }}
+        >
+          <Form.Item label="Name">
+            <Input
+              name="name"
+              value={formData.name}
+              onChange={handleFormChange}
+              required
+            />
+          </Form.Item>
+          <Form.Item label="Phone">
+            <Input
+              name="phone"
+              value={formData.phone}
+              onChange={handleFormChange}
+              required
+            />
+          </Form.Item>
+          <Form.Item label="Address">
+            <Input.TextArea
+              name="address"
+              value={formData.address}
+              onChange={handleFormChange}
+              required
+              rows={4}
+            />
+          </Form.Item>
+        </div>
         <h2
           style={{
             marginTop: "70px",
+            marginBottom: "20px",
             width: "100%",
             fontFamily: "cursive",
-            color: "#000",
+            color: "white",
             fontWeight: "900",
             textAlign: "center",
           }}
@@ -81,7 +128,7 @@ const OrderConfirmationPage = () => {
                 margin: "10px 0",
                 width: "100%",
                 fontFamily: "cursive",
-                color: "#000",
+                color: "white",
                 fontWeight: "black",
                 justifyContent: "space-between",
               }}
@@ -91,7 +138,7 @@ const OrderConfirmationPage = () => {
               <p
                 style={{
                   fontFamily: "cursive",
-                  color: "blue",
+                  color: "white",
                   fontWeight: "black",
                 }}
               >
@@ -104,25 +151,24 @@ const OrderConfirmationPage = () => {
         <Button
           style={{
             fontSize: "15px",
-            marginTop: "20px",
+            marginTop: "50px",
             width: "50%",
             justifyItems: "center",
             alignItems: "center",
-            marginLeft: "350px",
-            backgroundColor: "black",
-            color: "white",
-            fontWeight: "bold",
+            backgroundColor: "white",
+            color: "black",
             padding: "2px 5px",
             letterSpacing: "3px",
             textAlign: "center",
-            fontWeight: "300",
+            fontWeight: "800",
             borderRadius: "100px",
           }}
           type="primary"
           htmlType="submit"
           onClick={notify}
+          disabled={cart.length == 0}
         >
-          Confirm Order
+          {cart.length == 0 ? "No item Selected" : "Confirm Order"}
         </Button>
       </Form>
       <ToastContainer />
