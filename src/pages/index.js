@@ -2,9 +2,27 @@ import RootLayout from "../../components/Layouts/RootLayout";
 import Banner from "@/components/UI/Banner";
 import HomeProducts from "@/components/UI/HomeProducts";
 
+import { useSession, signIn, signOut } from "next-auth/react";
+
 const HomePage = ({ allProcessors }) => {
+  const { data: session } = useSession();
+
   return (
     <div style={{ color: "black", fontFamily: "cursive" }}>
+      <h1
+        style={{
+          textAlign: "center",
+          margin: "20px",
+          marginBottom: "30px",
+          font: "cursive",
+          color: "black",
+          fontSize: "30px",
+          fontWeight: "800",
+        }}
+      >
+        {" "}
+        Welcome {session?.user?.name}
+      </h1>
       <Banner></Banner>
       <HomeProducts allProcessors={allProcessors}></HomeProducts>
     </div>

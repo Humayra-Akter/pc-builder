@@ -1,10 +1,16 @@
 import { Breadcrumb, Button, Layout, Menu, theme } from "antd";
 import Link from "next/link";
 const { Header, Content, Footer } = Layout;
+
+import { useSession, signOut } from "next-auth/react";
+
 const RootLayout = ({ children }) => {
   const {
     token: { colorBgContainer },
   } = theme.useToken();
+
+  const { data: session } = useSession();
+
   return (
     <Layout className="layout">
       <Header
@@ -43,6 +49,19 @@ const RootLayout = ({ children }) => {
           <Link style={{ paddingRight: "50px" }} href="/about">
             About
           </Link>
+          {session?.user ? (
+            <Link
+              style={{ paddingRight: "50px", color: "red" }}
+              onClick={() => signOut()}
+              href="/"
+            >
+              Logout
+            </Link>
+          ) : (
+            <Link style={{ paddingRight: "50px" }} href="/login">
+              Login
+            </Link>
+          )}
         </Menu>
       </Header>
       <Content

@@ -11,7 +11,6 @@ const { Meta } = Card;
 
 const PcBuilderPage = () => {
   const { selectedCategories } = useCartContext();
-  const [userId, setUserId] = useState("user123");
   const [isPlaceOrderEnabled, setIsPlaceOrderEnabled] = useState(false);
 
   // const checkCategoriesSelection = () => {
@@ -283,44 +282,35 @@ const PcBuilderPage = () => {
         </Col>
       </Row> */}
       <Cart></Cart>
+      <div
+        style={{
+          textAlign: "center",
+          font: "cursive",
+          color: "red",
+        }}
+      >
+        {selectedCategories.length == 0
+          ? "No item Selected"
+          : "Proceed to place order"}
+      </div>
+
       <Button
         type="primary"
         style={{
+          marginLeft: "300px",
           marginTop: "40px",
           backgroundColor: "black",
+          width: "50%",
           font: "cursive",
           color: "white",
           fontWeight: "900",
         }}
-        disabled={selectedCategories.length != 1}
+        // disabled={selectedCategories.length >= 2}
         onClick={notify}
       >
         <Link href="/orderConfirmation">Place Order</Link>
       </Button>
-      {/* <Button
-        style={{
-          marginTop: "40px",
-          backgroundColor: "black",
-          font: "cursive",
-          color: "white",
-          fontWeight: "900",
-        }}
-        onClick={() => handleAddToCart(selectedCategories)}
-      >
-        Add to Cart
-      </Button>
-      <Button
-        style={{
-          marginTop: "40px",
-          backgroundColor: "black",
-          font: "cursive",
-          color: "white",
-          fontWeight: "900",
-        }}
-        onClick={() => handleRemoveFromCart(selectedCategories)}
-      >
-        Remove from Cart
-      </Button> */}
+
       <ToastContainer />
     </div>
   );

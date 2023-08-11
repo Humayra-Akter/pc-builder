@@ -45,7 +45,7 @@ const OrderConfirmationPage = () => {
           alignItems: "center",
           backgroundColor: "black",
           color: "white",
-          padding: "70px 50px",
+          padding: "70px ",
           letterSpacing: "2px",
           textAlign: "center",
         }}
