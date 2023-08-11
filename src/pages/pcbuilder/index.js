@@ -124,7 +124,7 @@ const PcBuilderPage = () => {
               </h1>
 
               <Button>
-                <Link href={`/${category.replace(/\s/g, "")}`}>Select</Link>
+                <Link href={`/${category.replace(/\s/g, "")}`}>Choose</Link>
               </Button>
             </Card>
           </Col>
