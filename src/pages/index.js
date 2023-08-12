@@ -8,7 +8,7 @@ const HomePage = ({ allProcessors }) => {
   const { data: session } = useSession();
 
   return (
-    <div style={{ color: "black", fontFamily: "cursive" }}>
+    <div className="body" style={{ color: "black", fontFamily: "cursive" }}>
       <h1
         style={{
           textAlign: "center",
@@ -20,7 +20,6 @@ const HomePage = ({ allProcessors }) => {
           fontWeight: "800",
         }}
       >
-        {" "}
         Welcome {session?.user?.name}
       </h1>
       <Banner></Banner>

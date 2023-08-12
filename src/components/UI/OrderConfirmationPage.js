@@ -35,11 +35,15 @@ const OrderConfirmationPage = () => {
   };
 
   return (
-    <div>
+    <div
+      style={{
+        backgroundColor: "black",
+      }}
+    >
       <Form
         style={{
           fontSize: "15px",
-          margin: "20px",
+          margin: "30px auto",
           width: "100%",
           justifyItems: "center",
           alignItems: "center",

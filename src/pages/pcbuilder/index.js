@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Button, Card, Col, Row } from "antd";
+import { Button, Card, Col, Row, Tooltip } from "antd";
 import DashboardLayout from "../../../components/Layouts/DashboardLayout";
 import Link from "next/link";
 import { useCartContext } from "../../components/UI/CartContext";
@@ -11,6 +11,7 @@ const { Meta } = Card;
 
 const PcBuilderPage = () => {
   const { selectedCategories } = useCartContext();
+
   const [isPlaceOrderEnabled, setIsPlaceOrderEnabled] = useState(false);
 
   // const checkCategoriesSelection = () => {
@@ -92,6 +93,14 @@ const PcBuilderPage = () => {
     }
   };
 
+  // const handleCategorySelect = (category) => {
+  //   const updatedCategories = selectedCategories.includes(category)
+  //     ? selectedCategories.filter((cat) => cat !== category)
+  //     : [...selectedCategories, category];
+
+  //   setSelectedCategories(updatedCategories);
+  // };
+
   return (
     <div className="pc-builder-page">
       <Row gutter={16}>
@@ -104,29 +113,39 @@ const PcBuilderPage = () => {
           "monitor",
         ].map((category) => (
           <Col key={category} span={8}>
-            <Card
-              style={{
-                textAlign: "center",
-                backgroundColor: "black",
-              }}
+            <Tooltip
+              title={
+                selectedCategories.includes(category)
+                  ? "Selected"
+                  : "Select at least one item"
+              }
+              placement="top"
             >
-              <h1
+              <Card
                 style={{
                   textAlign: "center",
-                  margin: "10px",
-                  marginBottom: "30px",
-                  font: "cursive",
-                  color: "white",
-                  fontWeight: "900",
+                  backgroundColor: "black",
                 }}
               >
-                {category}
-              </h1>
-
-              <Button>
-                <Link href={`/${category.replace(/\s/g, "")}`}>Choose</Link>
-              </Button>
-            </Card>
+                <h1
+                  style={{
+                    textAlign: "center",
+                    margin: "10px",
+                    marginBottom: "30px",
+                    font: "cursive",
+                    color: "white",
+                    fontWeight: "900",
+                  }}
+                >
+                  Category: {category}
+                </h1>
+                <Button>
+                  <Link href={`/${category.replace(/\s/g, "")}`}>
+                    Choose
+                  </Link>
+                </Button>
+              </Card>
+            </Tooltip>
           </Col>
         ))}
       </Row>
