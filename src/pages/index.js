@@ -2,7 +2,7 @@ import RootLayout from "../../components/Layouts/RootLayout";
 import Banner from "@/components/UI/Banner";
 import HomeProducts from "@/components/UI/HomeProducts";
 
-import { useSession, signIn, signOut } from "next-auth/react";
+import { useSession } from "next-auth/react";
 
 const HomePage = ({ allProcessors }) => {
   const { data: session } = useSession();

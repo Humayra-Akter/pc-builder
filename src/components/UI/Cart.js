@@ -7,6 +7,7 @@ import {
   MinusOutlined,
   DeleteOutlined,
 } from "@ant-design/icons";
+import Link from "next/link";
 
 const Cart = () => {
   const {
@@ -48,6 +49,11 @@ const Cart = () => {
   const { Meta } = Card;
   const { overallTotal, categoryTotals } = calculateOverallTotal();
 
+  const sumOfCategoryTotals = Object.values(categoryTotals).reduce(
+    (acc, total) => acc + total,
+    0
+  );
+
   return (
     <div>
       <h1
@@ -59,6 +65,52 @@ const Cart = () => {
       >
         Selected Components
       </h1>
+      {/* <h1
+        style={{
+          textAlign: "left",
+          fontSize: "20px",
+          fontFamily: "cursive",
+          color: "#000",
+        }}
+      >
+        Your selected categories
+      </h1> */}
+      {selectedCategories.length == 0 ? (
+        ""
+      ) : (
+        <div>
+          <h1
+            style={{
+              textAlign: "left",
+              fontSize: "20px",
+              fontFamily: "cursive",
+              color: "#000",
+            }}
+          >
+            Your selected categories
+          </h1>
+          <hr
+            style={{
+              border: "none",
+              borderTop: "3px double #000",
+              margin: " 10px 0",
+              width: "20%",
+            }}
+          />
+        </div>
+      )}
+
+      {selectedCategories.map((category) => (
+        <p
+          style={{
+            textAlign: "left",
+            fontSize: "15px",
+          }}
+          key={category}
+        >
+          {category}
+        </p>
+      ))}
       <Row
         gutter={{
           xs: 8,
@@ -67,7 +119,6 @@ const Cart = () => {
           lg: 32,
         }}
       >
-        {/* <div className="space-y-5"> */}
         {cart.map((component) => (
           <Col key={component.id} className="gutter-row" span={6}>
             <Card
@@ -127,7 +178,7 @@ const Cart = () => {
                 }}
                 className="text-xl"
               >
-                Total Price: ${calculateComponentTotal(component)}
+                {component.category} : ${calculateComponentTotal(component)}
               </p>
               <div className="border-l pl-5 flex flex-col justify-between">
                 <Button
@@ -147,23 +198,33 @@ const Cart = () => {
           </Col>
         ))}
       </Row>
-      {/* <div>
-        <Typography.Text strong>Total Price: ${overallTotal}</Typography.Text>
-      </div> */}
-      <div
-        style={{
-          paddingLeft: "10px",
-          fontFamily: "cursive",
-          marginTop: "50px",
-          color: "#000",
-          fontWeight: "900",
-        }}
-      >
+      <div>
+        {/* 
         {Object.entries(categoryTotals).map(([category, total]) => (
           <p key={category}>
-            <h2>Category Totals : ${total}</h2>
+            <h2
+              style={{
+                paddingLeft: "10px",
+                fontFamily: "cursive",
+                color: "#000",
+                fontSize: "17px",
+              }}
+            >
+              {category} : ${total}
+            </h2>
           </p>
-        ))}
+        ))} */}
+        <h2
+          style={{
+            paddingLeft: "10px",
+            fontFamily: "cursive",
+            marginTop: "50px",
+            color: "#000",
+            fontWeight: "900",
+          }}
+        >
+          Category Totals : ${sumOfCategoryTotals}
+        </h2>
       </div>
     </div>
   );

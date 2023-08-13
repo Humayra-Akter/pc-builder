@@ -3,10 +3,12 @@ import DashboardLayout from "../../../components/Layouts/DashboardLayout";
 import { Button, Form, Input } from "antd";
 import { useCartContext } from "./CartContext";
 import { ToastContainer, toast } from "react-toastify";
+import { useSession } from "next-auth/react";
 import "react-toastify/dist/ReactToastify.css";
 
 const OrderConfirmationPage = () => {
   const { cart } = useCartContext();
+  const { data: session } = useSession();
 
   const [formData, setFormData] = useState({
     name: "",
@@ -30,7 +32,6 @@ const OrderConfirmationPage = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission and order confirmation here
     console.log("Order confirmed:", formData);
   };
 
@@ -86,18 +87,12 @@ const OrderConfirmationPage = () => {
           <Form.Item label="Name">
             <Input
               name="name"
-              value={formData.name}
+              value={session?.user?.name}
               onChange={handleFormChange}
-              required
             />
           </Form.Item>
-          <Form.Item label="Phone">
-            <Input
-              name="phone"
-              value={formData.phone}
-              onChange={handleFormChange}
-              required
-            />
+          <Form.Item label="Email">
+            <Input name="email" value={session?.user?.email} required />
           </Form.Item>
           <Form.Item label="Address">
             <Input.TextArea

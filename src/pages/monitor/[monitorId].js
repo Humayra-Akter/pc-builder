@@ -144,7 +144,7 @@ export const getStaticProps = async (context) => {
   const { params } = context;
   const res = await fetch(`http://localhost:5000/monitors/${params.monitorId}`);
   const data = await res.json();
-  console.log(data);
+  // console.log(data);
   return {
     props: {
       monitors: data,

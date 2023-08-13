@@ -37,7 +37,11 @@ const RamDetails = ({ rams }) => {
         }}
       >
         <Col className="gutter-row" span={12}>
-          <div>
+          <div
+            style={{
+              marginTop: "120px",
+            }}
+          >
             <Image
               src={rams?.image}
               width={600}
@@ -50,7 +54,6 @@ const RamDetails = ({ rams }) => {
         <Col className="gutter-row" span={12}>
           <div>
             <h1>{rams?.name}</h1>
-
             <p
               style={{
                 display: "flex",
@@ -82,18 +85,141 @@ const RamDetails = ({ rams }) => {
                 background: "#fff",
               }}
             ></div>
-
             <p
               style={{
-                fontSize: "23px",
+                fontSize: "17px",
                 fontFamily: "cursive",
                 marginTop: "60px",
+                marginBottom: "60px",
                 textAlign: "justify",
                 color: "white",
               }}
             >
               {rams?.description}
+            </p>{" "}
+            <p
+              style={{
+                display: "flex",
+                margin: "10px 0",
+                width: "100%",
+                fontFamily: "cursive",
+                color: "white",
+                fontWeight: "black",
+                justifyContent: "space-between",
+              }}
+            >
+              Brand : {rams?.key_features.brand}
             </p>
+            <p
+              style={{
+                display: "flex",
+                margin: "10px 0",
+                width: "100%",
+                fontFamily: "cursive",
+                color: "white",
+                fontWeight: "black",
+                justifyContent: "space-between",
+              }}
+            >
+              Model : {rams?.key_features.model}
+            </p>
+            <p
+              style={{
+                display: "flex",
+                margin: "10px 0",
+                width: "100%",
+                fontFamily: "cursive",
+                color: "white",
+                fontWeight: "black",
+                justifyContent: "space-between",
+              }}
+            >
+              Specification : {rams?.key_features.specification}
+            </p>
+            <p
+              style={{
+                display: "flex",
+                margin: "10px 0",
+                width: "100%",
+                fontFamily: "cursive",
+                color: "white",
+                fontWeight: "black",
+                justifyContent: "space-between",
+              }}
+            >
+              Speed : {rams?.key_features.speed}
+            </p>{" "}
+            <p
+              style={{
+                display: "flex",
+                margin: "10px 0",
+                width: "100%",
+                fontFamily: "cursive",
+                color: "white",
+                fontWeight: "black",
+                justifyContent: "space-between",
+              }}
+            >
+              Cas latency : {rams?.key_features.cas_latency}
+            </p>
+            <p
+              style={{
+                display: "flex",
+                margin: "10px 0",
+                width: "100%",
+                fontFamily: "cursive",
+                color: "white",
+                fontWeight: "black",
+                justifyContent: "space-between",
+              }}
+            >
+              Form factor : {rams?.key_features.form_factor}
+            </p>{" "}
+            <p
+              style={{
+                display: "flex",
+                margin: "10px 0",
+                width: "100%",
+                fontFamily: "cursive",
+                color: "white",
+                fontWeight: "black",
+                justifyContent: "space-between",
+              }}
+            >
+              Compatibility : {rams?.key_features.compatibility}
+            </p>
+            <p
+              style={{
+                display: "flex",
+                margin: "10px 0",
+                width: "100%",
+                fontFamily: "cursive",
+                color: "white",
+                fontWeight: "black",
+                justifyContent: "space-between",
+              }}
+            >
+              Capacity : {rams?.key_features.capacity}
+            </p>
+            <div
+              className="line"
+              style={{
+                // height: "1px",
+                margin: "20px 0",
+                width: "50% auto",
+                borderTop: "1px dotted #fff",
+              }}
+            ></div>
+            <div>
+              <h3>Reviews:</h3>
+              {rams?.reviews.map((review, index) => (
+                <div key={index}>
+                  <h3>User: {review.user}</h3>
+                  <p>Rating: {review.rating}</p>
+                  <p>Comment: {review.comment}</p>
+                </div>
+              ))}
+            </div>
             <p
               style={{
                 fontSize: "16px",
@@ -146,7 +272,7 @@ export const getStaticProps = async (context) => {
   const { params } = context;
   const res = await fetch(`http://localhost:5000/rams/${params.ramId}`);
   const data = await res.json();
-  console.log(data);
+  // console.log(data);
   return {
     props: {
       rams: data,

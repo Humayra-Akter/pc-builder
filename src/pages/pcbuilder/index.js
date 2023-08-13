@@ -12,24 +12,6 @@ const { Meta } = Card;
 const PcBuilderPage = () => {
   const { selectedCategories } = useCartContext();
 
-  const [isPlaceOrderEnabled, setIsPlaceOrderEnabled] = useState(false);
-
-  // const checkCategoriesSelection = () => {
-  //   setIsPlaceOrderEnabled(
-  //     selectedCategories.includes("CPU / Processor") &&
-  //       selectedCategories.includes("Motherboard") &&
-  //       selectedCategories.includes("RAM") &&
-  //       selectedCategories.includes("Power Supply Unit") &&
-  //       selectedCategories.includes("Storage Device") &&
-  //       selectedCategories.includes("Monitor")
-  //   );
-  // };
-
-  useEffect(() => {
-    // at least one component is selected
-    setIsPlaceOrderEnabled(selectedCategories.length === 6);
-  }, [selectedCategories]);
-
   const handleAddToCart = async () => {
     try {
       const productIdsToAdd = selectedCategories
@@ -86,20 +68,12 @@ const PcBuilderPage = () => {
   };
 
   const notify = () => {
-    if (selectedCategories.length == 6) {
+    if (selectedCategories.length >= 6) {
       toast.success("Proceed to your order!");
     } else if (selectedCategories.length != 6) {
       toast.warning("You have not selected all category");
     }
   };
-
-  // const handleCategorySelect = (category) => {
-  //   const updatedCategories = selectedCategories.includes(category)
-  //     ? selectedCategories.filter((cat) => cat !== category)
-  //     : [...selectedCategories, category];
-
-  //   setSelectedCategories(updatedCategories);
-  // };
 
   return (
     <div className="pc-builder-page">
@@ -113,39 +87,63 @@ const PcBuilderPage = () => {
           "monitor",
         ].map((category) => (
           <Col key={category} span={8}>
-            <Tooltip
-              title={
-                selectedCategories.includes(category)
-                  ? "Selected"
-                  : "Select at least one item"
-              }
-              placement="top"
+            <Card
+              style={{
+                textAlign: "center",
+                backgroundColor: "black",
+              }}
             >
-              <Card
+              <hr
+                style={{
+                  border: "none",
+                  borderTop: "3px double #fff",
+                  margin: " 20px auto",
+                  width: "80%",
+                }}
+              />
+
+              <h1
                 style={{
                   textAlign: "center",
-                  backgroundColor: "black",
+                  margin: "10px",
+                  marginBottom: "20px",
+                  font: "cursive",
+                  color: "white",
+                  fontWeight: "900",
                 }}
               >
-                <h1
+                {category}
+              </h1>
+              <Tooltip
+                title={
+                  selectedCategories.includes(category)
+                    ? "Selected"
+                    : "Select at least one item"
+                }
+                placement="top"
+              >
+                <Button
+                  type="primary"
                   style={{
-                    textAlign: "center",
-                    margin: "10px",
-                    marginBottom: "30px",
+                    backgroundColor: "white",
+                    width: "50%",
                     font: "cursive",
-                    color: "white",
+                    color: "black",
                     fontWeight: "900",
                   }}
                 >
-                  Category: {category}
-                </h1>
-                <Button>
-                  <Link href={`/${category.replace(/\s/g, "")}`}>
-                    Choose
-                  </Link>
+                  <Link href={`/${category.replace(/\s/g, "")}`}>choose</Link>
                 </Button>
-              </Card>
-            </Tooltip>
+              </Tooltip>
+              <hr
+                style={{
+                  border: "none",
+                  borderTop: "3px double #fff",
+                  margin: " 20px auto",
+                  width: "80%",
+                }}
+              />
+            </Card>
           </Col>
         ))}
       </Row>
@@ -308,11 +306,19 @@ const PcBuilderPage = () => {
           color: "red",
         }}
       >
-        {selectedCategories.length == 0
-          ? "No item Selected"
-          : "Proceed to place order"}
+        {selectedCategories.length == 0 ? "No item Selected" : " "}
       </div>
-
+      <div
+        style={{
+          textAlign: "center",
+          font: "cursive",
+          color: "gray",
+        }}
+      >
+        {selectedCategories.length == 6
+          ? "proceed to order"
+          : "select at least 6 items"}
+      </div>
       <Button
         type="primary"
         style={{
@@ -324,7 +330,7 @@ const PcBuilderPage = () => {
           color: "white",
           fontWeight: "900",
         }}
-        // disabled={selectedCategories.length >= 2}
+        disabled={selectedCategories.length != 6}
         onClick={notify}
       >
         <Link href="/orderConfirmation">Place Order</Link>

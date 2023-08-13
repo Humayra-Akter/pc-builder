@@ -40,7 +40,11 @@ const StorageDeviceDetails = ({ storageDevices }) => {
         }}
       >
         <Col className="gutter-row" span={12}>
-          <div>
+          <div
+            style={{
+              marginTop: "120px",
+            }}
+          >
             <Image
               src={storageDevices?.image}
               width={500}
@@ -53,7 +57,6 @@ const StorageDeviceDetails = ({ storageDevices }) => {
         <Col className="gutter-row" span={12}>
           <div>
             <h1>{storageDevices?.name}</h1>
-
             <p
               style={{
                 display: "flex",
@@ -86,15 +89,139 @@ const StorageDeviceDetails = ({ storageDevices }) => {
             ></div>
             <p
               style={{
-                fontSize: "23px",
+                fontSize: "17px",
                 fontFamily: "cursive",
                 marginTop: "60px",
+                marginBottom: "60px",
                 textAlign: "justify",
                 color: "white",
               }}
             >
               {storageDevices?.description}
+            </p>{" "}
+            <p
+              style={{
+                display: "flex",
+                margin: "10px 0",
+                width: "100%",
+                fontFamily: "cursive",
+                color: "white",
+                fontWeight: "black",
+                justifyContent: "space-between",
+              }}
+            >
+              Brand : {storageDevices?.key_features.brand}
             </p>
+            <p
+              style={{
+                display: "flex",
+                margin: "10px 0",
+                width: "100%",
+                fontFamily: "cursive",
+                color: "white",
+                fontWeight: "black",
+                justifyContent: "space-between",
+              }}
+            >
+              Model : {storageDevices?.key_features.model}
+            </p>
+            <p
+              style={{
+                display: "flex",
+                margin: "10px 0",
+                width: "100%",
+                fontFamily: "cursive",
+                color: "white",
+                fontWeight: "black",
+                justifyContent: "space-between",
+              }}
+            >
+              Specification : {storageDevices?.key_features.specification}
+            </p>
+            <p
+              style={{
+                display: "flex",
+                margin: "10px 0",
+                width: "100%",
+                fontFamily: "cursive",
+                color: "white",
+                fontWeight: "black",
+                justifyContent: "space-between",
+              }}
+            >
+              Interface : {storageDevices?.key_features.interface}
+            </p>{" "}
+            <p
+              style={{
+                display: "flex",
+                margin: "10px 0",
+                width: "100%",
+                fontFamily: "cursive",
+                color: "white",
+                fontWeight: "black",
+                justifyContent: "space-between",
+              }}
+            >
+              Storage type : {storageDevices?.key_features.storage_type}
+            </p>
+            <p
+              style={{
+                display: "flex",
+                margin: "10px 0",
+                width: "100%",
+                fontFamily: "cursive",
+                color: "white",
+                fontWeight: "black",
+                justifyContent: "space-between",
+              }}
+            >
+              Form factor : {storageDevices?.key_features.form_factor}
+            </p>{" "}
+            <p
+              style={{
+                display: "flex",
+                margin: "10px 0",
+                width: "100%",
+                fontFamily: "cursive",
+                color: "white",
+                fontWeight: "black",
+                justifyContent: "space-between",
+              }}
+            >
+              Cache : {storageDevices?.key_features.cache}
+            </p>
+            <p
+              style={{
+                display: "flex",
+                margin: "10px 0",
+                width: "100%",
+                fontFamily: "cursive",
+                color: "white",
+                fontWeight: "black",
+                justifyContent: "space-between",
+              }}
+            >
+              Capacity : {storageDevices?.key_features.capacity}
+            </p>
+            <div
+              className="line"
+              style={{
+                // height: "1px",
+                margin: "20px 0",
+                width: "50% auto",
+                borderTop: "1px dotted #fff",
+              }}
+            ></div>
+            <div>
+              <h3>Reviews:</h3>
+              {storageDevices?.reviews.map((review, index) => (
+                <div key={index}>
+                  <h3>User: {review.user}</h3>
+                  <p>Rating: {review.rating}</p>
+                  <p>Comment: {review.comment}</p>
+                </div>
+              ))}
+            </div>
             <p
               style={{
                 fontSize: "16px",
@@ -149,7 +276,7 @@ export const getStaticProps = async (context) => {
     `http://localhost:5000/storageDevices/${params.storageDeviceId}`
   );
   const data = await res.json();
-  console.log(data);
+  // console.log(data);
   return {
     props: {
       storageDevices: data,

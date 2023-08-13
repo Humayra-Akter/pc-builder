@@ -6,9 +6,7 @@ import {
 } from "@ant-design/icons";
 import { Col, Row } from "antd";
 import Image from "next/image";
-import { useState } from "react";
 import { useRouter } from "next/router";
-import { useDispatch } from "react-redux";
 
 const ProcessorDetail = ({ processors }) => {
   const router = useRouter();
@@ -42,7 +40,11 @@ const ProcessorDetail = ({ processors }) => {
         }}
       >
         <Col className="gutter-row" span={12}>
-          <div>
+          <div
+            style={{
+              marginTop: "120px",
+            }}
+          >
             <Image
               src={processors?.image}
               width={600}
@@ -55,7 +57,6 @@ const ProcessorDetail = ({ processors }) => {
         <Col className="gutter-row" span={12}>
           <div>
             <h1>{processors?.name}</h1>
-
             <p
               style={{
                 display: "flex",
@@ -87,19 +88,102 @@ const ProcessorDetail = ({ processors }) => {
                 background: "#fff",
               }}
             ></div>
-
             <p
               style={{
-                fontSize: "23px",
+                fontSize: "17px",
                 fontFamily: "cursive",
                 marginTop: "60px",
+                marginBottom: "60px",
                 textAlign: "justify",
                 color: "white",
               }}
             >
               {processors?.description}
             </p>
-
+            <p
+              style={{
+                display: "flex",
+                margin: "10px 0",
+                width: "100%",
+                fontFamily: "cursive",
+                color: "white",
+                fontWeight: "black",
+                justifyContent: "space-between",
+              }}
+            >
+              Brand : {processors?.keyFeatures.Brand}
+            </p>
+            <p
+              style={{
+                display: "flex",
+                margin: "10px 0",
+                width: "100%",
+                fontFamily: "cursive",
+                color: "white",
+                fontWeight: "black",
+                justifyContent: "space-between",
+              }}
+            >
+              Model : {processors?.keyFeatures.Model}
+            </p>
+            <p
+              style={{
+                display: "flex",
+                margin: "10px 0",
+                width: "100%",
+                fontFamily: "cursive",
+                color: "white",
+                fontWeight: "black",
+                justifyContent: "space-between",
+              }}
+            >
+              Cores : {processors?.keyFeatures.Cores}
+            </p>
+            <p
+              style={{
+                display: "flex",
+                margin: "10px 0",
+                width: "100%",
+                fontFamily: "cursive",
+                color: "white",
+                fontWeight: "black",
+                justifyContent: "space-between",
+              }}
+            >
+              Socket : {processors?.keyFeatures.Socket}
+            </p>
+            <p
+              style={{
+                display: "flex",
+                margin: "10px 0",
+                width: "100%",
+                fontFamily: "cursive",
+                color: "white",
+                fontWeight: "black",
+                justifyContent: "space-between",
+              }}
+            >
+              TDP : {processors?.keyFeatures.TDP}
+            </p>
+            <div
+              className="line"
+              style={{
+                // height: "1px",
+                margin: "20px 0",
+                width: "50% auto",
+                borderTop: "1px dotted #fff",
+              }}
+            ></div>
+            <div>
+              <h3>Reviews:</h3>
+              {processors?.reviews.map((review, index) => (
+                <div key={index}>
+                  <h3>User: {review.user}</h3>
+                  <p>Rating: {review.rating}</p>
+                  <p>Comment: {review.comment}</p>
+                </div>
+              ))}
+            </div>
             <p
               style={{
                 fontSize: "16px",
@@ -154,7 +238,7 @@ export const getStaticProps = async (context) => {
     `http://localhost:5000/processors/${params.processorId}`
   );
   const data = await res.json();
-  console.log(data);
+  // console.log(data);
   return {
     props: {
       processors: data,

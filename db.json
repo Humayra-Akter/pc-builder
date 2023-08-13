@@ -94,70 +94,266 @@
       "image": "/image/processor/1.jpg",
       "name": "Professional CPU/Processor 1",
       "description": "Experience top-notch performance and efficiency with this high-end CPU/Processor. Ideal for power users and enthusiasts seeking unparalleled computing capabilities.",
-      "category": "Electronics",
+      "category": "processors",
       "price": 199.99,
       "status": "In Stock",
-      "rating": 4.5
+      "rating": 4.5,
+      "keyFeatures": {
+        "Brand": "Professional",
+        "Model": "CPU/Processor 1",
+        "Cores": "8",
+        "Clock Speed": "3.5 GHz",
+        "Socket": "AM4",
+        "TDP": "95W",
+        "AverageRating": 4.5
+      },
+      "individualRating": {
+        "5": 100,
+        "4": 40,
+        "3": 5,
+        "2": 3,
+        "1": 1
+      },
+      "reviews": [
+        {
+          "user": "User456",
+          "rating": 5,
+          "comment": "Excellent CPU for both gaming and heavy tasks."
+        },
+        {
+          "user": "TechGuru",
+          "rating": 4,
+          "comment": "Great value for the performance it offers."
+        }
+      ]
     },
     {
       "id": "2",
       "image": "/image/processor/2.jpg",
       "name": "Elite CPU/Processor 2",
       "description": "Unleash the full potential of your system with this cutting-edge CPU/Processor. Designed to deliver exceptional speed and responsiveness for demanding tasks.",
-      "category": "Electronics",
+      "category": "processors",
       "price": 179.99,
       "status": "In Stock",
-      "rating": 4.2
+      "rating": 4.2,
+      "keyFeatures": {
+        "Brand": "Elite",
+        "Model": "CPU/Processor 2",
+        "Cores": "6",
+        "Clock Speed": "4.0 GHz",
+        "Socket": "LGA1200",
+        "TDP": "65W",
+        "AverageRating": 4.2
+      },
+      "individualRating": {
+        "5": 90,
+        "4": 30,
+        "3": 8,
+        "2": 5,
+        "1": 2
+      },
+      "reviews": [
+        {
+          "user": "GamingEnthusiast",
+          "rating": 5,
+          "comment": "Impressive performance in games and multitasking."
+        },
+        {
+          "user": "TechLover",
+          "rating": 4,
+          "comment": "Runs cool and efficient."
+        }
+      ]
     },
     {
       "id": "3",
       "image": "/image/processor/3.jpg",
       "name": "Premium CPU/Processor 3",
       "description": "Upgrade your computing experience with this premium CPU/Processor. Out of stock, but worth the wait for its unrivaled performance and efficiency.",
-      "category": "Electronics",
+      "category": "processors",
       "price": 229.99,
       "status": "Out of Stock",
-      "rating": 4.8
+      "rating": 4.8,
+      "keyFeatures": {
+        "Brand": "Premium",
+        "Model": "CPU/Processor 3",
+        "Cores": "12",
+        "Clock Speed": "3.8 GHz",
+        "Socket": "AM4",
+        "TDP": "105W",
+        "AverageRating": 4.8
+      },
+      "individualRating": {
+        "5": 120,
+        "4": 50,
+        "3": 12,
+        "2": 8,
+        "1": 3
+      },
+      "reviews": [
+        {
+          "user": "ContentCreator123",
+          "rating": 5,
+          "comment": "Absolutely worth the wait. Lightning-fast rendering!"
+        },
+        {
+          "user": "TechAdmirer",
+          "rating": 4,
+          "comment": "Powerful processor, but wish it was in stock."
+        }
+      ]
     },
     {
       "id": "4",
       "image": "/image/processor/4.jpg",
       "name": "Advanced CPU/Processor 4",
       "description": "Take your productivity and gaming to the next level with this advanced CPU/Processor. Loaded with features to handle intensive workloads with ease.",
-      "category": "Electronics",
+      "category": "processors",
       "price": 249.99,
       "status": "In Stock",
-      "rating": 4.7
+      "rating": 4.7,
+      "keyFeatures": {
+        "Brand": "Advanced",
+        "Model": "CPU/Processor 4",
+        "Cores": "10",
+        "Clock Speed": "3.6 GHz",
+        "Socket": "LGA1151",
+        "TDP": "95W",
+        "AverageRating": 4.7
+      },
+      "individualRating": {
+        "5": 85,
+        "4": 40,
+        "3": 10,
+        "2": 3,
+        "1": 1
+      },
+      "reviews": [
+        {
+          "user": "ProductivityPro",
+          "rating": 5,
+          "comment": "Handles my video editing tasks effortlessly."
+        },
+        {
+          "user": "GamingFan",
+          "rating": 4,
+          "comment": "Great gaming performance, but could be more energy-efficient."
+        }
+      ]
     },
     {
       "id": "5",
       "image": "/image/processor/5.jpg",
       "name": "Efficient CPU/Processor 5",
       "description": "Achieve a perfect balance of performance and power efficiency with this efficient CPU/Processor. Ideal for long computing sessions without compromising speed.",
-      "category": "Electronics",
+      "category": "processors",
       "price": 189.99,
       "status": "In Stock",
-      "rating": 4.3
+      "rating": 4.3,
+      "keyFeatures": {
+        "Brand": "Efficient",
+        "Model": "CPU/Processor 5",
+        "Cores": "6",
+        "Clock Speed": "3.2 GHz",
+        "Socket": "AM4",
+        "TDP": "65W",
+        "AverageRating": 4.3
+      },
+      "individualRating": {
+        "5": 60,
+        "4": 25,
+        "3": 5,
+        "2": 2,
+        "1": 1
+      },
+      "reviews": [
+        {
+          "user": "LongSessions",
+          "rating": 5,
+          "comment": "Runs cool even during extended usage."
+        },
+        {
+          "user": "CasualGamer",
+          "rating": 4,
+          "comment": "Decent performance for its power efficiency."
+        }
+      ]
     },
     {
       "id": "6",
       "image": "/image/processor/6.jpg",
       "name": "Pro Performance CPU/Processor 6",
       "description": "Get ready to dominate your tasks and workflows with this Pro Performance CPU/Processor. Experience seamless multitasking like never before.",
-      "category": "Electronics",
+      "category": "processors",
       "price": 209.99,
       "status": "In Stock",
-      "rating": 4.6
+      "rating": 4.6,
+      "keyFeatures": {
+        "Brand": "Pro Performance",
+        "Model": "CPU/Processor 6",
+        "Cores": "8",
+        "Clock Speed": "3.4 GHz",
+        "Socket": "LGA1200",
+        "TDP": "85W",
+        "AverageRating": 4.6
+      },
+      "individualRating": {
+        "5": 70,
+        "4": 30,
+        "3": 8,
+        "2": 2,
+        "1": 1
+      },
+      "reviews": [
+        {
+          "user": "MultitaskingMaster",
+          "rating": 5,
+          "comment": "Handles heavy workloads without breaking a sweat."
+        },
+        {
+          "user": "ProductivityQueen",
+          "rating": 4,
+          "comment": "Solid performance for my demanding projects."
+        }
+      ]
     },
     {
       "id": "7",
       "image": "/image/processor/7.jpg",
       "name": "High-End CPU/Processor 7",
       "description": "Experience the pinnacle of computing power with this high-end CPU/Processor. Out of stock, but worth the wait for unmatched performance.",
-      "category": "Electronics",
+      "category": "processors",
       "price": 219.99,
       "status": "Out of Stock",
-      "rating": 4.4
+      "rating": 4.4,
+      "keyFeatures": {
+        "Brand": "High-End",
+        "Model": "CPU/Processor 7",
+        "Cores": "12",
+        "Clock Speed": "3.8 GHz",
+        "Socket": "AM4",
+        "TDP": "105W",
+        "AverageRating": 4.4
+      },
+      "individualRating": {
+        "5": 45,
+        "4": 25,
+        "3": 7,
+        "2": 2,
+        "1": 1
+      },
+      "reviews": [
+        {
+          "user": "PowerUser",
+          "rating": 5,
+          "comment": "Absolutely worth the wait, unmatched power."
+        },
+        {
+          "user": "EnthusiastGamer",
+          "rating": 4,
+          "comment": "Can't wait to get my hands on this beast."
+        }
+      ]
     }
   ],
   "motherboards": [
@@ -166,70 +362,260 @@
       "image": "/image/motherboard/1.jpg",
       "name": "ProBoard XZ1",
       "description": "Unlock the true potential of your system with the ProBoard XZ1. This high-performance motherboard offers cutting-edge features and robust build quality, making it the perfect choice for power users and gamers alike.",
-      "category": "Electronics",
+      "category": "motherboards",
       "price": 129.99,
       "status": "In Stock",
-      "rating": 4.6
+      "rating": 4.6,
+      "key_features": {
+        "brand": "ProBoard",
+        "model": "XZ1",
+        "socket": "LGA1200",
+        "chipset": "Intel Z590",
+        "form_factor": "ATX",
+        "memory_slots": "4 DIMM slots",
+        "max_memory": "128GB",
+        "pci_slots": "3 x PCIe x16, 3 x PCIe x1",
+        "storage": "6 x SATA, 2 x M.2",
+        "usb_ports": "USB 3.2 Gen 2, USB-C",
+        "networking": "Gigabit LAN, Wi-Fi 6",
+        "audio": "Realtek ALC1220",
+        "rgb": "RGB lighting zones"
+      },
+      "reviews": [
+        {
+          "user": "User11",
+          "rating": 5,
+          "comment": "Great motherboard with all the features I needed."
+        },
+        {
+          "user": "User12",
+          "rating": 4,
+          "comment": "Solid performance, but a bit pricey."
+        }
+      ]
     },
     {
       "id": "12",
       "image": "/image/motherboard/2.jpg",
       "name": "EliteBoard ZR2",
       "description": "Experience unparalleled stability and seamless performance with the EliteBoard ZR2 motherboard. Designed for enthusiasts, it offers advanced overclocking capabilities and premium components for top-tier performance.",
-      "category": "Electronics",
+      "category": "motherboards",
       "price": 149.99,
       "status": "In Stock",
-      "rating": 4.7
+      "rating": 4.7,
+      "key_features": {
+        "brand": "EliteBoard",
+        "model": "ZR2",
+        "socket": "AM4",
+        "chipset": "AMD B550",
+        "form_factor": "ATX",
+        "memory_slots": "4 DIMM slots",
+        "max_memory": "128GB",
+        "pci_slots": "2 x PCIe x16, 2 x PCIe x1",
+        "storage": "4 x SATA, 2 x M.2",
+        "usb_ports": "USB 3.2 Gen 2, USB-C",
+        "networking": "Gigabit LAN, Wi-Fi 6",
+        "audio": "Realtek ALC1220",
+        "rgb": "RGB lighting zones"
+      },
+      "reviews": [
+        {
+          "user": "User13",
+          "rating": 4,
+          "comment": "Reliable motherboard with great overclocking features."
+        },
+        {
+          "user": "User14",
+          "rating": 5,
+          "comment": "Worth the price for its performance and features."
+        }
+      ]
     },
     {
       "id": "13",
       "image": "/image/motherboard/3.jpg",
-      "name": "UltimaBoard XG3",
-      "description": "The UltimaBoard XG3 is the ultimate choice for enthusiasts and content creators. With lightning-fast data transfer speeds and support for high-end components, this motherboard is engineered to deliver unparalleled performance.",
-      "category": "Electronics",
-      "price": 169.99,
-      "status": "Out of Stock",
-      "rating": 4.2
+      "name": "ProBoard XZ1",
+      "description": "Unlock the true potential of your system with the ProBoard XZ1. This high-performance motherboard offers cutting-edge features and robust build quality, making it the perfect choice for power users and gamers alike.",
+      "category": "motherboards",
+      "price": 129.99,
+      "status": "In Stock",
+      "rating": 4.6,
+      "key_features": {
+        "brand": "ProBoard",
+        "model": "XZ1",
+        "socket": "LGA1200",
+        "chipset": "Intel Z590",
+        "form_factor": "ATX",
+        "memory_slots": "4 DIMM slots",
+        "max_memory": "128GB",
+        "pci_slots": "3 x PCIe x16, 3 x PCIe x1",
+        "storage": "6 x SATA, 2 x M.2",
+        "usb_ports": "USB 3.2 Gen 2, USB-C",
+        "networking": "Gigabit LAN, Wi-Fi 6",
+        "audio": "Realtek ALC1220",
+        "rgb": "RGB lighting zones"
+      },
+      "reviews": [
+        {
+          "user": "User11",
+          "rating": 5,
+          "comment": "Great motherboard with all the features I needed."
+        },
+        {
+          "user": "User12",
+          "rating": 4,
+          "comment": "Solid performance, but a bit pricey."
+        }
+      ]
     },
     {
       "id": "14",
       "image": "/image/motherboard/4.jpg",
-      "name": "PrimeBoard ZT4",
-      "description": "Get ready to enter a new realm of gaming and productivity with the PrimeBoard ZT4 motherboard. Its robust design and innovative features ensure a smooth and lag-free computing experience.",
-      "category": "Electronics",
-      "price": 199.99,
+      "name": "EliteBoard ZR2",
+      "description": "Experience unparalleled stability and seamless performance with the EliteBoard ZR2 motherboard. Designed for enthusiasts, it offers advanced overclocking capabilities and premium components for top-tier performance.",
+      "category": "motherboards",
+      "price": 149.99,
       "status": "In Stock",
-      "rating": 4.5
+      "rating": 4.7,
+      "key_features": {
+        "brand": "EliteBoard",
+        "model": "ZR2",
+        "socket": "AM4",
+        "chipset": "AMD B550",
+        "form_factor": "ATX",
+        "memory_slots": "4 DIMM slots",
+        "max_memory": "128GB",
+        "pci_slots": "2 x PCIe x16, 2 x PCIe x1",
+        "storage": "4 x SATA, 2 x M.2",
+        "usb_ports": "USB 3.2 Gen 2, USB-C",
+        "networking": "Gigabit LAN, Wi-Fi 6",
+        "audio": "Realtek ALC1220",
+        "rgb": "RGB lighting zones"
+      },
+      "reviews": [
+        {
+          "user": "User13",
+          "rating": 4,
+          "comment": "Reliable motherboard with great overclocking features."
+        },
+        {
+          "user": "User14",
+          "rating": 5,
+          "comment": "Worth the price for its performance and features."
+        }
+      ]
     },
     {
       "id": "15",
       "image": "/image/motherboard/5.jpg",
-      "name": "SpeedBoard RZ5",
-      "description": "Achieve lightning-fast performance and responsiveness with the SpeedBoard RZ5 motherboard. Built for speed enthusiasts, it offers excellent connectivity options and future-proof technology.",
-      "category": "Electronics",
-      "price": 139.99,
-      "status": "In Stock",
-      "rating": 4.3
+      "name": "UltimaBoard XG3",
+      "description": "The UltimaBoard XG3 is the ultimate choice for enthusiasts and content creators. With lightning-fast data transfer speeds and support for high-end components, this motherboard is engineered to deliver unparalleled performance.",
+      "category": "motherboards",
+      "price": 169.99,
+      "status": "Out of Stock",
+      "rating": 4.2,
+      "key_features": {
+        "brand": "UltimaBoard",
+        "model": "XG3",
+        "socket": "LGA1151",
+        "chipset": "Intel Z690",
+        "form_factor": "ATX",
+        "memory_slots": "4 DIMM slots",
+        "max_memory": "128GB",
+        "pci_slots": "3 x PCIe x16, 3 x PCIe x1",
+        "storage": "6 x SATA, 2 x M.2",
+        "usb_ports": "USB 3.2 Gen 2, USB-C",
+        "networking": "2.5Gb LAN, Wi-Fi 6E",
+        "audio": "Realtek ALC1220",
+        "rgb": "RGB lighting zones"
+      },
+      "reviews": [
+        {
+          "user": "User15",
+          "rating": 4,
+          "comment": "Impressive features, but disappointed it's out of stock."
+        },
+        {
+          "user": "User16",
+          "rating": 3,
+          "comment": "High-performance motherboard, but needs better availability."
+        }
+      ]
     },
     {
       "id": "16",
       "image": "/image/motherboard/6.jpg",
-      "name": "ProMastery GX6",
-      "description": "Experience mastery over your system with the ProMastery GX6 motherboard. Equipped with advanced features and durable components, it ensures reliability and optimal performance under any workload.",
-      "category": "Electronics",
-      "price": 179.99,
-      "status": "Out of Stock",
-      "rating": 4.8
+      "name": "EliteBoard ZR2",
+      "description": "Experience unparalleled stability and seamless performance with the EliteBoard ZR2 motherboard. Designed for enthusiasts, it offers advanced overclocking capabilities and premium components for top-tier performance.",
+      "category": "motherboards",
+      "price": 149.99,
+      "status": "In Stock",
+      "rating": 4.7,
+      "keyFeatures": {
+        "Brand": "EliteBoard",
+        "Model": "ZR2",
+        "Specification": "Premium Overclocking Capabilities",
+        "Ports": "USB, DisplayPort, Ethernet",
+        "Type": "ATX",
+        "Voltage": "12V",
+        "AverageRating": 4.7
+      },
+      "individualRating": {
+        "5": 150,
+        "4": 60,
+        "3": 12,
+        "2": 8,
+        "1": 4
+      },
+      "reviews": [
+        {
+          "user": "Gamer456",
+          "rating": 5,
+          "comment": "Overclocks like a dream!"
+        },
+        {
+          "user": "EnthusiastTech",
+          "rating": 4,
+          "comment": "Stable performance and great for gaming."
+        }
+      ]
     },
     {
       "id": "17",
       "image": "/image/motherboard/7.jpg",
       "name": "UltraBoard TQ7",
       "description": "The UltraBoard TQ7 motherboard sets a new standard for excellence. Featuring a sleek design and innovative technologies, it caters to enthusiasts seeking the best of both aesthetics and performance.",
-      "category": "Electronics",
+      "category": "motherboards",
       "price": 159.99,
       "status": "In Stock",
-      "rating": 4.4
+      "rating": 4.4,
+      "key_features": {
+        "brand": "UltraBoard",
+        "model": "TQ7",
+        "socket": "LGA1151",
+        "chipset": "Intel Z470",
+        "form_factor": "ATX",
+        "memory_slots": "4 DIMM slots",
+        "max_memory": "128GB",
+        "pci_slots": "3 x PCIe x16, 2 x PCIe x1",
+        "storage": "6 x SATA, 2 x M.2",
+        "usb_ports": "USB 3.2 Gen 2, USB-C",
+        "networking": "Gigabit LAN, Wi-Fi 6",
+        "audio": "Realtek ALC1200",
+        "rgb": "RGB lighting zones"
+      },
+      "reviews": [
+        {
+          "user": "User31",
+          "rating": 5,
+          "comment": "Sleek design and excellent performance."
+        },
+        {
+          "user": "User32",
+          "rating": 4,
+          "comment": "Great value for its features."
+        }
+      ]
     }
   ],
   "rams": [
@@ -238,70 +624,224 @@
       "image": "/image/ram/1.jpg",
       "name": "Performance RAM Plus",
       "description": "Experience exceptional multitasking and faster data access with the Performance RAM Plus. This high-speed memory module is designed for power users and content creators seeking peak performance.",
-      "category": "Electronics",
+      "category": "rams",
       "price": 79.99,
       "status": "In Stock",
-      "rating": 4.5
+      "rating": 4.5,
+      "key_features": {
+        "brand": "Performance RAM",
+        "model": "Plus",
+        "specification": "Exceptional multitasking and faster data access",
+        "capacity": "16GB (2x8GB)",
+        "speed": "DDR4-3200MHz",
+        "cas_latency": "CL16",
+        "form_factor": "DIMM",
+        "compatibility": "Intel and AMD platforms"
+      },
+      "reviews": [
+        {
+          "user": "User21",
+          "rating": 5,
+          "comment": "Super fast RAM, noticeable improvement in multitasking."
+        },
+        {
+          "user": "User22",
+          "rating": 4,
+          "comment": "Good value, works well with my system."
+        }
+      ]
     },
     {
       "id": "22",
       "image": "/image/ram/2.jpg",
       "name": "UltraBoost RAM Pro",
       "description": "Take your system's performance to new heights with the UltraBoost RAM Pro. Featuring advanced overclocking capabilities, this memory module ensures unparalleled responsiveness.",
-      "category": "Electronics",
+      "category": "rams",
       "price": 89.99,
       "status": "Out of Stock",
-      "rating": 4.2
+      "rating": 4.2,
+      "key_features": {
+        "brand": "UltraBoost RAM",
+        "model": "Pro",
+        "specification": "Advanced overclocking capabilities for peak performance",
+        "capacity": "32GB (2x16GB)",
+        "speed": "DDR4-3600MHz",
+        "cas_latency": "CL18",
+        "form_factor": "DIMM",
+        "compatibility": "Intel and AMD platforms"
+      },
+      "reviews": [
+        {
+          "user": "User23",
+          "rating": 4,
+          "comment": "Fast RAM, wish it was in stock."
+        },
+        {
+          "user": "User24",
+          "rating": 3,
+          "comment": "Overclocks well, but availability is an issue."
+        }
+      ]
     },
     {
       "id": "23",
       "image": "/image/ram/3.jpg",
       "name": "MegaSpeed RAM Xtreme",
       "description": "The MegaSpeed RAM Xtreme sets a new standard for speed and reliability. Ideal for gamers and professionals, it delivers blazing-fast performance for demanding tasks.",
-      "category": "Electronics",
+      "category": "rams",
       "price": 99.99,
       "status": "In Stock",
-      "rating": 4.7
+      "rating": 4.7,
+      "key_features": {
+        "brand": "MegaSpeed RAM",
+        "model": "Xtreme",
+        "specification": "Blazing-fast performance for demanding tasks",
+        "capacity": "32GB (2x16GB)",
+        "speed": "DDR4-4000MHz",
+        "cas_latency": "CL16",
+        "form_factor": "DIMM",
+        "compatibility": "Intel and AMD platforms"
+      },
+      "reviews": [
+        {
+          "user": "User25",
+          "rating": 5,
+          "comment": "Incredible RAM, improved my gaming performance."
+        },
+        {
+          "user": "User26",
+          "rating": 4,
+          "comment": "High-speed RAM, but a bit on the pricey side."
+        }
+      ]
     },
     {
       "id": "24",
       "image": "/image/ram/4.jpg",
       "name": "EcoEfficiency RAM Lite",
       "description": "Maximize efficiency and productivity with the EcoEfficiency RAM Lite. This energy-efficient memory module ensures optimal performance while keeping power consumption in check.",
-      "category": "Electronics",
+      "category": "rams",
       "price": 69.99,
       "status": "In Stock",
-      "rating": 4.4
+      "rating": 4.4,
+      "key_features": {
+        "brand": "EcoEfficiency RAM",
+        "model": "Lite",
+        "specification": "Maximize efficiency and productivity, energy-efficient",
+        "capacity": "16GB (2x8GB)",
+        "speed": "DDR4-2666MHz",
+        "cas_latency": "CL16",
+        "form_factor": "DIMM",
+        "compatibility": "Intel and AMD platforms"
+      },
+      "reviews": [
+        {
+          "user": "User27",
+          "rating": 4,
+          "comment": "Efficient RAM, great for office work."
+        },
+        {
+          "user": "User28",
+          "rating": 3,
+          "comment": "Affordable, but not the fastest option."
+        }
+      ]
     },
     {
       "id": "25",
       "image": "/image/ram/5.jpg",
       "name": "PowerX RAM Dominator",
       "description": "Unleash the full potential of your system with the PowerX RAM Dominator. Designed for enthusiasts and high-performance computing, it guarantees seamless multitasking and data handling.",
-      "category": "Electronics",
+      "category": "rams",
       "price": 109.99,
       "status": "Out of Stock",
-      "rating": 4.8
+      "rating": 4.8,
+      "key_features": {
+        "brand": "PowerX RAM",
+        "model": "Dominator",
+        "specification": "Unleash system's full potential, high-performance computing",
+        "capacity": "64GB (2x32GB)",
+        "speed": "DDR4-4400MHz",
+        "cas_latency": "CL19",
+        "form_factor": "DIMM",
+        "compatibility": "Intel and AMD platforms"
+      },
+      "reviews": [
+        {
+          "user": "User29",
+          "rating": 5,
+          "comment": "Beastly RAM, worth the investment."
+        },
+        {
+          "user": "User30",
+          "rating": 4,
+          "comment": "Top-notch performance, but currently out of stock."
+        }
+      ]
     },
     {
       "id": "26",
       "image": "/image/ram/6.jpg",
       "name": "TurboBoost RAM Pro",
       "description": "Accelerate your system's performance with the TurboBoost RAM Pro. Built for speed and responsiveness, it ensures smooth operation during intense workloads and gaming sessions.",
-      "category": "Electronics",
+      "category": "rams",
       "price": 84.99,
       "status": "In Stock",
-      "rating": 4.6
+      "rating": 4.6,
+      "key_features": {
+        "brand": "TurboBoost RAM",
+        "model": "Pro",
+        "specification": "Built for speed and responsiveness",
+        "capacity": "32GB (2x16GB)",
+        "speed": "DDR4-3600MHz",
+        "cas_latency": "CL17",
+        "form_factor": "DIMM",
+        "compatibility": "Intel and AMD platforms"
+      },
+      "reviews": [
+        {
+          "user": "User31",
+          "rating": 5,
+          "comment": "Fast and reliable RAM, perfect for gaming."
+        },
+        {
+          "user": "User32",
+          "rating": 4,
+          "comment": "Great balance of speed and price."
+        }
+      ]
     },
     {
       "id": "27",
       "image": "/image/ram/7.jpg",
       "name": "XtremePerformance RAM Plus",
       "description": "Experience the ultimate in performance with the XtremePerformance RAM Plus. Perfect for high-end systems, it offers unrivaled speed and reliability for heavy multitasking.",
-      "category": "Electronics",
+      "category": "rams",
       "price": 94.99,
       "status": "In Stock",
-      "rating": 4.3
+      "rating": 4.3,
+      "key_features": {
+        "brand": "XtremePerformance RAM",
+        "model": "Plus",
+        "specification": "Ultimate performance for high-end systems",
+        "capacity": "32GB (2x16GB)",
+        "speed": "DDR4-4000MHz",
+        "cas_latency": "CL18",
+        "form_factor": "DIMM",
+        "compatibility": "Intel and AMD platforms"
+      },
+      "reviews": [
+        {
+          "user": "User33",
+          "rating": 4,
+          "comment": "Impressive RAM, but slightly pricey."
+        },
+        {
+          "user": "User34",
+          "rating": 3,
+          "comment": "High performance, but not much room for overclocking."
+        }
+      ]
     }
   ],
   "powerSupplyUnits": [
@@ -310,70 +850,224 @@
       "image": "/image/powerSupply/1.jpg",
       "name": "ProPower XG1",
       "description": "Experience reliable and efficient power delivery with the ProPower XG1. This high-quality power supply unit ensures stable performance and optimal power distribution for your system.",
-      "category": "Electronics",
+      "category": "powerSupplyUnits",
       "price": 89.99,
       "status": "In Stock",
-      "rating": 4.5
+      "rating": 4.5,
+      "key_features": {
+        "brand": "ProPower",
+        "model": "XG1",
+        "specification": "Reliable and efficient power delivery",
+        "wattage": "650W",
+        "efficiency": "80 PLUS Gold",
+        "modular": "Semi-modular",
+        "fan": "120mm",
+        "certification": "80 PLUS Gold, ATX12V v2.4"
+      },
+      "reviews": [
+        {
+          "user": "User41",
+          "rating": 5,
+          "comment": "Stable power delivery, great for my gaming rig."
+        },
+        {
+          "user": "User42",
+          "rating": 4,
+          "comment": "Efficient PSU, wish it had full modular cables."
+        }
+      ]
     },
     {
       "id": "32",
       "image": "/image/powerSupply/2.jpg",
       "name": "ElitePower XR2",
       "description": "Unleash the full potential of your system with the ElitePower XR2. Designed for enthusiasts and high-performance rigs, it delivers consistent power even under heavy loads.",
-      "category": "Electronics",
+      "category": "powerSupplyUnits",
       "price": 99.99,
       "status": "Out of Stock",
-      "rating": 4.4
+      "rating": 4.4,
+      "key_features": {
+        "brand": "ElitePower",
+        "model": "XR2",
+        "specification": "Consistent power delivery for high-performance systems",
+        "wattage": "750W",
+        "efficiency": "80 PLUS Platinum",
+        "modular": "Fully modular",
+        "fan": "140mm",
+        "certification": "80 PLUS Platinum, ATX12V v2.4"
+      },
+      "reviews": [
+        {
+          "user": "User43",
+          "rating": 4,
+          "comment": "Powerful PSU, disappointed it's out of stock."
+        },
+        {
+          "user": "User44",
+          "rating": 5,
+          "comment": "Great quality and stability, worth the price."
+        }
+      ]
     },
     {
       "id": "33",
       "image": "/image/powerSupply/3.jpg",
       "name": "MegaPower XL3",
       "description": "The MegaPower XL3 sets a new standard for power supply units. With its advanced features and robust design, it ensures stable performance and optimal efficiency.",
-      "category": "Electronics",
+      "category": "powerSupplyUnits",
       "price": 79.99,
       "status": "In Stock",
-      "rating": 4.2
+      "rating": 4.2,
+      "key_features": {
+        "brand": "MegaPower",
+        "model": "XL3",
+        "specification": "Advanced features, robust design",
+        "wattage": "550W",
+        "efficiency": "80 PLUS Bronze",
+        "modular": "Non-modular",
+        "fan": "120mm",
+        "certification": "80 PLUS Bronze, ATX12V v2.4"
+      },
+      "reviews": [
+        {
+          "user": "User45",
+          "rating": 4,
+          "comment": "Good PSU for the price, handles my system well."
+        },
+        {
+          "user": "User46",
+          "rating": 3,
+          "comment": "Decent performance, wish it was modular."
+        }
+      ]
     },
     {
       "id": "34",
       "image": "/image/powerSupply/4.jpg",
       "name": "TurboPower XT4",
       "description": "Get ready for turbocharged performance with the TurboPower XT4. This power supply unit is designed to handle demanding tasks and provide consistent power output.",
-      "category": "Electronics",
+      "category": "powerSupplyUnits",
       "price": 109.99,
       "status": "In Stock",
-      "rating": 4.6
+      "rating": 4.6,
+      "key_features": {
+        "brand": "TurboPower",
+        "model": "XT4",
+        "specification": "Designed for demanding tasks and consistent power",
+        "wattage": "850W",
+        "efficiency": "80 PLUS Gold",
+        "modular": "Semi-modular",
+        "fan": "135mm",
+        "certification": "80 PLUS Gold, ATX12V v2.4"
+      },
+      "reviews": [
+        {
+          "user": "User47",
+          "rating": 5,
+          "comment": "Reliable and powerful PSU, worth the investment."
+        },
+        {
+          "user": "User48",
+          "rating": 4,
+          "comment": "Handles overclocking well, wish it had more connectivity options."
+        }
+      ]
     },
     {
       "id": "35",
       "image": "/image/powerSupply/5.jpg",
       "name": "UltraPower ZE5",
       "description": "The UltraPower ZE5 is engineered for stability and efficiency. With its silent operation and high-quality components, it ensures a smooth and reliable computing experience.",
-      "category": "Electronics",
+      "category": "powerSupplyUnits",
       "price": 94.99,
       "status": "Out of Stock",
-      "rating": 4.3
+      "rating": 4.3,
+      "key_features": {
+        "brand": "UltraPower",
+        "model": "ZE5",
+        "specification": "Stability and efficiency, silent operation",
+        "wattage": "650W",
+        "efficiency": "80 PLUS Gold",
+        "modular": "Semi-modular",
+        "fan": "120mm",
+        "certification": "80 PLUS Gold, ATX12V v2.4"
+      },
+      "reviews": [
+        {
+          "user": "User49",
+          "rating": 4,
+          "comment": "Silent operation and efficient, but disappointed it's out of stock."
+        },
+        {
+          "user": "User50",
+          "rating": 5,
+          "comment": "Great PSU, keeps my system cool and stable."
+        }
+      ]
     },
     {
       "id": "36",
       "image": "/image/powerSupply/6.jpg",
       "name": "SpeedPower RP6",
       "description": "Maximize your system's potential with the SpeedPower RP6. This power supply unit offers high efficiency and optimal power output to meet the demands of modern systems.",
-      "category": "Electronics",
+      "category": "powerSupplyUnits",
       "price": 84.99,
       "status": "In Stock",
-      "rating": 4.7
+      "rating": 4.7,
+      "key_features": {
+        "brand": "SpeedPower",
+        "model": "RP6",
+        "specification": "Maximize system potential, high efficiency",
+        "wattage": "600W",
+        "efficiency": "80 PLUS Bronze",
+        "modular": "Non-modular",
+        "fan": "120mm",
+        "certification": "80 PLUS Bronze, ATX12V v2.4"
+      },
+      "reviews": [
+        {
+          "user": "User51",
+          "rating": 5,
+          "comment": "Efficient PSU, no complaints so far."
+        },
+        {
+          "user": "User52",
+          "rating": 4,
+          "comment": "Good value for the price, handles my system needs well."
+        }
+      ]
     },
     {
       "id": "37",
       "image": "/image/powerSupply/7.jpg",
       "name": "XtremePower TD7",
       "description": "The XtremePower TD7 delivers extreme performance and reliability. Ideal for high-end builds and gaming rigs, it guarantees stable power for even the most power-hungry components.",
-      "category": "Electronics",
+      "category": "powerSupplyUnits",
       "price": 89.99,
       "status": "In Stock",
-      "rating": 4.8
+      "rating": 4.8,
+      "key_features": {
+        "brand": "XtremePower",
+        "model": "TD7",
+        "specification": "Extreme performance and reliability",
+        "wattage": "800W",
+        "efficiency": "80 PLUS Gold",
+        "modular": "Semi-modular",
+        "fan": "140mm",
+        "certification": "80 PLUS Gold, ATX12V v2.4"
+      },
+      "reviews": [
+        {
+          "user": "User53",
+          "rating": 5,
+          "comment": "Powerful PSU, perfect for my high-end gaming rig."
+        },
+        {
+          "user": "User54",
+          "rating": 4,
+          "comment": "Handles heavy loads well, wish it had more RGB lighting options."
+        }
+      ]
     }
   ],
   "storageDevices": [
@@ -382,70 +1076,224 @@
       "image": "/image/storage/1.jpg",
       "name": "SwiftStorage XE1",
       "description": "The SwiftStorage XE1 offers high-speed data access and ample storage capacity for your digital needs. Designed for professionals and enthusiasts, it ensures seamless data management and reliability.",
-      "category": "Electronics",
+      "category": "storageDevices",
       "price": 69.99,
       "status": "Out of Stock",
-      "rating": 4.2
+      "rating": 4.2,
+      "key_features": {
+        "brand": "SwiftStorage",
+        "model": "XE1",
+        "specification": "High-speed data access, ample storage capacity",
+        "interface": "SATA III",
+        "storage_type": "SSD",
+        "capacity": "500GB",
+        "cache": "128MB",
+        "form_factor": "2.5-inch"
+      },
+      "reviews": [
+        {
+          "user": "User21",
+          "rating": 3,
+          "comment": "Fast storage but disappointed it's currently out of stock."
+        },
+        {
+          "user": "User22",
+          "rating": 4,
+          "comment": "Good SSD, would have been better if available."
+        }
+      ]
     },
     {
       "id": "42",
       "image": "/image/storage/2.jpg",
       "name": "TurboStorage XR2",
       "description": "Experience lightning-fast storage performance with the TurboStorage XR2. Equipped with cutting-edge technology, it delivers faster file transfers and reduced load times for applications.",
-      "category": "Electronics",
+      "category": "storageDevices",
       "price": 79.99,
       "status": "In Stock",
-      "rating": 4.6
+      "rating": 4.6,
+      "key_features": {
+        "brand": "TurboStorage",
+        "model": "XR2",
+        "specification": "Lightning-fast storage performance",
+        "interface": "NVMe PCIe Gen3",
+        "storage_type": "SSD",
+        "capacity": "1TB",
+        "cache": "256MB",
+        "form_factor": "M.2 2280"
+      },
+      "reviews": [
+        {
+          "user": "User23",
+          "rating": 5,
+          "comment": "Blazing fast storage, reduced my application load times significantly."
+        },
+        {
+          "user": "User24",
+          "rating": 4,
+          "comment": "Solid performance, great value for the price."
+        }
+      ]
     },
     {
       "id": "43",
       "image": "/image/storage/3.jpg",
       "name": "UltraStorage ZT3",
       "description": "The UltraStorage ZT3 offers both speed and reliability for your data storage needs. Perfect for multimedia professionals and gamers, it ensures smooth performance and data security.",
-      "category": "Electronics",
+      "category": "storageDevices",
       "price": 89.99,
       "status": "In Stock",
-      "rating": 4.3
+      "rating": 4.3,
+      "key_features": {
+        "brand": "UltraStorage",
+        "model": "ZT3",
+        "specification": "Speed and reliability, ideal for multimedia",
+        "interface": "SATA III",
+        "storage_type": "HDD",
+        "capacity": "2TB",
+        "cache": "64MB",
+        "form_factor": "3.5-inch"
+      },
+      "reviews": [
+        {
+          "user": "User25",
+          "rating": 4,
+          "comment": "Reliable storage for my multimedia projects."
+        },
+        {
+          "user": "User26",
+          "rating": 3,
+          "comment": "Decent speed, but would prefer an SSD for faster performance."
+        }
+      ]
     },
     {
       "id": "44",
       "image": "/image/storage/4.jpg",
       "name": "PowerStorage XT4",
       "description": "The PowerStorage XT4 is your ultimate companion for large-scale data storage. With its high capacity and fast data access, it is perfect for data-intensive tasks and projects.",
-      "category": "Electronics",
+      "category": "storageDevices",
       "price": 99.99,
       "status": "Out of Stock",
-      "rating": 4.8
+      "rating": 4.8,
+      "key_features": {
+        "brand": "PowerStorage",
+        "model": "XT4",
+        "specification": "High capacity, fast data access",
+        "interface": "USB 3.0",
+        "storage_type": "External HDD",
+        "capacity": "4TB",
+        "cache": "N/A",
+        "form_factor": "3.5-inch"
+      },
+      "reviews": [
+        {
+          "user": "User27",
+          "rating": 5,
+          "comment": "Massive storage, perfect for my video editing projects."
+        },
+        {
+          "user": "User28",
+          "rating": 4,
+          "comment": "Great for backups, disappointed it's currently out of stock."
+        }
+      ]
     },
     {
       "id": "45",
       "image": "/image/storage/5.jpg",
       "name": "EliteStorage RD5",
       "description": "Elevate your storage experience with the EliteStorage RD5. Featuring advanced caching technology, it provides smooth and responsive performance, ideal for creative professionals.",
-      "category": "Electronics",
+      "category": "storageDevices",
       "price": 84.99,
       "status": "In Stock",
-      "rating": 4.7
+      "rating": 4.7,
+      "key_features": {
+        "brand": "EliteStorage",
+        "model": "RD5",
+        "specification": "Advanced caching technology for smooth performance",
+        "interface": "SATA III",
+        "storage_type": "SSD",
+        "capacity": "1TB",
+        "cache": "512MB",
+        "form_factor": "2.5-inch"
+      },
+      "reviews": [
+        {
+          "user": "User29",
+          "rating": 5,
+          "comment": "Impressive performance, especially for creative work."
+        },
+        {
+          "user": "User30",
+          "rating": 4,
+          "comment": "Smooth storage, but could have a bit more capacity."
+        }
+      ]
     },
     {
       "id": "46",
       "image": "/image/storage/6.jpg",
       "name": "ProStorage LT6",
       "description": "The ProStorage LT6 combines speed and reliability to meet the demands of modern computing. Ideal for multitasking and content creation, it ensures smooth data access and management.",
-      "category": "Electronics",
+      "category": "storageDevices",
       "price": 94.99,
       "status": "In Stock",
-      "rating": 4.4
+      "rating": 4.4,
+      "key_features": {
+        "brand": "ProStorage",
+        "model": "LT6",
+        "specification": "Speed and reliability for modern computing",
+        "interface": "NVMe PCIe Gen4",
+        "storage_type": "SSD",
+        "capacity": "2TB",
+        "cache": "1GB",
+        "form_factor": "M.2 2280"
+      },
+      "reviews": [
+        {
+          "user": "User31",
+          "rating": 4,
+          "comment": "Great SSD, noticeably improved my system's performance."
+        },
+        {
+          "user": "User32",
+          "rating": 3,
+          "comment": "Decent speed, but could be more affordable."
+        }
+      ]
     },
     {
       "id": "47",
       "image": "/image/storage/7.jpg",
       "name": "SpeedStorage GR7",
       "description": "Accelerate your productivity with the SpeedStorage GR7. This high-performance storage device delivers exceptional read and write speeds, perfect for power users and enthusiasts.",
-      "category": "Electronics",
+      "category": "storageDevices",
       "price": 79.99,
       "status": "In Stock",
-      "rating": 4.5
+      "rating": 4.5,
+      "key_features": {
+        "brand": "SpeedStorage",
+        "model": "GR7",
+        "specification": "High-performance storage, exceptional read and write speeds",
+        "interface": "NVMe PCIe Gen4",
+        "storage_type": "SSD",
+        "capacity": "1TB",
+        "cache": "512MB",
+        "form_factor": "M.2 2280"
+      },
+      "reviews": [
+        {
+          "user": "User33",
+          "rating": 5,
+          "comment": "Blazing fast storage, excellent for my data-intensive tasks."
+        },
+        {
+          "user": "User34",
+          "rating": 4,
+          "comment": "Great SSD, slightly pricey but worth it for the speed."
+        }
+      ]
     }
   ],
   "monitors": [
@@ -454,70 +1302,224 @@
       "image": "/image/monitor/1.jpg",
       "name": "ProView XG1",
       "description": "Immerse yourself in stunning visuals with the ProView XG1 monitor. Designed for professionals and gamers, it offers a high-quality display and seamless performance for a superior viewing experience.",
-      "category": "Electronics",
-      "price": 249.99,
+      "category": "monitors",
       "status": "In Stock",
-      "rating": 4.7
+      "price": 249.99,
+      "key_features": {
+        "brand": "ProView",
+        "model": "XG1",
+        "specification": "High-quality display, seamless performance",
+        "port": "Multiple connectivity options",
+        "type": "LED",
+        "resolution": "1920x1080",
+        "voltage": "120-240V"
+      },
+      "rating": 4.7,
+      "average_rating": 4.7,
+      "reviews": [
+        {
+          "user": "User1",
+          "rating": 5,
+          "comment": "Amazing monitor, great value for the price!"
+        },
+        {
+          "user": "User2",
+          "rating": 4,
+          "comment": "Good display quality, but could have more ports."
+        }
+      ]
     },
     {
       "id": "52",
       "image": "/image/monitor/2.jpg",
       "name": "EliteScreen XR2",
       "description": "Experience the pinnacle of visual excellence with the EliteScreen XR2 monitor. With its high-resolution display and fast refresh rates, it delivers smooth visuals and precise color accuracy.",
-      "category": "Electronics",
-      "price": 199.99,
+      "category": "monitors",
       "status": "In Stock",
-      "rating": 4.5
+      "price": 199.99,
+      "key_features": {
+        "brand": "EliteScreen",
+        "model": "XR2",
+        "specification": "High-resolution display, fast refresh rates",
+        "port": "Advanced connectivity options",
+        "type": "LCD",
+        "resolution": "2560x1440",
+        "voltage": "110-220V"
+      },
+      "rating": 4.5,
+      "average_rating": 4.5,
+      "reviews": [
+        {
+          "user": "User3",
+          "rating": 4,
+          "comment": "Great monitor for gaming, colors could be more vibrant."
+        },
+        {
+          "user": "User4",
+          "rating": 5,
+          "comment": "Excellent clarity and smooth refresh rates."
+        }
+      ]
     },
     {
       "id": "53",
       "image": "/image/monitor/3.jpg",
       "name": "UltimaView XT3",
       "description": "The UltimaView XT3 offers a superior visual experience with its immersive display and wide viewing angles. Perfect for creative professionals, it ensures accurate color representation for your projects.",
-      "category": "Electronics",
-      "price": 179.99,
+      "category": "monitors",
       "status": "Out of Stock",
-      "rating": 4.2
+      "price": 179.99,
+      "key_features": {
+        "brand": "UltimaView",
+        "model": "XT3",
+        "specification": "Immersive display, wide viewing angles",
+        "port": "Enhanced connectivity options",
+        "type": "IPS",
+        "resolution": "3440x1440",
+        "voltage": "100-240V"
+      },
+      "rating": 4.2,
+      "average_rating": 4.2,
+      "reviews": [
+        {
+          "user": "User5",
+          "rating": 3,
+          "comment": "Nice display, but disappointed with the availability."
+        },
+        {
+          "user": "User6",
+          "rating": 4,
+          "comment": "Good colors, suitable for design work."
+        }
+      ]
     },
     {
       "id": "54",
       "image": "/image/monitor/4.jpg",
       "name": "PowerDisplay XZ4",
       "description": "Unleash the power of high-performance graphics with the PowerDisplay XZ4 monitor. Featuring fast response times and high refresh rates, it offers smooth visuals for gaming and multimedia.",
-      "category": "Electronics",
-      "price": 299.99,
+      "category": "monitors",
       "status": "In Stock",
-      "rating": 4.8
+      "price": 299.99,
+      "key_features": {
+        "brand": "PowerDisplay",
+        "model": "XZ4",
+        "specification": "High-performance graphics, fast response times",
+        "port": "Versatile connectivity options",
+        "type": "VA",
+        "resolution": "2560x1440",
+        "voltage": "110-240V"
+      },
+      "rating": 4.8,
+      "average_rating": 4.8,
+      "reviews": [
+        {
+          "user": "User7",
+          "rating": 5,
+          "comment": "Excellent for gaming, love the high refresh rates!"
+        },
+        {
+          "user": "User8",
+          "rating": 4,
+          "comment": "Impressive graphics, but a bit pricey."
+        }
+      ]
     },
     {
       "id": "55",
       "image": "/image/monitor/5.jpg",
       "name": "UltraVision ZR5",
       "description": "The UltraVision ZR5 monitor combines style and performance. With its slim design and vibrant display, it is perfect for both work and entertainment, providing a captivating visual experience.",
-      "category": "Electronics",
-      "price": 159.99,
+      "category": "monitors",
       "status": "In Stock",
-      "rating": 4.4
+      "price": 159.99,
+      "key_features": {
+        "brand": "UltraVision",
+        "model": "ZR5",
+        "specification": "Slim design, vibrant display",
+        "port": "Multiple connectivity options",
+        "type": "LED",
+        "resolution": "1920x1080",
+        "voltage": "120-230V"
+      },
+      "rating": 4.4,
+      "average_rating": 4.4,
+      "reviews": [
+        {
+          "user": "User9",
+          "rating": 4,
+          "comment": "Sleek design, good color accuracy."
+        },
+        {
+          "user": "User10",
+          "rating": 5,
+          "comment": "Great value, works well for both work and movies."
+        }
+      ]
     },
     {
       "id": "56",
       "image": "/image/monitor/6.jpg",
       "name": "ProDisplay LT6",
       "description": "Enhance your productivity with the ProDisplay LT6 monitor. Designed for multitasking, it offers a spacious display and crisp visuals, making it ideal for professionals and content creators.",
-      "category": "Electronics",
-      "price": 219.99,
+      "category": "monitors",
       "status": "In Stock",
-      "rating": 4.6
+      "price": 219.99,
+      "key_features": {
+        "brand": "ProDisplay",
+        "model": "LT6",
+        "specification": "Spacious display, crisp visuals",
+        "port": "Versatile connectivity options",
+        "type": "IPS",
+        "resolution": "2560x1440",
+        "voltage": "100-240V"
+      },
+      "rating": 4.6,
+      "average_rating": 4.6,
+      "reviews": [
+        {
+          "user": "User11",
+          "rating": 4,
+          "comment": "Good for multitasking, wish it had more USB ports."
+        },
+        {
+          "user": "User12",
+          "rating": 5,
+          "comment": "Clear and bright display, helps with my design work."
+        }
+      ]
     },
     {
       "id": "57",
       "image": "/image/monitor/7.jpg",
       "name": "SpeedView GR7",
       "description": "The SpeedView GR7 monitor delivers outstanding performance and vibrant colors. With its slim bezels and smooth display, it complements any workspace and elevates your visual experience.",
-      "category": "Electronics",
-      "price": 249.99,
+      "category": "monitors",
       "status": "Out of Stock",
-      "rating": 4.3
+      "price": 249.99,
+      "key_features": {
+        "brand": "SpeedView",
+        "model": "GR7",
+        "specification": "Outstanding performance, vibrant colors",
+        "port": "Advanced connectivity options",
+        "type": "VA",
+        "resolution": "3440x1440",
+        "voltage": "110-220V"
+      },
+      "rating": 4.3,
+      "average_rating": 4.3,
+      "reviews": [
+        {
+          "user": "User13",
+          "rating": 4,
+          "comment": "Impressive display, disappointed it's currently out of stock."
+        },
+        {
+          "user": "User14",
+          "rating": 4,
+          "comment": "Colors pop, but I needed it urgently."
+        }
+      ]
     }
   ],
   "banners": [

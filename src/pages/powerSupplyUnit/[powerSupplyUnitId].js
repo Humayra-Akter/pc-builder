@@ -37,7 +37,11 @@ const PowerSupplyUnitDetail = ({ powerSupplyUnits }) => {
         }}
       >
         <Col className="gutter-row" span={12}>
-          <div>
+          <div
+            style={{
+              marginTop: "120px",
+            }}
+          >
             <Image
               src={powerSupplyUnits?.image}
               width={500}
@@ -50,7 +54,6 @@ const PowerSupplyUnitDetail = ({ powerSupplyUnits }) => {
         <Col className="gutter-row" span={12}>
           <div>
             <h1>{powerSupplyUnits?.name}</h1>
-
             <p
               style={{
                 display: "flex",
@@ -83,15 +86,139 @@ const PowerSupplyUnitDetail = ({ powerSupplyUnits }) => {
             ></div>
             <p
               style={{
-                fontSize: "23px",
+                fontSize: "17px",
                 fontFamily: "cursive",
                 marginTop: "60px",
+                marginBottom: "60px",
                 textAlign: "justify",
                 color: "white",
               }}
             >
               {powerSupplyUnits?.description}
+            </p>{" "}
+            <p
+              style={{
+                display: "flex",
+                margin: "10px 0",
+                width: "100%",
+                fontFamily: "cursive",
+                color: "white",
+                fontWeight: "black",
+                justifyContent: "space-between",
+              }}
+            >
+              Brand : {powerSupplyUnits?.key_features.brand}
             </p>
+            <p
+              style={{
+                display: "flex",
+                margin: "10px 0",
+                width: "100%",
+                fontFamily: "cursive",
+                color: "white",
+                fontWeight: "black",
+                justifyContent: "space-between",
+              }}
+            >
+              Model : {powerSupplyUnits?.key_features.model}
+            </p>
+            <p
+              style={{
+                display: "flex",
+                margin: "10px 0",
+                width: "100%",
+                fontFamily: "cursive",
+                color: "white",
+                fontWeight: "black",
+                justifyContent: "space-between",
+              }}
+            >
+              Specification : {powerSupplyUnits?.key_features.specification}
+            </p>
+            <p
+              style={{
+                display: "flex",
+                margin: "10px 0",
+                width: "100%",
+                fontFamily: "cursive",
+                color: "white",
+                fontWeight: "black",
+                justifyContent: "space-between",
+              }}
+            >
+              Wattage : {powerSupplyUnits?.key_features.wattage}
+            </p>{" "}
+            <p
+              style={{
+                display: "flex",
+                margin: "10px 0",
+                width: "100%",
+                fontFamily: "cursive",
+                color: "white",
+                fontWeight: "black",
+                justifyContent: "space-between",
+              }}
+            >
+              Modular : {powerSupplyUnits?.key_features.modular}
+            </p>
+            <p
+              style={{
+                display: "flex",
+                margin: "10px 0",
+                width: "100%",
+                fontFamily: "cursive",
+                color: "white",
+                fontWeight: "black",
+                justifyContent: "space-between",
+              }}
+            >
+              Fan : {powerSupplyUnits?.key_features.fan}
+            </p>{" "}
+            <p
+              style={{
+                display: "flex",
+                margin: "10px 0",
+                width: "100%",
+                fontFamily: "cursive",
+                color: "white",
+                fontWeight: "black",
+                justifyContent: "space-between",
+              }}
+            >
+              Efficiency : {powerSupplyUnits?.key_features.efficiency}
+            </p>
+            <p
+              style={{
+                display: "flex",
+                margin: "10px 0",
+                width: "100%",
+                fontFamily: "cursive",
+                color: "white",
+                fontWeight: "black",
+                justifyContent: "space-between",
+              }}
+            >
+              Certification : {powerSupplyUnits?.key_features.certification}
+            </p>
+            <div
+              className="line"
+              style={{
+                // height: "1px",
+                margin: "20px 0",
+                width: "50% auto",
+                borderTop: "1px dotted #fff",
+              }}
+            ></div>
+            <div>
+              <h3>Reviews:</h3>
+              {powerSupplyUnits?.reviews.map((review, index) => (
+                <div key={index}>
+                  <h3>User: {review.user}</h3>
+                  <p>Rating: {review.rating}</p>
+                  <p>Comment: {review.comment}</p>
+                </div>
+              ))}
+            </div>
             <p
               style={{
                 fontSize: "16px",
@@ -146,7 +273,7 @@ export const getStaticProps = async (context) => {
     `http://localhost:5000/powerSupplyUnits/${params.powerSupplyUnitId}`
   );
   const data = await res.json();
-  console.log(data);
+  // console.log(data);
   return {
     props: {
       powerSupplyUnits: data,
