@@ -13,9 +13,9 @@ const LoginPage = () => {
         width: "40%",
         justifyItems: "center",
         alignItems: "center",
-        backgroundColor: "#000",
+        backgroundColor: "white",
         borderRadius: "30px",
-        color: "white",
+        color: "black",
         padding: "70px ",
         textAlign: "center",
       }}
@@ -23,17 +23,27 @@ const LoginPage = () => {
       <h3
         style={{
           fontSize: "30px",
+          fontFamily: "cursive",
           letterSpacing: "2px",
           fontWeight: "800",
-          backgroundColor: "black",
-          color: "white",
+          backgroundColor: "white",
+          color: "black",
           margin: "40px auto",
           textAlign: "center",
         }}
       >
         LOGIN
       </h3>
-      <hr />
+      <div
+        className="line"
+        style={{
+          height: "3px",
+          margin: "20px 0",
+          width: "100%",
+          background: "black",
+        }}
+      ></div>
+      {/* <hr /> */}
       <div
         style={{
           width: "30%",

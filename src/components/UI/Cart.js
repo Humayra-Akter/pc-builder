@@ -70,7 +70,7 @@ const Cart = () => {
           textAlign: "left",
           fontSize: "20px",
           fontFamily: "cursive",
-          color: "#000",
+          color: "white",
         }}
       >
         Your selected categories
@@ -84,15 +84,15 @@ const Cart = () => {
               textAlign: "left",
               fontSize: "20px",
               fontFamily: "cursive",
-              color: "#000",
+              color: "white",
             }}
           >
-            Your selected categories
+            Your selected categories :
           </h1>
           <hr
             style={{
               border: "none",
-              borderTop: "3px double #000",
+              borderTop: "3px double yellow",
               margin: " 10px 0",
               width: "20%",
             }}
@@ -101,15 +101,17 @@ const Cart = () => {
       )}
 
       {selectedCategories.map((category) => (
-        <p
+        <ul
           style={{
             textAlign: "left",
             fontSize: "15px",
+            color: "white",
+            paddingLeft: "30px",
           }}
           key={category}
         >
-          {category}
-        </p>
+          <li>{category}</li>
+        </ul>
       ))}
       <Row
         gutter={{
@@ -219,7 +221,7 @@ const Cart = () => {
             paddingLeft: "10px",
             fontFamily: "cursive",
             marginTop: "50px",
-            color: "#000",
+            color: "yellow",
             fontWeight: "900",
           }}
         >

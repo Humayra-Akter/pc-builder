@@ -17,7 +17,7 @@ const OrderConfirmationPage = () => {
   });
   const notify = () => {
     toast.success("Thanks for your order!");
-    if (cart.length != 6) {
+    if (cart.length < 6) {
       toast.warning("You have not selected all category");
     }
   };
@@ -61,7 +61,9 @@ const OrderConfirmationPage = () => {
             fontSize: "30px",
             fontWeight: "800",
             backgroundColor: "black",
-            color: "white",
+            color: "yellow",
+            fontFamily: "cursive",
+
             textAlign: "center",
           }}
         >
@@ -116,7 +118,15 @@ const OrderConfirmationPage = () => {
           }}
         >
           Selected Components
-        </h2>
+        </h2>{" "}
+        <hr
+          style={{
+            border: "none",
+            borderTop: "3px double yellow",
+            margin: "20px auto",
+            width: "40%",
+          }}
+        />
         <ul>
           {cart.map((component) => (
             <li
@@ -141,8 +151,11 @@ const OrderConfirmationPage = () => {
                   fontWeight: "black",
                 }}
               >
-                Quantity:
-                {component.quantity}~~~~ Price: {component.price}
+                {/* Quantity:
+                {component.quantity}{" "} */}
+                <strong style={{ color: "yellow" }}> ~~~~</strong>
+                Price:{" "}
+                <strong style={{ color: "yellow" }}> {component.price}</strong>
               </p>
             </li>
           ))}

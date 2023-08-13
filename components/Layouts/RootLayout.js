@@ -32,7 +32,7 @@ const RootLayout = ({ children }) => {
             style={{
               fontFamily: "cursive",
               background: "black",
-              color: "white",
+              color: "yellow",
               fontWeight: "800",
               paddingRight: "50px",
             }}
@@ -44,7 +44,7 @@ const RootLayout = ({ children }) => {
             style={{
               fontFamily: "cursive",
               background: "black",
-              color: "white",
+              color: "yellow",
               fontWeight: "800",
               paddingRight: "50px",
             }}
@@ -56,7 +56,7 @@ const RootLayout = ({ children }) => {
             style={{
               fontFamily: "cursive",
               background: "black",
-              color: "white",
+              color: "yellow",
               fontWeight: "800",
               paddingRight: "50px",
             }}
@@ -68,7 +68,7 @@ const RootLayout = ({ children }) => {
             style={{
               fontFamily: "cursive",
               background: "black",
-              color: "white",
+              color: "yellow",
               fontWeight: "800",
               paddingRight: "50px",
             }}
@@ -80,7 +80,7 @@ const RootLayout = ({ children }) => {
             style={{
               fontFamily: "cursive",
               background: "black",
-              color: "white",
+              color: "yellow",
               fontWeight: "800",
               paddingRight: "50px",
             }}
@@ -92,7 +92,7 @@ const RootLayout = ({ children }) => {
             style={{
               fontFamily: "cursive",
               background: "black",
-              color: "white",
+              color: "yellow",
               fontWeight: "800",
               paddingRight: "50px",
             }}
@@ -104,7 +104,7 @@ const RootLayout = ({ children }) => {
             style={{
               fontFamily: "cursive",
               background: "black",
-              color: "white",
+              color: "yellow",
               fontWeight: "800",
               paddingRight: "50px",
             }}
@@ -116,7 +116,7 @@ const RootLayout = ({ children }) => {
             style={{
               fontFamily: "cursive",
               background: "black",
-              color: "white",
+              color: "yellow",
               fontWeight: "800",
               paddingRight: "50px",
             }}
@@ -128,7 +128,7 @@ const RootLayout = ({ children }) => {
             style={{
               fontFamily: "cursive",
               background: "black",
-              color: "white",
+              color: "yellow",
               fontWeight: "800",
               paddingRight: "50px",
             }}
@@ -141,7 +141,9 @@ const RootLayout = ({ children }) => {
               style={{
                 background: "black",
                 paddingRight: "50px",
+                fontFamily: "cursive",
                 color: "red",
+                fontWeight: "800",
               }}
               onClick={() => signOut()}
               href="/"
@@ -150,7 +152,13 @@ const RootLayout = ({ children }) => {
             </Link>
           ) : (
             <Link
-              style={{ background: "black", paddingRight: "50px" }}
+              style={{
+                fontFamily: "cursive",
+                background: "black",
+                color: "yellow",
+                fontWeight: "800",
+                paddingRight: "50px",
+              }}
               href="/login"
             >
               Login

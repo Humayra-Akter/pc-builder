@@ -7,6 +7,8 @@ import {
 } from "@ant-design/icons";
 import Link from "next/link";
 import { useCartContext } from "./CartContext";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const AllProcessors = ({ allProcessors }) => {
   const { cart, addToCart, incrementQuantity } = useCartContext();
@@ -111,6 +113,9 @@ const AllProcessors = ({ allProcessors }) => {
                 disabled={cart.some((item) => item.id === processors.id)}
                 onClick={() => {
                   addToCart(processors);
+                  toast.success("Added to cart!", {
+                    position: toast.POSITION.BOTTOM_RIGHT,
+                  });
                 }}
                 style={{
                   fontSize: "15px",
@@ -153,6 +158,7 @@ const AllProcessors = ({ allProcessors }) => {
           </Col>
         ))}
       </Row>
+      <ToastContainer />
     </>
   );
 };

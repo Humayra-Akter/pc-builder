@@ -1552,15 +1552,6 @@
     },
     {
       "id": "64",
-      "image": "/image/banner/powerSupply.jpg",
-      "name": "UltraVision",
-      "category": "Electronics",
-      "price": 159.99,
-      "status": "In Stock",
-      "rating": 4.4
-    },
-    {
-      "id": "65",
       "image": "/image/banner/ram.png",
       "name": "Display LT6",
       "category": "RAM",
@@ -1569,7 +1560,7 @@
       "rating": 4.6
     },
     {
-      "id": "66",
+      "id": "65",
       "image": "/image/banner/storage.png",
       "name": "SpeedView",
       "category": "Storage",
@@ -1578,7 +1569,7 @@
       "rating": 4.3
     },
     {
-      "id": "67",
+      "id": "66",
       "image": "/image/banner/cpu-g6288c1fa9_1280.jpg",
       "name": "SpeedView",
       "category": "Power",
@@ -1587,7 +1578,7 @@
       "rating": 4.3
     },
     {
-      "id": "68",
+      "id": "67",
       "image": "/image/banner/circuit-board-g51138a303_1280.jpg",
       "name": "Power XZ4",
       "category": "PC",

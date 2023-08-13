@@ -1,3 +1,4 @@
+import AllMonitors from "@/components/UI/AllMonitors";
 import RootLayout from "../../components/Layouts/RootLayout";
 import Banner from "@/components/UI/Banner";
 import HomeProducts from "@/components/UI/HomeProducts";

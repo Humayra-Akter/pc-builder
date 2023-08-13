@@ -16,6 +16,7 @@ const HomeProducts = ({ allProcessors }) => {
           textAlign: "center",
           fontSize: "50px",
           marginTop: " 100px",
+          color: "white",
           marginBottom: "40px",
         }}
       >
@@ -29,46 +30,70 @@ const HomeProducts = ({ allProcessors }) => {
           lg: 32,
         }}
       >
-        {allProcessors?.map((processors) => (
-          <Col key={processors.id} className="gutter-row" span={3}>
-            <Link href="/pcbuilder">
-              <Card
+        {allProcessors?.map((processors) => {
+          <Col key={processors.id} className="gutter-row" span={8}>
+            <Card
+              style={{
+                fontFamily: "cursive",
+                color: "#fff",
+                background: "black",
+              }}
+              hoverable
+              cover={
+                <Image
+                  src={processors?.image}
+                  width={300}
+                  height={150}
+                  responsive
+                  alt="processors image"
+                />
+              }
+            >
+              <p
+                style={{
+                  fontFamily: "cursive",
+                  color: "yellow",
+                }}
+              >
+                {processors?.name}
+              </p>
+              <p
+                style={{
+                  margin: "10px 0",
+                  width: "100%",
+                  color: "white",
+                  justifyContent: "space-between",
+                }}
+              >
+                <span>
+                  <CalendarOutlined /> {processors?.category}
+                </span>
+              </p>
+              <p
                 style={{
                   fontFamily: "cursive",
                   color: "#fff",
-                  background: "black",
                 }}
-                hoverable
-                cover={
-                  <Image
-                    src={processors?.image}
-                    width={300}
-                    height={150}
-                    responsive
-                    alt="processors image"
-                  />
-                }
               >
-                <p
-                  style={{
-                    fontFamily: "cursive",
-                    color: "#fff",
-                  }}
-                >
-                  {processors?.name}
-                </p>
-                <p
-                  style={{
-                    margin: "10px 0",
-                    width: "100%",
-                    color: "white",
-                    justifyContent: "space-between",
-                  }}
-                >
-                  <span>
-                    <CalendarOutlined /> {processors?.category}
-                  </span>
-                </p>
+                {processors?.price}
+              </p>
+              <p
+                style={{
+                  fontFamily: "cursive",
+                  color: "#fff",
+                }}
+              >
+                {processors?.status}
+              </p>
+              <p
+                style={{
+                  fontFamily: "cursive",
+                  color: "#fff",
+                }}
+              >
+                {processors?.rating}
+              </p>
+              <Link href="/pcbuilder">
                 <p
                   style={{
                     margin: "10px 0",
@@ -82,10 +107,10 @@ const HomeProducts = ({ allProcessors }) => {
                     know more...
                   </span>
                 </p>
-              </Card>
-            </Link>
-          </Col>
-        ))}
+              </Link>
+            </Card>
+          </Col>;
+        })}
       </Row>
     </>
   );

@@ -307,10 +307,10 @@ const PcBuilderPage = () => {
         style={{
           marginLeft: "300px",
           marginTop: "40px",
-          backgroundColor: "black",
+          backgroundColor: "white",
           width: "50%",
           font: "cursive",
-          color: "white",
+          color: "black",
           fontWeight: "900",
         }}
         disabled={selectedCategories.length != 6}
