@@ -24,9 +24,9 @@ const items = [
 
 const DashboardLayout = ({ children }) => {
   const [collapsed, setCollapsed] = useState(false);
-  const {
-    token: { colorBgContainer },
-  } = theme.useToken();
+  // const {
+  //   token: { colorBgContainer },
+  // } = theme.useToken();
   return (
     <Layout
       style={{
@@ -35,6 +35,9 @@ const DashboardLayout = ({ children }) => {
       }}
     >
       <Sider
+        style={{
+          background: "black",
+        }}
         collapsible
         collapsed={collapsed}
         onCollapse={(value) => setCollapsed(value)}
@@ -43,11 +46,11 @@ const DashboardLayout = ({ children }) => {
 
         <Menu
           style={{
-            color: "white",
+            color: "yellow",
             fontFamily: "cursive",
+            background: "black",
             paddingTop: "150px",
           }}
-          theme="dark"
           defaultSelectedKeys={["1"]}
           mode="inline"
           items={items}
@@ -57,21 +60,48 @@ const DashboardLayout = ({ children }) => {
         <Content
           style={{
             margin: "0 16px",
+            background: "black",
           }}
         >
           <Breadcrumb
             style={{
               margin: "16px 0",
+              background: "black",
             }}
           >
             <Breadcrumb.Item>
-              <Button>
-                <Link href="/">Choose Your Need!!!</Link>
+              <Button
+                style={{
+                  fontSize: "15px",
+                  marginLeft: "15px",
+                  marginTop: "10px",
+                  width: "100%",
+                  backgroundColor: "white",
+                  color: "black",
+                  padding: "2px 5px",
+                  letterSpacing: "3px",
+                  textAlign: "center",
+                  fontWeight: "800",
+                }}
+              >
+                <Link href="/">Home</Link>
               </Button>
             </Breadcrumb.Item>
             <Breadcrumb.Item>
-              <Button>
-                <Link href="/pcbuilder">pc-builder</Link>
+              <Button
+                style={{
+                  fontSize: "15px",
+                  marginTop: "10px",
+                  width: "100%",
+                  backgroundColor: "white",
+                  color: "black",
+                  padding: "2px 5px",
+                  letterSpacing: "3px",
+                  textAlign: "center",
+                  fontWeight: "800",
+                }}
+              >
+                <Link href="/pcbuilder">PC-builder</Link>
               </Button>
             </Breadcrumb.Item>
           </Breadcrumb>
@@ -79,7 +109,7 @@ const DashboardLayout = ({ children }) => {
             style={{
               padding: 24,
               minHeight: 360,
-              background: colorBgContainer,
+              background: "black",
               color: "black",
               fontFamily: "cursive",
             }}
@@ -93,7 +123,7 @@ const DashboardLayout = ({ children }) => {
             textAlign: "center",
           }}
         >
-          Ant Design ©2023 Created by Ant UED
+          TECHO HUNT ©2023 Created by HAR
         </Footer>
       </Layout>
     </Layout>

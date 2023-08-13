@@ -22,7 +22,7 @@ const MonitorDetails = ({ monitors }) => {
           textAlign: "center",
           fontSize: "50px",
           marginBottom: " 50px",
-          color: "#fff",
+          color: "yellow",
           fontFamily: "cursive",
         }}
       >
@@ -37,7 +37,11 @@ const MonitorDetails = ({ monitors }) => {
         }}
       >
         <Col className="gutter-row" span={12}>
-          <div>
+          <div
+            style={{
+              marginTop: "120px",
+            }}
+          >
             <Image
               src={monitors?.image}
               width={500}
@@ -49,15 +53,23 @@ const MonitorDetails = ({ monitors }) => {
         </Col>
         <Col className="gutter-row" span={12}>
           <div>
-            <h1>{monitors?.name}</h1>
-
+            <h1
+              style={{
+                fontSize: "17px",
+                fontFamily: "cursive",
+                textAlign: "justify",
+                color: "white",
+              }}
+            >
+              {monitors?.name}
+            </h1>
             <p
               style={{
                 display: "flex",
                 margin: "10px 0",
                 width: "100%",
                 fontFamily: "cursive",
-                color: "white",
+                color: "yellow",
                 fontWeight: "black",
                 justifyContent: "space-between",
               }}
@@ -83,15 +95,134 @@ const MonitorDetails = ({ monitors }) => {
             ></div>
             <p
               style={{
-                fontSize: "23px",
+                fontSize: "17px",
                 fontFamily: "cursive",
                 marginTop: "60px",
+                marginBottom: "60px",
                 textAlign: "justify",
                 color: "white",
               }}
             >
               {monitors?.description}
             </p>
+            <p
+              style={{
+                display: "flex",
+                margin: "10px 0",
+                width: "100%",
+                fontFamily: "cursive",
+                color: "white",
+                fontWeight: "black",
+                justifyContent: "space-between",
+              }}
+            >
+              <p style={{ color: "yellow" }}> Brand : </p>
+              {monitors?.key_features.brand}
+            </p>
+            <p
+              style={{
+                display: "flex",
+                margin: "10px 0",
+                width: "100%",
+                fontFamily: "cursive",
+                color: "white",
+                fontWeight: "black",
+                justifyContent: "space-between",
+              }}
+            >
+              <p style={{ color: "yellow" }}>Model : </p>
+              {monitors?.key_features.model}
+            </p>
+            <p
+              style={{
+                display: "flex",
+                margin: "10px 0",
+                width: "100%",
+                fontFamily: "cursive",
+                color: "white",
+                fontWeight: "black",
+                justifyContent: "space-between",
+              }}
+            >
+              <p style={{ color: "yellow" }}>Specification : </p>
+              {monitors?.key_features.specification}
+            </p>
+            <p
+              style={{
+                display: "flex",
+                margin: "10px 0",
+                width: "100%",
+                fontFamily: "cursive",
+                color: "white",
+                fontWeight: "black",
+                justifyContent: "space-between",
+              }}
+            >
+              {" "}
+              <p style={{ color: "yellow" }}> Port : </p>
+              {monitors?.key_features.port}
+            </p>
+            <p
+              style={{
+                display: "flex",
+                margin: "10px 0",
+                width: "100%",
+                fontFamily: "cursive",
+                color: "white",
+                fontWeight: "black",
+                justifyContent: "space-between",
+              }}
+            >
+              <p style={{ color: "yellow" }}> Type :</p>
+              {monitors?.key_features.type}
+            </p>
+            <p
+              style={{
+                display: "flex",
+                margin: "10px 0",
+                width: "100%",
+                fontFamily: "cursive",
+                color: "white",
+                fontWeight: "black",
+                justifyContent: "space-between",
+              }}
+            >
+              <p style={{ color: "yellow" }}> Resolution :</p>
+              {monitors?.key_features.resolution}
+            </p>
+            <p
+              style={{
+                display: "flex",
+                margin: "10px 0",
+                width: "100%",
+                fontFamily: "cursive",
+                color: "white",
+                fontWeight: "black",
+                justifyContent: "space-between",
+              }}
+            >
+              <p style={{ color: "yellow" }}> Voltage :</p>
+              {monitors?.key_features.voltage}
+            </p>{" "}
+            <div
+              className="line"
+              style={{
+                // height: "1px",
+                margin: "20px 0",
+                width: "50% auto",
+                borderTop: "1px dotted #fff",
+              }}
+            ></div>
+            <div>
+              <h3 style={{ color: "yellow" }}>Reviews:</h3>
+              {monitors?.reviews.map((review, index) => (
+                <div key={index}>
+                  <h3>User: {review.user}</h3>
+                  <p>Rating: {review.rating}</p>
+                  <p>Comment: {review.comment}</p>
+                </div>
+              ))}
+            </div>
             <p
               style={{
                 fontSize: "16px",

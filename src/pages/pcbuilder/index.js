@@ -93,15 +93,6 @@ const PcBuilderPage = () => {
                 backgroundColor: "black",
               }}
             >
-              <hr
-                style={{
-                  border: "none",
-                  borderTop: "3px double #fff",
-                  margin: " 20px auto",
-                  width: "80%",
-                }}
-              />
-
               <h1
                 style={{
                   textAlign: "center",
@@ -125,7 +116,7 @@ const PcBuilderPage = () => {
                 <Button
                   type="primary"
                   style={{
-                    backgroundColor: "white",
+                    backgroundColor: "yellow",
                     width: "50%",
                     font: "cursive",
                     color: "black",
@@ -135,14 +126,6 @@ const PcBuilderPage = () => {
                   <Link href={`/${category.replace(/\s/g, "")}`}>choose</Link>
                 </Button>
               </Tooltip>
-              <hr
-                style={{
-                  border: "none",
-                  borderTop: "3px double #fff",
-                  margin: " 20px auto",
-                  width: "80%",
-                }}
-              />
             </Card>
           </Col>
         ))}

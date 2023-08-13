@@ -12,53 +12,147 @@ const RootLayout = ({ children }) => {
   const { data: session } = useSession();
 
   return (
-    <Layout className="layout">
+    <Layout
+      style={{
+        background: "black",
+      }}
+      className="layout"
+    >
       <Header
         style={{
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
+          background: "black",
         }}
       >
         <div className="demo-logo" />
         <Menu theme="dark" mode="horizontal" defaultSelectedKeys={["2"]}>
-          <Link style={{ paddingRight: "50px" }} href="/">
+          <Link
+            style={{
+              fontFamily: "cursive",
+              background: "black",
+              color: "white",
+              fontWeight: "800",
+              paddingRight: "50px",
+            }}
+            href="/"
+          >
             🖥
           </Link>
-          <Link style={{ paddingRight: "50px" }} href="/pcbuilder">
+          <Link
+            style={{
+              fontFamily: "cursive",
+              background: "black",
+              color: "white",
+              fontWeight: "800",
+              paddingRight: "50px",
+            }}
+            href="/pcbuilder"
+          >
             PC Builder
           </Link>
-          <Link style={{ paddingRight: "50px" }} href="/processor">
+          <Link
+            style={{
+              fontFamily: "cursive",
+              background: "black",
+              color: "white",
+              fontWeight: "800",
+              paddingRight: "50px",
+            }}
+            href="/processor"
+          >
             CPU / Processor
           </Link>
-          <Link style={{ paddingRight: "50px" }} href="/motherboard">
+          <Link
+            style={{
+              fontFamily: "cursive",
+              background: "black",
+              color: "white",
+              fontWeight: "800",
+              paddingRight: "50px",
+            }}
+            href="/motherboard"
+          >
             Motherboard
           </Link>
-          <Link style={{ paddingRight: "50px" }} href="/ram">
+          <Link
+            style={{
+              fontFamily: "cursive",
+              background: "black",
+              color: "white",
+              fontWeight: "800",
+              paddingRight: "50px",
+            }}
+            href="/ram"
+          >
             RAM
           </Link>
-          <Link style={{ paddingRight: "50px" }} href="/powerSupplyUnit">
+          <Link
+            style={{
+              fontFamily: "cursive",
+              background: "black",
+              color: "white",
+              fontWeight: "800",
+              paddingRight: "50px",
+            }}
+            href="/powerSupplyUnit"
+          >
             Power Supply Unit
           </Link>
-          <Link style={{ paddingRight: "50px" }} href="/storageDevice">
+          <Link
+            style={{
+              fontFamily: "cursive",
+              background: "black",
+              color: "white",
+              fontWeight: "800",
+              paddingRight: "50px",
+            }}
+            href="/storageDevice"
+          >
             Storage Device
           </Link>
-          <Link style={{ paddingRight: "50px" }} href="/monitor">
+          <Link
+            style={{
+              fontFamily: "cursive",
+              background: "black",
+              color: "white",
+              fontWeight: "800",
+              paddingRight: "50px",
+            }}
+            href="/monitor"
+          >
             Monitor
           </Link>
-          <Link style={{ paddingRight: "50px" }} href="/about">
+          <Link
+            style={{
+              fontFamily: "cursive",
+              background: "black",
+              color: "white",
+              fontWeight: "800",
+              paddingRight: "50px",
+            }}
+            href="/about"
+          >
             About
           </Link>
           {session?.user ? (
             <Link
-              style={{ paddingRight: "50px", color: "red" }}
+              style={{
+                background: "black",
+                paddingRight: "50px",
+                color: "red",
+              }}
               onClick={() => signOut()}
               href="/"
             >
               Logout
             </Link>
           ) : (
-            <Link style={{ paddingRight: "50px" }} href="/login">
+            <Link
+              style={{ background: "black", paddingRight: "50px" }}
+              href="/login"
+            >
               Login
             </Link>
           )}

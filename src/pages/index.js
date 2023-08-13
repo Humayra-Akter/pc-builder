@@ -8,14 +8,18 @@ const HomePage = ({ allProcessors }) => {
   const { data: session } = useSession();
 
   return (
-    <div className="body" style={{ color: "black", fontFamily: "cursive" }}>
+    <div
+      className="body"
+      style={{ color: "black", background: "black", fontFamily: "cursive" }}
+    >
       <h1
         style={{
           textAlign: "center",
           margin: "20px",
           marginBottom: "30px",
           font: "cursive",
-          color: "black",
+          color: "white",
+          background: "black",
           fontSize: "30px",
           fontWeight: "800",
         }}

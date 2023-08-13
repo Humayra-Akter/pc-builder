@@ -25,7 +25,7 @@ const ProcessorDetail = ({ processors }) => {
           textAlign: "center",
           fontSize: "50px",
           marginBottom: " 50px",
-          color: "#fff",
+          color: "yellow",
           fontFamily: "cursive",
         }}
       >
@@ -63,7 +63,7 @@ const ProcessorDetail = ({ processors }) => {
                 margin: "10px 0",
                 width: "100%",
                 fontFamily: "cursive",
-                color: "white",
+                color: "yellow",
                 fontWeight: "black",
                 justifyContent: "space-between",
               }}
@@ -111,7 +111,9 @@ const ProcessorDetail = ({ processors }) => {
                 justifyContent: "space-between",
               }}
             >
-              Brand : {processors?.keyFeatures.Brand}
+              {" "}
+              <p style={{ color: "yellow" }}> Brand : </p>
+              {processors?.keyFeatures.Brand}
             </p>
             <p
               style={{
@@ -124,7 +126,8 @@ const ProcessorDetail = ({ processors }) => {
                 justifyContent: "space-between",
               }}
             >
-              Model : {processors?.keyFeatures.Model}
+              <p style={{ color: "yellow" }}> Model : </p>
+              {processors?.keyFeatures.Model}
             </p>
             <p
               style={{
@@ -137,7 +140,8 @@ const ProcessorDetail = ({ processors }) => {
                 justifyContent: "space-between",
               }}
             >
-              Cores : {processors?.keyFeatures.Cores}
+              <p style={{ color: "yellow" }}> Cores : </p>
+              {processors?.keyFeatures.Cores}
             </p>
             <p
               style={{
@@ -150,7 +154,8 @@ const ProcessorDetail = ({ processors }) => {
                 justifyContent: "space-between",
               }}
             >
-              Socket : {processors?.keyFeatures.Socket}
+              <p style={{ color: "yellow" }}>Socket : </p>
+              {processors?.keyFeatures.Socket}
             </p>
             <p
               style={{
@@ -163,7 +168,8 @@ const ProcessorDetail = ({ processors }) => {
                 justifyContent: "space-between",
               }}
             >
-              TDP : {processors?.keyFeatures.TDP}
+              <p style={{ color: "yellow" }}> TDP : </p>
+              {processors?.keyFeatures.TDP}
             </p>
             <div
               className="line"
@@ -175,7 +181,7 @@ const ProcessorDetail = ({ processors }) => {
               }}
             ></div>
             <div>
-              <h3>Reviews:</h3>
+              <h3 style={{ color: "yellow" }}>Reviews:</h3>
               {processors?.reviews.map((review, index) => (
                 <div key={index}>
                   <h3>User: {review.user}</h3>

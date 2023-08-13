@@ -22,7 +22,7 @@ const MotherboardDetails = ({ motherboards }) => {
           textAlign: "center",
           fontSize: "50px",
           marginBottom: " 50px",
-          color: "#fff",
+          color: "yellow",
           fontFamily: "cursive",
         }}
       >
@@ -60,7 +60,7 @@ const MotherboardDetails = ({ motherboards }) => {
                 margin: "10px 0",
                 width: "100%",
                 fontFamily: "cursive",
-                color: "white",
+                color: "yellow",
                 fontWeight: "black",
                 justifyContent: "space-between",
               }}
@@ -107,7 +107,8 @@ const MotherboardDetails = ({ motherboards }) => {
                 justifyContent: "space-between",
               }}
             >
-              Brand : {motherboards?.key_features.brand}
+              <p style={{ color: "yellow" }}> Brand : </p>
+              {motherboards?.key_features.brand}
             </p>
             <p
               style={{
@@ -120,7 +121,9 @@ const MotherboardDetails = ({ motherboards }) => {
                 justifyContent: "space-between",
               }}
             >
-              Model : {motherboards?.key_features.model}
+              {" "}
+              <p style={{ color: "yellow" }}> Model :</p>
+              {motherboards?.key_features.model}
             </p>{" "}
             <p
               style={{
@@ -133,7 +136,9 @@ const MotherboardDetails = ({ motherboards }) => {
                 justifyContent: "space-between",
               }}
             >
-              Storage : {motherboards?.key_features.storage}
+              {" "}
+              <p style={{ color: "yellow" }}> Storage : </p>
+              {motherboards?.key_features.storage}
             </p>
             <p
               style={{
@@ -146,7 +151,8 @@ const MotherboardDetails = ({ motherboards }) => {
                 justifyContent: "space-between",
               }}
             >
-              Socket : {motherboards?.key_features.socket}
+              <p style={{ color: "yellow" }}> Socket : </p>
+              {motherboards?.key_features.socket}
             </p>
             <p
               style={{
@@ -159,7 +165,9 @@ const MotherboardDetails = ({ motherboards }) => {
                 justifyContent: "space-between",
               }}
             >
-              Networking : {motherboards?.key_features.networking}
+              {" "}
+              <p style={{ color: "yellow" }}> Networking : </p>
+              {motherboards?.key_features.networking}
             </p>
             <p
               style={{
@@ -172,7 +180,9 @@ const MotherboardDetails = ({ motherboards }) => {
                 justifyContent: "space-between",
               }}
             >
-              usb ports : {motherboards?.key_features.usb_ports}
+              {" "}
+              <p style={{ color: "yellow" }}> usb ports : </p>
+              {motherboards?.key_features.usb_ports}
             </p>
             <p
               style={{
@@ -185,7 +195,9 @@ const MotherboardDetails = ({ motherboards }) => {
                 justifyContent: "space-between",
               }}
             >
-              Form factor : {motherboards?.key_features.form_factor}
+              {" "}
+              <p style={{ color: "yellow" }}> Form factor : </p>
+              {motherboards?.key_features.form_factor}
             </p>{" "}
             <p
               style={{
@@ -198,7 +210,9 @@ const MotherboardDetails = ({ motherboards }) => {
                 justifyContent: "space-between",
               }}
             >
-              Memory slots : {motherboards?.key_features.memory_slots}
+              {" "}
+              <p style={{ color: "yellow" }}> Memory slots : </p>
+              {motherboards?.key_features.memory_slots}
             </p>
             <p
               style={{
@@ -211,7 +225,9 @@ const MotherboardDetails = ({ motherboards }) => {
                 justifyContent: "space-between",
               }}
             >
-              Max memory : {motherboards?.key_features.max_memory}
+              {" "}
+              <p style={{ color: "yellow" }}> Max memory : </p>
+              {motherboards?.key_features.max_memory}
             </p>{" "}
             <p
               style={{
@@ -224,7 +240,9 @@ const MotherboardDetails = ({ motherboards }) => {
                 justifyContent: "space-between",
               }}
             >
-              Pci slots : {motherboards?.key_features.pci_slots}
+              {" "}
+              <p style={{ color: "yellow" }}> Pci slots : </p>
+              {motherboards?.key_features.pci_slots}
             </p>
             <p
               style={{
@@ -237,7 +255,9 @@ const MotherboardDetails = ({ motherboards }) => {
                 justifyContent: "space-between",
               }}
             >
-              audio : {motherboards?.key_features.audio}
+              {" "}
+              <p style={{ color: "yellow" }}>Audio : </p>
+              {motherboards?.key_features.audio}
             </p>
             <p
               style={{
@@ -250,7 +270,9 @@ const MotherboardDetails = ({ motherboards }) => {
                 justifyContent: "space-between",
               }}
             >
-              RGB :{motherboards?.key_features.rgb}
+              {" "}
+              <p style={{ color: "yellow" }}> RGB : </p>
+              {motherboards?.key_features.rgb}
             </p>
             <div
               className="line"
@@ -262,7 +284,7 @@ const MotherboardDetails = ({ motherboards }) => {
               }}
             ></div>
             <div>
-              <h3>Reviews:</h3>
+              <h3 style={{ color: "yellow" }}>Reviews:</h3>
               {motherboards?.reviews.map((review, index) => (
                 <div key={index}>
                   <h3>User: {review.user}</h3>

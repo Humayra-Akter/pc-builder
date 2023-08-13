@@ -22,7 +22,7 @@ const PowerSupplyUnitDetail = ({ powerSupplyUnits }) => {
           textAlign: "center",
           fontSize: "50px",
           marginBottom: " 50px",
-          color: "#fff",
+          color: "yellow",
           fontFamily: "cursive",
         }}
       >
@@ -60,7 +60,7 @@ const PowerSupplyUnitDetail = ({ powerSupplyUnits }) => {
                 margin: "10px 0",
                 width: "100%",
                 fontFamily: "cursive",
-                color: "white",
+                color: "yellow",
                 fontWeight: "black",
                 justifyContent: "space-between",
               }}
@@ -107,7 +107,8 @@ const PowerSupplyUnitDetail = ({ powerSupplyUnits }) => {
                 justifyContent: "space-between",
               }}
             >
-              Brand : {powerSupplyUnits?.key_features.brand}
+              <p style={{ color: "yellow" }}> Brand : </p>{" "}
+              {powerSupplyUnits?.key_features.brand}
             </p>
             <p
               style={{
@@ -120,7 +121,9 @@ const PowerSupplyUnitDetail = ({ powerSupplyUnits }) => {
                 justifyContent: "space-between",
               }}
             >
-              Model : {powerSupplyUnits?.key_features.model}
+              {" "}
+              <p style={{ color: "yellow" }}>Model : </p>
+              {powerSupplyUnits?.key_features.model}
             </p>
             <p
               style={{
@@ -133,7 +136,9 @@ const PowerSupplyUnitDetail = ({ powerSupplyUnits }) => {
                 justifyContent: "space-between",
               }}
             >
-              Specification : {powerSupplyUnits?.key_features.specification}
+              {" "}
+              <p style={{ color: "yellow" }}> Specification : </p>
+              {powerSupplyUnits?.key_features.specification}
             </p>
             <p
               style={{
@@ -146,7 +151,9 @@ const PowerSupplyUnitDetail = ({ powerSupplyUnits }) => {
                 justifyContent: "space-between",
               }}
             >
-              Wattage : {powerSupplyUnits?.key_features.wattage}
+              {" "}
+              <p style={{ color: "yellow" }}> Wattage : </p>
+              {powerSupplyUnits?.key_features.wattage}
             </p>{" "}
             <p
               style={{
@@ -159,7 +166,9 @@ const PowerSupplyUnitDetail = ({ powerSupplyUnits }) => {
                 justifyContent: "space-between",
               }}
             >
-              Modular : {powerSupplyUnits?.key_features.modular}
+              {" "}
+              <p style={{ color: "yellow" }}> Modular : </p>
+              {powerSupplyUnits?.key_features.modular}
             </p>
             <p
               style={{
@@ -172,7 +181,9 @@ const PowerSupplyUnitDetail = ({ powerSupplyUnits }) => {
                 justifyContent: "space-between",
               }}
             >
-              Fan : {powerSupplyUnits?.key_features.fan}
+              {" "}
+              <p style={{ color: "yellow" }}> Fan : </p>
+              {powerSupplyUnits?.key_features.fan}
             </p>{" "}
             <p
               style={{
@@ -185,7 +196,9 @@ const PowerSupplyUnitDetail = ({ powerSupplyUnits }) => {
                 justifyContent: "space-between",
               }}
             >
-              Efficiency : {powerSupplyUnits?.key_features.efficiency}
+              {" "}
+              <p style={{ color: "yellow" }}> Efficiency : </p>
+              {powerSupplyUnits?.key_features.efficiency}
             </p>
             <p
               style={{
@@ -198,7 +211,9 @@ const PowerSupplyUnitDetail = ({ powerSupplyUnits }) => {
                 justifyContent: "space-between",
               }}
             >
-              Certification : {powerSupplyUnits?.key_features.certification}
+              {" "}
+              <p style={{ color: "yellow" }}> Certification : </p>
+              {powerSupplyUnits?.key_features.certification}
             </p>
             <div
               className="line"
@@ -210,7 +225,7 @@ const PowerSupplyUnitDetail = ({ powerSupplyUnits }) => {
               }}
             ></div>
             <div>
-              <h3>Reviews:</h3>
+              <h3 style={{ color: "yellow" }}>Reviews:</h3>
               {powerSupplyUnits?.reviews.map((review, index) => (
                 <div key={index}>
                   <h3>User: {review.user}</h3>

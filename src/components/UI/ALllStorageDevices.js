@@ -18,7 +18,11 @@ const ALllStorageDevices = ({ allStorageDevices }) => {
         style={{
           textAlign: "center",
           fontSize: "50px",
-          margin: " 30px 0px",
+          fontFamily: "cursive",
+          background: "black",
+          color: "white",
+          fontWeight: "800",
+          marginBottom: "30px",
         }}
       >
         Storage Devices
@@ -75,7 +79,7 @@ const ALllStorageDevices = ({ allStorageDevices }) => {
                   margin: "10px 0",
                   width: "100%",
                   fontFamily: "cursive",
-                  color: "#fff",
+                  color: "yellow",
                   fontWeight: "black",
                   justifyContent: "space-between",
                 }}
@@ -115,13 +119,12 @@ const ALllStorageDevices = ({ allStorageDevices }) => {
                   width: "100%",
                   justifyItems: "center",
                   alignItems: "center",
-                  backgroundColor: "white",
+                  backgroundColor: "yellow",
                   color: "black",
-                  fontWeight: "bold",
                   padding: "2px 5px",
                   letterSpacing: "3px",
                   textAlign: "center",
-                  fontWeight: "300",
+                  fontWeight: "800",
                   borderRadius: "100px",
                 }}
               >
@@ -130,27 +133,26 @@ const ALllStorageDevices = ({ allStorageDevices }) => {
                   : "Add to Cart"}
               </Button>
 
-              <h2
+              <Button
                 style={{
                   fontSize: "15px",
-                  marginTop: "20px",
+                  marginTop: "10px",
                   width: "100%",
                   justifyItems: "center",
                   alignItems: "center",
                   backgroundColor: "white",
                   color: "black",
-                  fontWeight: "bold",
                   padding: "2px 5px",
                   letterSpacing: "3px",
                   textAlign: "center",
-                  fontWeight: "300",
+                  fontWeight: "800",
                   borderRadius: "100px",
                 }}
               >
                 <Link href={`/storageDevice/${storageDevices?.id}`}>
                   Details
                 </Link>
-              </h2>
+              </Button>
             </Card>
           </Col>
         ))}

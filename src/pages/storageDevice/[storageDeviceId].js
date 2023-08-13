@@ -25,7 +25,7 @@ const StorageDeviceDetails = ({ storageDevices }) => {
           textAlign: "center",
           fontSize: "50px",
           marginBottom: " 50px",
-          color: "#fff",
+          color: "yellow",
           fontFamily: "cursive",
         }}
       >
@@ -63,7 +63,7 @@ const StorageDeviceDetails = ({ storageDevices }) => {
                 margin: "10px 0",
                 width: "100%",
                 fontFamily: "cursive",
-                color: "white",
+                color: "yellow",
                 fontWeight: "black",
                 justifyContent: "space-between",
               }}
@@ -98,6 +98,64 @@ const StorageDeviceDetails = ({ storageDevices }) => {
               }}
             >
               {storageDevices?.description}
+            </p>
+            <p
+              style={{
+                display: "flex",
+                margin: "10px 0",
+                width: "100%",
+                fontFamily: "cursive",
+                color: "white",
+                fontWeight: "black",
+                justifyContent: "space-between",
+              }}
+            >
+              <p style={{ color: "yellow" }}> Brand : </p>
+              {storageDevices?.key_features.brand}
+            </p>
+            <p
+              style={{
+                display: "flex",
+                margin: "10px 0",
+                width: "100%",
+                fontFamily: "cursive",
+                color: "white",
+                fontWeight: "black",
+                justifyContent: "space-between",
+              }}
+            >
+              {" "}
+              <p style={{ color: "yellow" }}> Model : </p>
+              {storageDevices?.key_features.model}
+            </p>
+            <p
+              style={{
+                display: "flex",
+                margin: "10px 0",
+                width: "100%",
+                fontFamily: "cursive",
+                color: "white",
+                fontWeight: "black",
+                justifyContent: "space-between",
+              }}
+            >
+              {" "}
+              <p style={{ color: "yellow" }}>Specification : </p>
+              {storageDevices?.key_features.specification}
+            </p>
+            <p
+              style={{
+                display: "flex",
+                margin: "10px 0",
+                width: "100%",
+                fontFamily: "cursive",
+                color: "white",
+                fontWeight: "black",
+                justifyContent: "space-between",
+              }}
+            >
+              <p style={{ color: "yellow" }}>Interface : </p>
+              {storageDevices?.key_features.interface}
             </p>{" "}
             <p
               style={{
@@ -110,7 +168,9 @@ const StorageDeviceDetails = ({ storageDevices }) => {
                 justifyContent: "space-between",
               }}
             >
-              Brand : {storageDevices?.key_features.brand}
+              {" "}
+              <p style={{ color: "yellow" }}>Storage type : </p>
+              {storageDevices?.key_features.storage_type}
             </p>
             <p
               style={{
@@ -123,33 +183,9 @@ const StorageDeviceDetails = ({ storageDevices }) => {
                 justifyContent: "space-between",
               }}
             >
-              Model : {storageDevices?.key_features.model}
-            </p>
-            <p
-              style={{
-                display: "flex",
-                margin: "10px 0",
-                width: "100%",
-                fontFamily: "cursive",
-                color: "white",
-                fontWeight: "black",
-                justifyContent: "space-between",
-              }}
-            >
-              Specification : {storageDevices?.key_features.specification}
-            </p>
-            <p
-              style={{
-                display: "flex",
-                margin: "10px 0",
-                width: "100%",
-                fontFamily: "cursive",
-                color: "white",
-                fontWeight: "black",
-                justifyContent: "space-between",
-              }}
-            >
-              Interface : {storageDevices?.key_features.interface}
+              {" "}
+              <p style={{ color: "yellow" }}>Form factor : </p>
+              {storageDevices?.key_features.form_factor}
             </p>{" "}
             <p
               style={{
@@ -162,7 +198,9 @@ const StorageDeviceDetails = ({ storageDevices }) => {
                 justifyContent: "space-between",
               }}
             >
-              Storage type : {storageDevices?.key_features.storage_type}
+              {" "}
+              <p style={{ color: "yellow" }}> Cache : </p>
+              {storageDevices?.key_features.cache}
             </p>
             <p
               style={{
@@ -175,33 +213,8 @@ const StorageDeviceDetails = ({ storageDevices }) => {
                 justifyContent: "space-between",
               }}
             >
-              Form factor : {storageDevices?.key_features.form_factor}
-            </p>{" "}
-            <p
-              style={{
-                display: "flex",
-                margin: "10px 0",
-                width: "100%",
-                fontFamily: "cursive",
-                color: "white",
-                fontWeight: "black",
-                justifyContent: "space-between",
-              }}
-            >
-              Cache : {storageDevices?.key_features.cache}
-            </p>
-            <p
-              style={{
-                display: "flex",
-                margin: "10px 0",
-                width: "100%",
-                fontFamily: "cursive",
-                color: "white",
-                fontWeight: "black",
-                justifyContent: "space-between",
-              }}
-            >
-              Capacity : {storageDevices?.key_features.capacity}
+              <p style={{ color: "yellow" }}>Capacity : </p>
+              {storageDevices?.key_features.capacity}
             </p>
             <div
               className="line"
@@ -213,7 +226,7 @@ const StorageDeviceDetails = ({ storageDevices }) => {
               }}
             ></div>
             <div>
-              <h3>Reviews:</h3>
+              <h3 style={{ color: "yellow" }}>Reviews:</h3>
               {storageDevices?.reviews.map((review, index) => (
                 <div key={index}>
                   <h3>User: {review.user}</h3>

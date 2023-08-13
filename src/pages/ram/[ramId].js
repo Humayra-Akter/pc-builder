@@ -22,7 +22,7 @@ const RamDetails = ({ rams }) => {
           textAlign: "center",
           fontSize: "50px",
           marginBottom: " 50px",
-          color: "#fff",
+          color: "yellow",
           fontFamily: "cursive",
         }}
       >
@@ -60,7 +60,7 @@ const RamDetails = ({ rams }) => {
                 margin: "10px 0",
                 width: "100%",
                 fontFamily: "cursive",
-                color: "white",
+                color: "yellow",
                 fontWeight: "black",
                 justifyContent: "space-between",
               }}
@@ -108,7 +108,8 @@ const RamDetails = ({ rams }) => {
                 justifyContent: "space-between",
               }}
             >
-              Brand : {rams?.key_features.brand}
+              <p style={{ color: "yellow" }}> Brand : </p>{" "}
+              {rams?.key_features.brand}
             </p>
             <p
               style={{
@@ -121,7 +122,9 @@ const RamDetails = ({ rams }) => {
                 justifyContent: "space-between",
               }}
             >
-              Model : {rams?.key_features.model}
+              {" "}
+              <p style={{ color: "yellow" }}>Model : </p>
+              {rams?.key_features.model}
             </p>
             <p
               style={{
@@ -134,7 +137,8 @@ const RamDetails = ({ rams }) => {
                 justifyContent: "space-between",
               }}
             >
-              Specification : {rams?.key_features.specification}
+              <p style={{ color: "yellow" }}> Specification : </p>
+              {rams?.key_features.specification}
             </p>
             <p
               style={{
@@ -147,7 +151,9 @@ const RamDetails = ({ rams }) => {
                 justifyContent: "space-between",
               }}
             >
-              Speed : {rams?.key_features.speed}
+              {" "}
+              <p style={{ color: "yellow" }}> Speed : </p>
+              {rams?.key_features.speed}
             </p>{" "}
             <p
               style={{
@@ -160,7 +166,9 @@ const RamDetails = ({ rams }) => {
                 justifyContent: "space-between",
               }}
             >
-              Cas latency : {rams?.key_features.cas_latency}
+              {" "}
+              <p style={{ color: "yellow" }}> Cas latency : </p>
+              {rams?.key_features.cas_latency}
             </p>
             <p
               style={{
@@ -173,7 +181,9 @@ const RamDetails = ({ rams }) => {
                 justifyContent: "space-between",
               }}
             >
-              Form factor : {rams?.key_features.form_factor}
+              {" "}
+              <p style={{ color: "yellow" }}>Form factor : </p>
+              {rams?.key_features.form_factor}
             </p>{" "}
             <p
               style={{
@@ -186,7 +196,9 @@ const RamDetails = ({ rams }) => {
                 justifyContent: "space-between",
               }}
             >
-              Compatibility : {rams?.key_features.compatibility}
+              {" "}
+              <p style={{ color: "yellow" }}> Compatibility : </p>
+              {rams?.key_features.compatibility}
             </p>
             <p
               style={{
@@ -199,7 +211,9 @@ const RamDetails = ({ rams }) => {
                 justifyContent: "space-between",
               }}
             >
-              Capacity : {rams?.key_features.capacity}
+              {" "}
+              <p style={{ color: "yellow" }}> Capacity : </p>
+              {rams?.key_features.capacity}
             </p>
             <div
               className="line"
@@ -211,7 +225,7 @@ const RamDetails = ({ rams }) => {
               }}
             ></div>
             <div>
-              <h3>Reviews:</h3>
+              <h3 style={{ color: "yellow" }}>Reviews:</h3>
               {rams?.reviews.map((review, index) => (
                 <div key={index}>
                   <h3>User: {review.user}</h3>
