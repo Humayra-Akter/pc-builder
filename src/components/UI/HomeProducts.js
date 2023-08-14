@@ -6,9 +6,17 @@ import {
   ProfileOutlined,
 } from "@ant-design/icons";
 import Link from "next/link";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 const HomeProducts = ({ allProcessors }) => {
   const { Meta } = Card;
+
+ useEffect(() => {
+   AOS.init();
+ }, []);
+
   return (
     <>
       <h1
@@ -30,44 +38,54 @@ const HomeProducts = ({ allProcessors }) => {
           lg: 32,
         }}
       >
-        {allProcessors?.map((processors) => {
-          <Col key={processors.id} className="gutter-row" span={8}>
-            <Card
+        {allProcessors?.map((processors) => (
+          <div
+            data-aos="zoom-in-down"
+            style={{
+              display: "flex",
+              gap: "30px",
+              border: "2px solid white",
+              margin: "25px",
+              padding: "10px",
+            }}
+            key={processors.id}
+          >
+            <div
               style={{
                 fontFamily: "cursive",
-                color: "#fff",
+                color: "white",
                 background: "black",
+                margin: "auto auto",
               }}
               hoverable
-              cover={
-                <Image
-                  src={processors?.image}
-                  width={300}
-                  height={150}
-                  responsive
-                  alt="processors image"
-                />
-              }
             >
-              <p
+              <Image
+                src={processors?.image}
+                width={120}
+                height={120}
+                responsive
+                alt="processors image"
+              />
+            </div>
+            <div>
+              <h1
                 style={{
                   fontFamily: "cursive",
                   color: "yellow",
                 }}
               >
                 {processors?.name}
-              </p>
+              </h1>
               <p
                 style={{
                   margin: "10px 0",
                   width: "100%",
                   color: "white",
+                  fontWeight: "700",
                   justifyContent: "space-between",
                 }}
               >
-                <span>
-                  <CalendarOutlined /> {processors?.category}
-                </span>
+                <span>{processors?.category}</span>
               </p>
               <p
                 style={{
@@ -75,6 +93,7 @@ const HomeProducts = ({ allProcessors }) => {
                   color: "#fff",
                 }}
               >
+                <ProfileOutlined />
                 {processors?.price}
               </p>
               <p
@@ -83,6 +102,8 @@ const HomeProducts = ({ allProcessors }) => {
                   color: "#fff",
                 }}
               >
+                {" "}
+                <CalendarOutlined />
                 {processors?.status}
               </p>
               <p
@@ -91,6 +112,7 @@ const HomeProducts = ({ allProcessors }) => {
                   color: "#fff",
                 }}
               >
+                <CommentOutlined />
                 {processors?.rating}
               </p>
               <Link href="/pcbuilder">
@@ -102,15 +124,12 @@ const HomeProducts = ({ allProcessors }) => {
                     justifyContent: "space-between",
                   }}
                 >
-                  <span>
-                    <ProfileOutlined />
-                    know more...
-                  </span>
+                  <span>know more...</span>
                 </p>
               </Link>
-            </Card>
-          </Col>;
-        })}
+            </div>
+          </div>
+        ))}
       </Row>
     </>
   );

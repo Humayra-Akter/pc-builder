@@ -1534,7 +1534,7 @@
     },
     {
       "id": "62",
-      "image": "/image/banner/monitor.png",
+      "image": "/image/banner/monitor.jpg",
       "name": "EliteScreen",
       "category": "Monitor",
       "price": 199.99,
@@ -1552,7 +1552,7 @@
     },
     {
       "id": "64",
-      "image": "/image/banner/ram.png",
+      "image": "/image/banner/ram.jpg",
       "name": "Display LT6",
       "category": "RAM",
       "price": 219.99,
@@ -1561,7 +1561,7 @@
     },
     {
       "id": "65",
-      "image": "/image/banner/storage.png",
+      "image": "/image/banner/storage.jpg",
       "name": "SpeedView",
       "category": "Storage",
       "price": 249.99,

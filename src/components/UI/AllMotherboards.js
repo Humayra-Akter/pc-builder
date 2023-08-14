@@ -8,12 +8,20 @@ import {
 } from "@ant-design/icons";
 import Link from "next/link";
 import { useCartContext } from "./CartContext";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { useEffect } from "react";
 
 const AllMotherboards = ({ allMotherboards }) => {
   const { cart, addToCart, incrementQuantity } = useCartContext();
   const { Meta } = Card;
+
+   useEffect(() => {
+     AOS.init();
+   }, []);
+
   return (
     <>
       <h1
@@ -38,7 +46,12 @@ const AllMotherboards = ({ allMotherboards }) => {
         }}
       >
         {allMotherboards?.map((motherboards) => (
-          <Col key={motherboards.id} className="gutter-row" span={8}>
+          <Col
+            data-aos="zoom-in-down"
+            key={motherboards.id}
+            className="gutter-row"
+            span={8}
+          >
             <Card
               style={{
                 margin: "30px 0",

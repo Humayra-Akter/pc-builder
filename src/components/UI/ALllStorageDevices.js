@@ -7,12 +7,19 @@ import {
 } from "@ant-design/icons";
 import Link from "next/link";
 import { useCartContext } from "./CartContext";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { useEffect } from "react";
 
 const ALllStorageDevices = ({ allStorageDevices }) => {
   const { cart, addToCart, incrementQuantity } = useCartContext();
   const { Meta } = Card;
+
+  useEffect(() => {
+    AOS.init();
+  }, []);
 
   return (
     <>
@@ -38,7 +45,12 @@ const ALllStorageDevices = ({ allStorageDevices }) => {
         }}
       >
         {allStorageDevices?.map((storageDevices) => (
-          <Col key={storageDevices.id} className="gutter-row" span={8}>
+          <Col
+            data-aos="zoom-in-down"
+            key={storageDevices.id}
+            className="gutter-row"
+            span={8}
+          >
             <Card
               style={{
                 margin: "30px 0",

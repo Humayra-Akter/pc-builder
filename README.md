@@ -1,38 +1,110 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`pc-builder`](https://github.com/Humayra-Akter/pc-builder).
 
 ## Getting Started
 
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
-
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
 ## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+The navbar have the following categories:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+CPU / Processor
+Motherboard
+RAM
+Power Supply Unit
+Storage Device
+Monitor
+Others
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Each category have a corresponding route. (SSG implementation)
 
-## Deploy on Vercel
+## Home page
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+The home page featured 6 random PC components as Featured Products.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Each Featured has the following properties:
+Image
+Product Name
+Category
+Price
+Status ( In Stock | Out of stock)
+Rating
+
+Each featured product is clickable and take the user to the pc-builder page.
+
+## Featured Product
+
+There are 6 Featured Categories under the Featured Product section. The Categories are:
+
+CPU / Processor
+Motherboard
+RAM
+Power Supply Unit
+Storage Device
+Monitor
+
+Featured Category Sections:
+Each featured category is clickable.
+Clicking on any of the Featured Categories will redirect the user to another page where at least 7 products of that category will be displayed.
+
+Each product card on this page shows the following properties:
+
+Image
+Product Name
+Category
+Price
+Status
+Rating
+
+Each product retrieved after querying on this page will also be clickable and should take the user to the product detail page.
+
+## product detail page
+
+Product Detail Page: (SSG implementation)
+Each PC Component must have the following properties:
+
+Image
+Product Name
+Category
+Status: In Stock | Out of stock
+Price
+Description
+Key Features (like Brand, Model, Specification, Port, Type, Resolution, Voltage, etc)
+Individual Rating
+Average Rating
+Reviews
+
+## PC Builder Page: (SSR implementation)
+
+The PC Builder page should have category sections as follows:
+CPU / Processor
+Motherboard
+RAM
+Power Supply Unit
+Storage Device
+Monitor
+
+Each category have a Choose Button.
+Clicking on the Choose Button will take the user to another page where at least 7 components of that specific category will be displayed.
+
+Each component card on this page shows the following properties:
+Image
+Product Name
+Category
+Price
+Status
+Rating
+
+Each component card on that page has an Add To Builder Button.Clicking on this button will redirect the user to the PC Builder page, and it will update the state of that selected category section in the PC Builder Page with the selected component below. (using Redux)
+
+After adding at least 5 - 6 Components (CPU, RAM, Power Supply, Storage, Motherboard, Casing), the user will be able to click on the Place order button. (This button will be disabled unless the user adds at least 5-6 of the mentioned components)
+
+### protected/private route
+
+The PC Builder Page has a protected/private route (only logged-in users can visit this route). Using NextAuth two social login (Google & Github) provider to enable user authentication.
+
+## toast
+
+Clicking on the Complete Build button will show a success alert.
+
+The Home page should also have a hero section/banner section and a footer.
