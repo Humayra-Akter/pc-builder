@@ -261,7 +261,7 @@ MonitorDetails.getLayout = function getLayout(page) {
 };
 
 export const getStaticPaths = async () => {
-  const res = await fetch("http://localhost:5000/monitors");
+  const res = await fetch("https://pc-builder-sage-pi.vercel.app/monitors");
   const monitors = await res.json();
 
   const paths = monitors.map((monitor) => ({
@@ -273,7 +273,9 @@ export const getStaticPaths = async () => {
 
 export const getStaticProps = async (context) => {
   const { params } = context;
-  const res = await fetch(`http://localhost:5000/monitors/${params.monitorId}`);
+  const res = await fetch(
+    `https://pc-builder-sage-pi.vercel.app/monitors/${params.monitorId}` // { cache: "no-store" }
+  );
   const data = await res.json();
   // console.log(data);
   return {

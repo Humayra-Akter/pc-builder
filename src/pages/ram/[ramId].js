@@ -272,7 +272,7 @@ RamDetails.getLayout = function getLayout(page) {
 };
 
 export const getStaticPaths = async () => {
-  const res = await fetch("http://localhost:5000/rams");
+  const res = await fetch("https://pc-builder-sage-pi.vercel.app/rams");
   const rams = await res.json();
 
   const paths = rams.map((ram) => ({
@@ -284,7 +284,9 @@ export const getStaticPaths = async () => {
 
 export const getStaticProps = async (context) => {
   const { params } = context;
-  const res = await fetch(`http://localhost:5000/rams/${params.ramId}`);
+  const res = await fetch(
+    `https://pc-builder-sage-pi.vercel.app/rams/${params.ramId}` // { cache: "no-store" }
+  );
   const data = await res.json();
   // console.log(data);
   return {

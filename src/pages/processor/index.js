@@ -16,7 +16,9 @@ Processor.getLayout = function getLayout(page) {
 };
 
 export const getStaticProps = async () => {
-  const res = await fetch("http://localhost:5000/processors");
+  const res = await fetch(
+    "https://pc-builder-sage-pi.vercel.app/processors"
+  );
   const data = await res.json();
   // console.log(data);
   return {

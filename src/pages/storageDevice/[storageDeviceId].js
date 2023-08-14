@@ -273,7 +273,9 @@ StorageDeviceDetails.getLayout = function getLayout(page) {
 };
 
 export const getStaticPaths = async () => {
-  const res = await fetch("http://localhost:5000/storageDevices");
+  const res = await fetch(
+    "https://pc-builder-sage-pi.vercel.app/storageDevices"
+  );
   const storageDevices = await res.json();
 
   const paths = storageDevices.map((storageDevice) => ({
@@ -286,7 +288,8 @@ export const getStaticPaths = async () => {
 export const getStaticProps = async (context) => {
   const { params } = context;
   const res = await fetch(
-    `http://localhost:5000/storageDevices/${params.storageDeviceId}`
+    `https://pc-builder-sage-pi.vercel.app/storageDevices/${params.storageDeviceId}`
+    // { cache: "no-store" }
   );
   const data = await res.json();
   // console.log(data);
