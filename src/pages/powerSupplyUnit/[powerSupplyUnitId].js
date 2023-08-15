@@ -272,9 +272,7 @@ PowerSupplyUnitDetail.getLayout = function getLayout(page) {
 };
 
 export const getStaticPaths = async () => {
-  const res = await fetch(
-    "https://pc-builder-sage-pi.vercel.app/powerSupplyUnits"
-  );
+  const res = await fetch("http://localhost:5000/powerSupplyUnits");
   const powerSupplyUnits = await res.json();
 
   const paths = powerSupplyUnits.map((powerSupplyUnit) => ({
@@ -287,7 +285,7 @@ export const getStaticPaths = async () => {
 export const getStaticProps = async (context) => {
   const { params } = context;
   const res = await fetch(
-    `https://pc-builder-sage-pi.vercel.app/powerSupplyUnits/${params.powerSupplyUnitId}` // { cache: "no-store" }
+    `http://localhost:5000/powerSupplyUnits/${params.powerSupplyUnitId}` // { cache: "no-store" }
   );
   const data = await res.json();
   // console.log(data);

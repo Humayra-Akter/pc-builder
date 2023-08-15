@@ -16,7 +16,7 @@ Ram.getLayout = function getLayout(page) {
 };
 
 export const getStaticProps = async () => {
-  const res = await fetch("https://pc-builder-sage-pi.vercel.app/rams");
+  const res = await fetch("http://localhost:5000/rams");
   const data = await res.json();
   console.log(data);
   return {

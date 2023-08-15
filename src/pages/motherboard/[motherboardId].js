@@ -331,7 +331,7 @@ MotherboardDetails.getLayout = function getLayout(page) {
 };
 
 export const getStaticPaths = async () => {
-  const res = await fetch("https://pc-builder-sage-pi.vercel.app/motherboards");
+  const res = await fetch("http://localhost:5000/motherboards");
   const motherboards = await res.json();
 
   const paths = motherboards.map((motherboard) => ({
@@ -344,7 +344,7 @@ export const getStaticPaths = async () => {
 export const getStaticProps = async (context) => {
   const { params } = context;
   const res = await fetch(
-    `https://pc-builder-sage-pi.vercel.app/motherboards/${params.motherboardId}` // { cache: "no-store" }
+    `http://localhost:5000/motherboards/${params.motherboardId}` // { cache: "no-store" }
   );
   const data = await res.json();
   // console.log(data);
