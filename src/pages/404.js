@@ -1,12 +1,17 @@
 import { useRouter } from "next/router";
 import { Button, Result } from "antd";
 import Link from "next/link";
+import { useEffect } from "react";
+
 
 const ErrorPage = () => {
   const router = useRouter();
-  setTimeout(() => {
-    router.push("/");
-  }, 5000);
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      router.push("/");
+    }, 5000);
+    return () => clearTimeout(timeout); // Clear timeout on component unmount
+  }, []);
   return (
     <Result
       status="404"

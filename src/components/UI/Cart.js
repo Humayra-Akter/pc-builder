@@ -61,6 +61,7 @@ const Cart = () => {
           textAlign: "center",
           fontSize: "50px",
           margin: " 30px 0px",
+          color: "white",
         }}
       >
         Selected Components

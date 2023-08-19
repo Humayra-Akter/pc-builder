@@ -15,12 +15,12 @@ Monitor.getLayout = function getLayout(page) {
 };
 
 export const getStaticProps = async () => {
-  const res = await fetch("http://localhost:5000/monitors");
+  const res = await fetch("http://localhost:3000/api/monitors");
   const data = await res.json();
   console.log(data);
   return {
     props: {
-      allMonitors: data,
+      allMonitors: data.data,
     },
     revalidate: 10,
   };

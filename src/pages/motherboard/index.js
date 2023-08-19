@@ -15,12 +15,12 @@ Motherboard.getLayout = function getLayout(page) {
   return <DashboardLayout>{page}</DashboardLayout>;
 };
 export const getStaticProps = async () => {
-  const res = await fetch("http://localhost:5000/motherboards");
+  const res = await fetch("http://localhost:3000/api/motherboards");
   const data = await res.json();
   console.log(data);
   return {
     props: {
-      allMotherboards: data,
+      allMotherboards: data.data,
     },
     revalidate: 10,
   };

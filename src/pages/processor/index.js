@@ -16,12 +16,11 @@ Processor.getLayout = function getLayout(page) {
 };
 
 export const getStaticProps = async () => {
-  const res = await fetch("http://localhost:5000/processors");
+  const res = await fetch("http://localhost:3000/api/processors"); //connected with mongoDB
   const data = await res.json();
-  // console.log(data);
   return {
     props: {
-      allProcessors: data,
+      allProcessors: data.data, // when using internal API connected with mongoDB
     },
     revalidate: 10,
   };

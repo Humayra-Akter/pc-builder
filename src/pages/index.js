@@ -39,12 +39,12 @@ HomePage.getLayout = function getLayout(page) {
   return <RootLayout>{page}</RootLayout>;
 };
 
-export const getServerSideProps = async () => {
-  const res = await fetch("http://localhost:5000/banners");
+export const getStaticProps = async () => {
+  const res = await fetch("http://localhost:3000/api/banners");
   const data = await res.json();
   return {
     props: {
-      allProcessors: data,
+      allProcessors: data.data,
     },
   };
 };

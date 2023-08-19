@@ -9,7 +9,7 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 
 const ProcessorDetail = ({ processors }) => {
-  const router = useRouter();
+  // const router = useRouter();
 
   return (
     <div
@@ -29,7 +29,7 @@ const ProcessorDetail = ({ processors }) => {
           fontFamily: "cursive",
         }}
       >
-        {processors?.name}
+        {processors?.name || null}
       </h1>
       <Row
         gutter={{
@@ -46,7 +46,7 @@ const ProcessorDetail = ({ processors }) => {
             }}
           >
             <Image
-              src={processors?.image}
+              src={processors?.image || null}
               width={600}
               height={400}
               responsive
@@ -56,7 +56,7 @@ const ProcessorDetail = ({ processors }) => {
         </Col>
         <Col className="gutter-row" span={12}>
           <div>
-            <h1>{processors?.name}</h1>
+            <h1>{processors?.name || null}</h1>
             <p
               style={{
                 display: "flex",
@@ -69,14 +69,14 @@ const ProcessorDetail = ({ processors }) => {
               }}
             >
               <span>
-                <CommentOutlined /> {processors?.price}
+                <CommentOutlined /> {processors?.price || null}
               </span>
               <span>
                 <CalendarOutlined />
-                {processors?.status}
+                {processors?.status || null}
               </span>
               <span>
-                <ProfileOutlined /> {processors?.category}
+                <ProfileOutlined /> {processors?.category || null}
               </span>
             </p>
             <div
@@ -98,7 +98,7 @@ const ProcessorDetail = ({ processors }) => {
                 color: "white",
               }}
             >
-              {processors?.description}
+              {processors?.description || null}
             </p>
             <p
               style={{
@@ -111,9 +111,8 @@ const ProcessorDetail = ({ processors }) => {
                 justifyContent: "space-between",
               }}
             >
-              {" "}
               <p style={{ color: "yellow" }}> Brand : </p>
-              {processors?.keyFeatures.Brand}
+              {processors?.keyFeatures.Brand || null}
             </p>
             <p
               style={{
@@ -127,7 +126,7 @@ const ProcessorDetail = ({ processors }) => {
               }}
             >
               <p style={{ color: "yellow" }}> Model : </p>
-              {processors?.keyFeatures.Model}
+              {processors?.keyFeatures.Model || null}
             </p>
             <p
               style={{
@@ -141,7 +140,7 @@ const ProcessorDetail = ({ processors }) => {
               }}
             >
               <p style={{ color: "yellow" }}> Cores : </p>
-              {processors?.keyFeatures.Cores}
+              {processors?.keyFeatures.Cores || null}
             </p>
             <p
               style={{
@@ -155,7 +154,7 @@ const ProcessorDetail = ({ processors }) => {
               }}
             >
               <p style={{ color: "yellow" }}>Socket : </p>
-              {processors?.keyFeatures.Socket}
+              {processors?.keyFeatures.Socket || null}
             </p>
             <p
               style={{
@@ -169,7 +168,7 @@ const ProcessorDetail = ({ processors }) => {
               }}
             >
               <p style={{ color: "yellow" }}> TDP : </p>
-              {processors?.keyFeatures.TDP}
+              {processors?.keyFeatures.TDP || null}
             </p>
             <div
               className="line"
@@ -188,7 +187,7 @@ const ProcessorDetail = ({ processors }) => {
                   <p>Rating: {review.rating}</p>
                   <p>Comment: {review.comment}</p>
                 </div>
-              ))}
+              )) || null}
             </div>
             <p
               style={{
@@ -228,9 +227,8 @@ ProcessorDetail.getLayout = function getLayout(page) {
 };
 
 export const getStaticPaths = async () => {
-  const res = await fetch("http://localhost:5000/processors");
+  const res = await fetch("http://localhost:3000/api/processors");
   const processors = await res.json();
-
   const paths = processors.map((processor) => ({
     params: { processorId: processor.id },
   }));
@@ -241,13 +239,14 @@ export const getStaticPaths = async () => {
 export const getStaticProps = async (context) => {
   const { params } = context;
   const res = await fetch(
-    `http://localhost:5000/processors/${params.processorId}` // { cache: "no-store" }
+    `http://localhost:3000/api/processors/${params.processorId}`
+    // { cache: "no-store" }
   );
   const data = await res.json();
-  // console.log(data);
+
   return {
     props: {
-      processors: data,
+      processors: data.data,
     },
   };
 };

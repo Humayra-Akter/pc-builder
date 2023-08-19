@@ -18,12 +18,12 @@ StorageDevice.getLayout = function getLayout(page) {
 };
 
 export const getStaticProps = async () => {
-  const res = await fetch(" http://localhost:5000/storageDevices");
+  const res = await fetch(" http://localhost:3000/api/storageDevices");
   const data = await res.json();
   console.log(data);
   return {
     props: {
-      allStorageDevices: data,
+      allStorageDevices: data.data,
     },
     revalidate: 10,
   };
