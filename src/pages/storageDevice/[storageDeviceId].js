@@ -273,11 +273,11 @@ StorageDeviceDetails.getLayout = function getLayout(page) {
 };
 
 export const getStaticPaths = async () => {
-  const res = await fetch("http://localhost:5000/storageDevices");
+  const res = await fetch("http://localhost:3000/api/storageDevices");
   const storageDevices = await res.json();
 
-  const paths = storageDevices.map((storageDevice) => ({
-    params: { storageDeviceId: storageDevice.id },
+  const paths = storageDevices.data.map((storageDevice) => ({
+    params: { storageDeviceId: storageDevice.id.toString() },
   }));
 
   return { paths, fallback: false };
@@ -286,14 +286,13 @@ export const getStaticPaths = async () => {
 export const getStaticProps = async (context) => {
   const { params } = context;
   const res = await fetch(
-    ` http://localhost:5000/storageDevices/${params.storageDeviceId}`
-    // { cache: "no-store" }
+    `http://localhost:3000/api/storageDevices/${params.storageDeviceId}`
   );
   const data = await res.json();
-  // console.log(data);
+
   return {
     props: {
-      storageDevices: data,
+      storageDevices: data.data,
     },
   };
 };

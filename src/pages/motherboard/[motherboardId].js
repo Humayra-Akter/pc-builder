@@ -329,13 +329,12 @@ export default MotherboardDetails;
 MotherboardDetails.getLayout = function getLayout(page) {
   return <RootLayout>{page}</RootLayout>;
 };
-
 export const getStaticPaths = async () => {
-  const res = await fetch("http://localhost:5000/motherboards");
+  const res = await fetch("http://localhost:3000/api/motherboards");
   const motherboards = await res.json();
 
-  const paths = motherboards.map((motherboard) => ({
-    params: { motherboardId: motherboard.id },
+  const paths = motherboards.data.map((motherboard) => ({
+    params: { motherboardId: motherboard.id.toString() },
   }));
 
   return { paths, fallback: false };
@@ -344,13 +343,13 @@ export const getStaticPaths = async () => {
 export const getStaticProps = async (context) => {
   const { params } = context;
   const res = await fetch(
-    `http://localhost:5000/motherboards/${params.motherboardId}` // { cache: "no-store" }
+    `http://localhost:3000/api/motherboards/${params.motherboardId}`
   );
   const data = await res.json();
-  // console.log(data);
+
   return {
     props: {
-      motherboards: data,
+      motherboards: data.data,
     },
   };
 };

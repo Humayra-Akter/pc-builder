@@ -229,8 +229,9 @@ ProcessorDetail.getLayout = function getLayout(page) {
 export const getStaticPaths = async () => {
   const res = await fetch("http://localhost:3000/api/processors");
   const processors = await res.json();
-  const paths = processors.map((processor) => ({
-    params: { processorId: processor.id },
+
+  const paths = processors.data.map((processor) => ({
+    params: { processorId: processor.id.toString() },
   }));
 
   return { paths, fallback: false };
@@ -240,7 +241,6 @@ export const getStaticProps = async (context) => {
   const { params } = context;
   const res = await fetch(
     `http://localhost:3000/api/processors/${params.processorId}`
-    // { cache: "no-store" }
   );
   const data = await res.json();
 

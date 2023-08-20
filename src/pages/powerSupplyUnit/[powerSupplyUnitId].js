@@ -272,11 +272,11 @@ PowerSupplyUnitDetail.getLayout = function getLayout(page) {
 };
 
 export const getStaticPaths = async () => {
-  const res = await fetch("http://localhost:5000/powerSupplyUnits");
+  const res = await fetch("http://localhost:3000/api/powerSupplyUnits");
   const powerSupplyUnits = await res.json();
 
-  const paths = powerSupplyUnits.map((powerSupplyUnit) => ({
-    params: { powerSupplyUnitId: powerSupplyUnit.id },
+  const paths = powerSupplyUnits.data.map((powerSupplyUnit) => ({
+    params: { powerSupplyUnitId: powerSupplyUnit.id.toString() },
   }));
 
   return { paths, fallback: false };
@@ -285,13 +285,13 @@ export const getStaticPaths = async () => {
 export const getStaticProps = async (context) => {
   const { params } = context;
   const res = await fetch(
-    `http://localhost:5000/powerSupplyUnits/${params.powerSupplyUnitId}` // { cache: "no-store" }
+    `http://localhost:3000/api/powerSupplyUnits/${params.powerSupplyUnitId}`
   );
   const data = await res.json();
-  // console.log(data);
+
   return {
     props: {
-      powerSupplyUnits: data,
+      powerSupplyUnits: data.data,
     },
   };
 };

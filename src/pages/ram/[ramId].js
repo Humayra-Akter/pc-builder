@@ -272,11 +272,11 @@ RamDetails.getLayout = function getLayout(page) {
 };
 
 export const getStaticPaths = async () => {
-  const res = await fetch("http://localhost:5000/rams");
+  const res = await fetch("http://localhost:3000/api/rams");
   const rams = await res.json();
 
-  const paths = rams.map((ram) => ({
-    params: { ramId: ram.id },
+  const paths = rams.data.map((ram) => ({
+    params: { ramId: ram.id.toString() },
   }));
 
   return { paths, fallback: false };
@@ -285,13 +285,13 @@ export const getStaticPaths = async () => {
 export const getStaticProps = async (context) => {
   const { params } = context;
   const res = await fetch(
-    `http://localhost:5000/rams/${params.ramId}` // { cache: "no-store" }
+    `http://localhost:3000/api/rams/${params.ramId}`
   );
   const data = await res.json();
-  // console.log(data);
+
   return {
     props: {
-      rams: data,
+      rams: data.data,
     },
   };
 };
