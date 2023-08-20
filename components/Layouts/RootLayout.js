@@ -1,14 +1,15 @@
-import { Breadcrumb, Button, Layout, Menu, theme } from "antd";
+import { Breadcrumb, Button, Modal, Layout, Menu, theme } from "antd";
 import Link from "next/link";
 const { Header, Content, Footer } = Layout;
 
 import { useSession, signOut } from "next-auth/react";
+import { useState } from "react";
 
 const RootLayout = ({ children }) => {
   const {
     token: { colorBgContainer },
   } = theme.useToken();
-
+  const [isLogoutModalVisible, setIsLogoutModalVisible] = useState(false);
   const { data: session } = useSession();
 
   return (
@@ -136,20 +137,57 @@ const RootLayout = ({ children }) => {
           >
             About
           </Link>
+
           {session?.user ? (
-            <Link
+            <div
               style={{
-                background: "black",
-                paddingRight: "50px",
                 fontFamily: "cursive",
-                color: "red",
-                fontWeight: "800",
+                background: "black",
               }}
-              onClick={() => signOut()}
-              href="/"
             >
-              Logout
-            </Link>
+              <a
+                style={{
+                  background: "black",
+                  paddingRight: "50px",
+                  fontFamily: "cursive",
+                  color: "red",
+                  fontWeight: "800",
+                  cursor: "pointer",
+                }}
+                onClick={() => setIsLogoutModalVisible(true)}
+              >
+                Logout
+              </a>
+              <Modal
+                title="Logout Confirmation"
+                visible={isLogoutModalVisible}
+                onOk={() => {
+                  signOut();
+                  setIsLogoutModalVisible(false);
+                }}
+                onCancel={() => setIsLogoutModalVisible(false)}
+                okText="Logout"
+                okType="danger"
+                style={{
+                  background: "black",
+                  fontFamily: "cursive",
+                  background: "black",
+                  textAlign: "center",
+                }}
+                bodyStyle={{ color: "white" }}
+              >
+                <p
+                  style={{
+                    fontFamily: "cursive",
+                    background: "white",
+                    textAlign: "center",
+                    color: "black",
+                  }}
+                >
+                  Are you sure you want to logout?
+                </p>
+              </Modal>
+            </div>
           ) : (
             <Link
               style={{
