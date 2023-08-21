@@ -271,21 +271,12 @@ RamDetails.getLayout = function getLayout(page) {
   return <RootLayout>{page}</RootLayout>;
 };
 
-export const getStaticPaths = async () => {
-  const res = await fetch("http://localhost:3000/api/rams");
-  const rams = await res.json();
 
-  const paths = rams.data.map((ram) => ({
-    params: { ramId: ram.id.toString() },
-  }));
-
-  return { paths, fallback: false };
-};
 
 export const getStaticProps = async (context) => {
   const { params } = context;
   const res = await fetch(
-    `http://localhost:3000/api/rams/${params.ramId}`
+    `https://pc-builder-sage-pi.vercel.app/api/rams/${params.ramId}`
   );
   const data = await res.json();
 
@@ -294,4 +285,14 @@ export const getStaticProps = async (context) => {
       rams: data.data,
     },
   };
+};
+export const getStaticPaths = async () => {
+  const res = await fetch("https://pc-builder-sage-pi.vercel.app/api/rams");
+  const rams = await res.json();
+
+  const paths = rams.data.map((ram) => ({
+    params: { ramId: ram.id.toString() },
+  }));
+
+  return { paths, fallback: false };
 };

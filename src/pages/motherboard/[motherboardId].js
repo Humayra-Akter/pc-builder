@@ -108,7 +108,7 @@ const MotherboardDetails = ({ motherboards }) => {
               }}
             >
               <small style={{ color: "yellow" }}> Brand : </small>
-              {motherboards?.key_features.brand}
+              {motherboards?.key_features?.brand}
             </p>
             <p
               style={{
@@ -123,7 +123,7 @@ const MotherboardDetails = ({ motherboards }) => {
             >
               {" "}
               <small style={{ color: "yellow" }}> Model :</small>
-              {motherboards?.key_features.model}
+              {motherboards?.key_features?.model}
             </p>{" "}
             <p
               style={{
@@ -138,7 +138,7 @@ const MotherboardDetails = ({ motherboards }) => {
             >
               {" "}
               <small style={{ color: "yellow" }}> Storage : </small>
-              {motherboards?.key_features.storage}
+              {motherboards?.key_features?.storage}
             </p>
             <p
               style={{
@@ -152,7 +152,7 @@ const MotherboardDetails = ({ motherboards }) => {
               }}
             >
               <small style={{ color: "yellow" }}> Socket : </small>
-              {motherboards?.key_features.socket}
+              {motherboards?.key_features?.socket}
             </p>
             <p
               style={{
@@ -167,7 +167,7 @@ const MotherboardDetails = ({ motherboards }) => {
             >
               {" "}
               <small style={{ color: "yellow" }}> Networking : </small>
-              {motherboards?.key_features.networking}
+              {motherboards?.key_features?.networking}
             </p>
             <p
               style={{
@@ -182,7 +182,7 @@ const MotherboardDetails = ({ motherboards }) => {
             >
               {" "}
               <small style={{ color: "yellow" }}> usb ports : </small>
-              {motherboards?.key_features.usb_ports}
+              {motherboards?.key_features?.usb_ports}
             </p>
             <p
               style={{
@@ -197,7 +197,7 @@ const MotherboardDetails = ({ motherboards }) => {
             >
               {" "}
               <small style={{ color: "yellow" }}> Form factor : </small>
-              {motherboards?.key_features.form_factor}
+              {motherboards?.key_features?.form_factor}
             </p>{" "}
             <p
               style={{
@@ -212,7 +212,7 @@ const MotherboardDetails = ({ motherboards }) => {
             >
               {" "}
               <small style={{ color: "yellow" }}> Memory slots : </small>
-              {motherboards?.key_features.memory_slots}
+              {motherboards?.key_features?.memory_slots}
             </p>
             <p
               style={{
@@ -227,7 +227,7 @@ const MotherboardDetails = ({ motherboards }) => {
             >
               {" "}
               <small style={{ color: "yellow" }}> Max memory : </small>
-              {motherboards?.key_features.max_memory}
+              {motherboards?.key_features?.max_memory}
             </p>{" "}
             <p
               style={{
@@ -242,7 +242,7 @@ const MotherboardDetails = ({ motherboards }) => {
             >
               {" "}
               <small style={{ color: "yellow" }}> Pci slots : </small>
-              {motherboards?.key_features.pci_slots}
+              {motherboards?.key_features?.pci_slots}
             </p>
             <p
               style={{
@@ -257,7 +257,7 @@ const MotherboardDetails = ({ motherboards }) => {
             >
               {" "}
               <small style={{ color: "yellow" }}>Audio : </small>
-              {motherboards?.key_features.audio}
+              {motherboards?.key_features?.audio}
             </p>
             <p
               style={{
@@ -272,7 +272,7 @@ const MotherboardDetails = ({ motherboards }) => {
             >
               {" "}
               <small style={{ color: "yellow" }}> RGB : </small>
-              {motherboards?.key_features.rgb}
+              {motherboards?.key_features?.rgb}
             </p>
             <div
               className="line"
@@ -329,21 +329,11 @@ export default MotherboardDetails;
 MotherboardDetails.getLayout = function getLayout(page) {
   return <RootLayout>{page}</RootLayout>;
 };
-export const getStaticPaths = async () => {
-  const res = await fetch("http://localhost:3000/api/motherboards");
-  const motherboards = await res.json();
-
-  const paths = motherboards.data.map((motherboard) => ({
-    params: { motherboardId: motherboard.id.toString() },
-  }));
-
-  return { paths, fallback: false };
-};
 
 export const getStaticProps = async (context) => {
   const { params } = context;
   const res = await fetch(
-    `http://localhost:3000/api/motherboards/${params.motherboardId}`
+    `https://pc-builder-sage-pi.vercel.app/api/motherboards/${params.motherboardId}`
   );
   const data = await res.json();
 
@@ -352,4 +342,16 @@ export const getStaticProps = async (context) => {
       motherboards: data.data,
     },
   };
+};
+export const getStaticPaths = async () => {
+  const res = await fetch(
+    "https://pc-builder-sage-pi.vercel.app/api/motherboards"
+  );
+  const motherboards = await res.json();
+
+  const paths = motherboards.data.map((motherboard) => ({
+    params: { motherboardId: motherboard.id.toString() },
+  }));
+
+  return { paths, fallback: false };
 };

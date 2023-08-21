@@ -1,3 +1,4 @@
+"use-client";
 import RootLayout from "../../../components/Layouts/RootLayout";
 import {
   CalendarOutlined,
@@ -260,21 +261,12 @@ MonitorDetails.getLayout = function getLayout(page) {
   return <RootLayout>{page}</RootLayout>;
 };
 
-export const getStaticPaths = async () => {
-  const res = await fetch("http://localhost:3000/api/monitors");
-  const monitors = await res.json();
 
-  const paths = monitors.data.map((monitor) => ({
-    params: { monitorId: monitor.id.toString() },
-  }));
-
-  return { paths, fallback: false };
-};
 
 export const getStaticProps = async (context) => {
   const { params } = context;
   const res = await fetch(
-    `http://localhost:3000/api/monitors/${params.monitorId}`
+    `https://pc-builder-sage-pi.vercel.app/api/monitors/${params.monitorId}`
   );
   const data = await res.json();
 
@@ -283,4 +275,14 @@ export const getStaticProps = async (context) => {
       monitors: data.data,
     },
   };
+};
+export const getStaticPaths = async () => {
+  const res = await fetch("https://pc-builder-sage-pi.vercel.app/api/monitors");
+  const monitors = await res.json();
+
+  const paths = monitors.data.map((monitor) => ({
+    params: { monitorId: monitor.id.toString() },
+  }));
+
+  return { paths, fallback: false };
 };

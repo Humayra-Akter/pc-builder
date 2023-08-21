@@ -552,9 +552,9 @@
       "status": "In Stock",
       "rating": 4.7,
       "keyFeatures": {
-        "Brand": "EliteBoard",
-        "Model": "ZR2",
-        "Specification": "Premium Overclocking Capabilities",
+        "brand": "EliteBoard",
+        "model": "ZR2",
+        "specification": "Premium Overclocking Capabilities",
         "Ports": "USB, DisplayPort, Ethernet",
         "Type": "ATX",
         "Voltage": "12V",

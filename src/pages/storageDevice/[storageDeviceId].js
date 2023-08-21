@@ -272,21 +272,10 @@ StorageDeviceDetails.getLayout = function getLayout(page) {
   return <RootLayout>{page}</RootLayout>;
 };
 
-export const getStaticPaths = async () => {
-  const res = await fetch("http://localhost:3000/api/storageDevices");
-  const storageDevices = await res.json();
-
-  const paths = storageDevices.data.map((storageDevice) => ({
-    params: { storageDeviceId: storageDevice.id.toString() },
-  }));
-
-  return { paths, fallback: false };
-};
-
 export const getStaticProps = async (context) => {
   const { params } = context;
   const res = await fetch(
-    `http://localhost:3000/api/storageDevices/${params.storageDeviceId}`
+    `https://pc-builder-sage-pi.vercel.app/api/storageDevices/${params.storageDeviceId}`
   );
   const data = await res.json();
 
@@ -295,4 +284,16 @@ export const getStaticProps = async (context) => {
       storageDevices: data.data,
     },
   };
+};
+export const getStaticPaths = async () => {
+  const res = await fetch(
+    "https://pc-builder-sage-pi.vercel.app/api/storageDevices"
+  );
+  const storageDevices = await res.json();
+
+  const paths = storageDevices.data.map((storageDevice) => ({
+    params: { storageDeviceId: storageDevice.id.toString() },
+  }));
+
+  return { paths, fallback: false };
 };

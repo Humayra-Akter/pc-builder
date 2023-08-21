@@ -271,21 +271,11 @@ PowerSupplyUnitDetail.getLayout = function getLayout(page) {
   return <RootLayout>{page}</RootLayout>;
 };
 
-export const getStaticPaths = async () => {
-  const res = await fetch("http://localhost:3000/api/powerSupplyUnits");
-  const powerSupplyUnits = await res.json();
-
-  const paths = powerSupplyUnits.data.map((powerSupplyUnit) => ({
-    params: { powerSupplyUnitId: powerSupplyUnit.id.toString() },
-  }));
-
-  return { paths, fallback: false };
-};
 
 export const getStaticProps = async (context) => {
   const { params } = context;
   const res = await fetch(
-    `http://localhost:3000/api/powerSupplyUnits/${params.powerSupplyUnitId}`
+    `https://pc-builder-sage-pi.vercel.app/api/powerSupplyUnits/${params.powerSupplyUnitId}`
   );
   const data = await res.json();
 
@@ -294,4 +284,17 @@ export const getStaticProps = async (context) => {
       powerSupplyUnits: data.data,
     },
   };
+};
+
+export const getStaticPaths = async () => {
+  const res = await fetch(
+    "https://pc-builder-sage-pi.vercel.app/api/powerSupplyUnits"
+  );
+  const powerSupplyUnits = await res.json();
+
+  const paths = powerSupplyUnits.data.map((powerSupplyUnit) => ({
+    params: { powerSupplyUnitId: powerSupplyUnit.id.toString() },
+  }));
+
+  return { paths, fallback: false };
 };

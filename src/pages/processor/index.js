@@ -16,7 +16,9 @@ Processor.getLayout = function getLayout(page) {
 };
 
 export const getStaticProps = async () => {
-  const res = await fetch("http://localhost:3000/api/processors"); //connected with mongoDB
+  const res = await fetch(
+    "https://pc-builder-sage-pi.vercel.app/api/processors"
+  ); //connected with mongoDB
   const data = await res.json();
   return {
     props: {

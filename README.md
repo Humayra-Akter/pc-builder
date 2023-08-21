@@ -2,7 +2,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`pc-builder`
 
 ## Getting Started
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [https://pc-builder-sage-pi.vercel.app](https://pc-builder-sage-pi.vercel.app) with your browser to see the result.
 
 ## Learn More
 

@@ -15,7 +15,9 @@ Motherboard.getLayout = function getLayout(page) {
   return <DashboardLayout>{page}</DashboardLayout>;
 };
 export const getStaticProps = async () => {
-  const res = await fetch("http://localhost:3000/api/motherboards");
+  const res = await fetch(
+    "https://pc-builder-sage-pi.vercel.app/api/motherboards"
+  );
   const data = await res.json();
   console.log(data);
   return {

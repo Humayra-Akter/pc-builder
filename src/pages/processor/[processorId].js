@@ -226,21 +226,12 @@ ProcessorDetail.getLayout = function getLayout(page) {
   return <RootLayout>{page}</RootLayout>;
 };
 
-export const getStaticPaths = async () => {
-  const res = await fetch("http://localhost:3000/api/processors");
-  const processors = await res.json();
 
-  const paths = processors.data.map((processor) => ({
-    params: { processorId: processor.id.toString() },
-  }));
-
-  return { paths, fallback: false };
-};
 
 export const getStaticProps = async (context) => {
   const { params } = context;
   const res = await fetch(
-    `http://localhost:3000/api/processors/${params.processorId}`
+    `https://pc-builder-sage-pi.vercel.app/api/processors/${params.processorId}`
   );
   const data = await res.json();
 
@@ -249,4 +240,16 @@ export const getStaticProps = async (context) => {
       processors: data.data,
     },
   };
+};
+export const getStaticPaths = async () => {
+  const res = await fetch(
+    "https://pc-builder-sage-pi.vercel.app/api/processors"
+  );
+  const processors = await res.json();
+
+  const paths = processors.data.map((processor) => ({
+    params: { processorId: processor.id.toString() },
+  }));
+
+  return { paths, fallback: false };
 };

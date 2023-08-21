@@ -55,12 +55,16 @@ const LoginPage = () => {
       >
         <GoogleOutlined
           onClick={() =>
-            signIn("google", { callbackUrl: "http://localhost:3000" })
+            signIn("google", {
+              callbackUrl: "https://pc-builder-sage-pi.vercel.app",
+            })
           }
         />
         <GithubOutlined
           onClick={() =>
-            signIn("github", { callbackUrl: "http://localhost:3000" })
+            signIn("github", {
+              callbackUrl: "https://pc-builder-sage-pi.vercel.app",
+            })
           }
         />
       </div>

@@ -29,13 +29,16 @@ const PcBuilderPage = () => {
         return;
       }
 
-      const response = await fetch("http://localhost:3000/api/addToCart", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ productIds: productIdsToAdd }),
-      });
+      const response = await fetch(
+        "https://pc-builder-sage-pi.vercel.app/api/addToCart",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ productIds: productIdsToAdd }),
+        }
+      );
 
       if (response.ok) {
         toast.success("Items added successfully!");
@@ -49,13 +52,16 @@ const PcBuilderPage = () => {
 
   const handleRemoveFromCart = async (productId) => {
     try {
-      const response = await fetch("http://localhost:3000/api/removeFromCart", {
-        method: "DELETE",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ productId }),
-      });
+      const response = await fetch(
+        "https://pc-builder-sage-pi.vercel.app/api/removeFromCart",
+        {
+          method: "DELETE",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ productId }),
+        }
+      );
 
       if (response.ok) {
         toast.success("Item removed successfully!");
@@ -330,7 +336,7 @@ PcBuilderPage.getLayout = function getLayout(page) {
   return <DashboardLayout>{page}</DashboardLayout>;
 };
 
-// export const getServerSideProps = async () => {
+// export const getStaticProps = async () => {
 //   const processorRes = await fetch("http://localhost:5000/processors");
 //   const monitorRes = await fetch("http://localhost:5000/monitors");
 //   const motherboardRes = await fetch("http://localhost:5000/motherboards");
