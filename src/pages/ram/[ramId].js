@@ -108,7 +108,7 @@ const RamDetails = ({ rams }) => {
                 justifyContent: "space-between",
               }}
             >
-              <p style={{ color: "yellow" }}> Brand : </p>{" "}
+              <small style={{ color: "yellow" }}> Brand : </small>{" "}
               {rams?.key_features.brand}
             </p>
             <p
@@ -123,7 +123,7 @@ const RamDetails = ({ rams }) => {
               }}
             >
               {" "}
-              <p style={{ color: "yellow" }}>Model : </p>
+              <small style={{ color: "yellow" }}>Model : </small>
               {rams?.key_features.model}
             </p>
             <p
@@ -137,7 +137,7 @@ const RamDetails = ({ rams }) => {
                 justifyContent: "space-between",
               }}
             >
-              <p style={{ color: "yellow" }}> Specification : </p>
+              <small style={{ color: "yellow" }}> Specification : </small>
               {rams?.key_features.specification}
             </p>
             <p
@@ -152,7 +152,7 @@ const RamDetails = ({ rams }) => {
               }}
             >
               {" "}
-              <p style={{ color: "yellow" }}> Speed : </p>
+              <small style={{ color: "yellow" }}> Speed : </small>
               {rams?.key_features.speed}
             </p>{" "}
             <p
@@ -167,7 +167,7 @@ const RamDetails = ({ rams }) => {
               }}
             >
               {" "}
-              <p style={{ color: "yellow" }}> Cas latency : </p>
+              <small style={{ color: "yellow" }}> Cas latency : </small>
               {rams?.key_features.cas_latency}
             </p>
             <p
@@ -182,7 +182,7 @@ const RamDetails = ({ rams }) => {
               }}
             >
               {" "}
-              <p style={{ color: "yellow" }}>Form factor : </p>
+              <small style={{ color: "yellow" }}>Form factor : </small>
               {rams?.key_features.form_factor}
             </p>{" "}
             <p
@@ -197,7 +197,7 @@ const RamDetails = ({ rams }) => {
               }}
             >
               {" "}
-              <p style={{ color: "yellow" }}> Compatibility : </p>
+              <small style={{ color: "yellow" }}> Compatibility : </small>
               {rams?.key_features.compatibility}
             </p>
             <p
@@ -212,7 +212,7 @@ const RamDetails = ({ rams }) => {
               }}
             >
               {" "}
-              <p style={{ color: "yellow" }}> Capacity : </p>
+              <small style={{ color: "yellow" }}> Capacity : </small>
               {rams?.key_features.capacity}
             </p>
             <div

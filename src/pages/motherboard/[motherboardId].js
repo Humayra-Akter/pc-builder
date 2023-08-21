@@ -107,7 +107,7 @@ const MotherboardDetails = ({ motherboards }) => {
                 justifyContent: "space-between",
               }}
             >
-              <p style={{ color: "yellow" }}> Brand : </p>
+              <small style={{ color: "yellow" }}> Brand : </small>
               {motherboards?.key_features.brand}
             </p>
             <p
@@ -122,7 +122,7 @@ const MotherboardDetails = ({ motherboards }) => {
               }}
             >
               {" "}
-              <p style={{ color: "yellow" }}> Model :</p>
+              <small style={{ color: "yellow" }}> Model :</small>
               {motherboards?.key_features.model}
             </p>{" "}
             <p
@@ -137,7 +137,7 @@ const MotherboardDetails = ({ motherboards }) => {
               }}
             >
               {" "}
-              <p style={{ color: "yellow" }}> Storage : </p>
+              <small style={{ color: "yellow" }}> Storage : </small>
               {motherboards?.key_features.storage}
             </p>
             <p
@@ -151,7 +151,7 @@ const MotherboardDetails = ({ motherboards }) => {
                 justifyContent: "space-between",
               }}
             >
-              <p style={{ color: "yellow" }}> Socket : </p>
+              <small style={{ color: "yellow" }}> Socket : </small>
               {motherboards?.key_features.socket}
             </p>
             <p
@@ -166,7 +166,7 @@ const MotherboardDetails = ({ motherboards }) => {
               }}
             >
               {" "}
-              <p style={{ color: "yellow" }}> Networking : </p>
+              <small style={{ color: "yellow" }}> Networking : </small>
               {motherboards?.key_features.networking}
             </p>
             <p
@@ -181,7 +181,7 @@ const MotherboardDetails = ({ motherboards }) => {
               }}
             >
               {" "}
-              <p style={{ color: "yellow" }}> usb ports : </p>
+              <small style={{ color: "yellow" }}> usb ports : </small>
               {motherboards?.key_features.usb_ports}
             </p>
             <p
@@ -196,7 +196,7 @@ const MotherboardDetails = ({ motherboards }) => {
               }}
             >
               {" "}
-              <p style={{ color: "yellow" }}> Form factor : </p>
+              <small style={{ color: "yellow" }}> Form factor : </small>
               {motherboards?.key_features.form_factor}
             </p>{" "}
             <p
@@ -211,7 +211,7 @@ const MotherboardDetails = ({ motherboards }) => {
               }}
             >
               {" "}
-              <p style={{ color: "yellow" }}> Memory slots : </p>
+              <small style={{ color: "yellow" }}> Memory slots : </small>
               {motherboards?.key_features.memory_slots}
             </p>
             <p
@@ -226,7 +226,7 @@ const MotherboardDetails = ({ motherboards }) => {
               }}
             >
               {" "}
-              <p style={{ color: "yellow" }}> Max memory : </p>
+              <small style={{ color: "yellow" }}> Max memory : </small>
               {motherboards?.key_features.max_memory}
             </p>{" "}
             <p
@@ -241,7 +241,7 @@ const MotherboardDetails = ({ motherboards }) => {
               }}
             >
               {" "}
-              <p style={{ color: "yellow" }}> Pci slots : </p>
+              <small style={{ color: "yellow" }}> Pci slots : </small>
               {motherboards?.key_features.pci_slots}
             </p>
             <p
@@ -256,7 +256,7 @@ const MotherboardDetails = ({ motherboards }) => {
               }}
             >
               {" "}
-              <p style={{ color: "yellow" }}>Audio : </p>
+              <small style={{ color: "yellow" }}>Audio : </small>
               {motherboards?.key_features.audio}
             </p>
             <p
@@ -271,7 +271,7 @@ const MotherboardDetails = ({ motherboards }) => {
               }}
             >
               {" "}
-              <p style={{ color: "yellow" }}> RGB : </p>
+              <small style={{ color: "yellow" }}> RGB : </small>
               {motherboards?.key_features.rgb}
             </p>
             <div

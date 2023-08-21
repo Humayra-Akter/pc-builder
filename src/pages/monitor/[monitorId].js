@@ -116,7 +116,7 @@ const MonitorDetails = ({ monitors }) => {
                 justifyContent: "space-between",
               }}
             >
-              <p style={{ color: "yellow" }}> Brand : </p>
+              <small style={{ color: "yellow" }}> Brand : </small>
               {monitors?.key_features.brand}
             </p>
             <p
@@ -130,7 +130,7 @@ const MonitorDetails = ({ monitors }) => {
                 justifyContent: "space-between",
               }}
             >
-              <p style={{ color: "yellow" }}>Model : </p>
+              <small style={{ color: "yellow" }}>Model : </small>
               {monitors?.key_features.model}
             </p>
             <p
@@ -144,7 +144,7 @@ const MonitorDetails = ({ monitors }) => {
                 justifyContent: "space-between",
               }}
             >
-              <p style={{ color: "yellow" }}>Specification : </p>
+              <small style={{ color: "yellow" }}>Specification : </small>
               {monitors?.key_features.specification}
             </p>
             <p
@@ -159,7 +159,7 @@ const MonitorDetails = ({ monitors }) => {
               }}
             >
               {" "}
-              <p style={{ color: "yellow" }}> Port : </p>
+              <small style={{ color: "yellow" }}> Port : </small>
               {monitors?.key_features.port}
             </p>
             <p
@@ -173,7 +173,7 @@ const MonitorDetails = ({ monitors }) => {
                 justifyContent: "space-between",
               }}
             >
-              <p style={{ color: "yellow" }}> Type :</p>
+              <small style={{ color: "yellow" }}> Type :</small>
               {monitors?.key_features.type}
             </p>
             <p
@@ -187,7 +187,7 @@ const MonitorDetails = ({ monitors }) => {
                 justifyContent: "space-between",
               }}
             >
-              <p style={{ color: "yellow" }}> Resolution :</p>
+              <small style={{ color: "yellow" }}> Resolution :</small>
               {monitors?.key_features.resolution}
             </p>
             <p
@@ -201,7 +201,7 @@ const MonitorDetails = ({ monitors }) => {
                 justifyContent: "space-between",
               }}
             >
-              <p style={{ color: "yellow" }}> Voltage :</p>
+              <small style={{ color: "yellow" }}> Voltage :</small>
               {monitors?.key_features.voltage}
             </p>{" "}
             <div

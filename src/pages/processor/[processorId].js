@@ -111,7 +111,7 @@ const ProcessorDetail = ({ processors }) => {
                 justifyContent: "space-between",
               }}
             >
-              <p style={{ color: "yellow" }}> Brand : </p>
+              <small style={{ color: "yellow" }}> Brand : </small>
               {processors?.keyFeatures.Brand || null}
             </p>
             <p
@@ -125,7 +125,7 @@ const ProcessorDetail = ({ processors }) => {
                 justifyContent: "space-between",
               }}
             >
-              <p style={{ color: "yellow" }}> Model : </p>
+              <small style={{ color: "yellow" }}> Model : </small>
               {processors?.keyFeatures.Model || null}
             </p>
             <p
@@ -139,7 +139,7 @@ const ProcessorDetail = ({ processors }) => {
                 justifyContent: "space-between",
               }}
             >
-              <p style={{ color: "yellow" }}> Cores : </p>
+              <small style={{ color: "yellow" }}> Cores : </small>
               {processors?.keyFeatures.Cores || null}
             </p>
             <p
@@ -153,7 +153,7 @@ const ProcessorDetail = ({ processors }) => {
                 justifyContent: "space-between",
               }}
             >
-              <p style={{ color: "yellow" }}>Socket : </p>
+              <small style={{ color: "yellow" }}>Socket : </small>
               {processors?.keyFeatures.Socket || null}
             </p>
             <p
@@ -167,7 +167,7 @@ const ProcessorDetail = ({ processors }) => {
                 justifyContent: "space-between",
               }}
             >
-              <p style={{ color: "yellow" }}> TDP : </p>
+              <small style={{ color: "yellow" }}> TDP : </small>
               {processors?.keyFeatures.TDP || null}
             </p>
             <div

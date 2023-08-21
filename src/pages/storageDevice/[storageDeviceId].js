@@ -110,7 +110,7 @@ const StorageDeviceDetails = ({ storageDevices }) => {
                 justifyContent: "space-between",
               }}
             >
-              <p style={{ color: "yellow" }}> Brand : </p>
+              <small style={{ color: "yellow" }}> Brand : </small>
               {storageDevices?.key_features.brand}
             </p>
             <p
@@ -125,7 +125,7 @@ const StorageDeviceDetails = ({ storageDevices }) => {
               }}
             >
               {" "}
-              <p style={{ color: "yellow" }}> Model : </p>
+              <small style={{ color: "yellow" }}> Model : </small>
               {storageDevices?.key_features.model}
             </p>
             <p
@@ -140,7 +140,7 @@ const StorageDeviceDetails = ({ storageDevices }) => {
               }}
             >
               {" "}
-              <p style={{ color: "yellow" }}>Specification : </p>
+              <small style={{ color: "yellow" }}>Specification : </small>
               {storageDevices?.key_features.specification}
             </p>
             <p
@@ -154,7 +154,7 @@ const StorageDeviceDetails = ({ storageDevices }) => {
                 justifyContent: "space-between",
               }}
             >
-              <p style={{ color: "yellow" }}>Interface : </p>
+              <small style={{ color: "yellow" }}>Interface : </small>
               {storageDevices?.key_features.interface}
             </p>{" "}
             <p
@@ -169,7 +169,7 @@ const StorageDeviceDetails = ({ storageDevices }) => {
               }}
             >
               {" "}
-              <p style={{ color: "yellow" }}>Storage type : </p>
+              <small style={{ color: "yellow" }}>Storage type : </small>
               {storageDevices?.key_features.storage_type}
             </p>
             <p
@@ -184,7 +184,7 @@ const StorageDeviceDetails = ({ storageDevices }) => {
               }}
             >
               {" "}
-              <p style={{ color: "yellow" }}>Form factor : </p>
+              <small style={{ color: "yellow" }}>Form factor : </small>
               {storageDevices?.key_features.form_factor}
             </p>{" "}
             <p
@@ -199,7 +199,7 @@ const StorageDeviceDetails = ({ storageDevices }) => {
               }}
             >
               {" "}
-              <p style={{ color: "yellow" }}> Cache : </p>
+              <small style={{ color: "yellow" }}> Cache : </small>
               {storageDevices?.key_features.cache}
             </p>
             <p
@@ -213,7 +213,7 @@ const StorageDeviceDetails = ({ storageDevices }) => {
                 justifyContent: "space-between",
               }}
             >
-              <p style={{ color: "yellow" }}>Capacity : </p>
+              <small style={{ color: "yellow" }}>Capacity : </small>
               {storageDevices?.key_features.capacity}
             </p>
             <div

@@ -15,27 +15,9 @@ async function run(req, res) {
     await client.connect();
     const monitorsCollection = client.db("pc-builder").collection("monitors");
 
-    // if (req.method === "GET") {
-    //   const monitors = await monitorsCollection.find({}).toArray();
-    //   res.send({ message: "success", status: 200, data: monitors });
-    // }
-
     if (req.method === "GET") {
-      if (req.query.monitorId) {
-        const monitorId = req.query.monitorId;
-        const monitor = await monitorsCollection.findOne({
-          _id: ObjectId(monitorId),
-        });
-
-        if (monitor) {
-          res.send({ message: "success", status: 200, data: monitor });
-        } else {
-          res.status(404).send({ message: "Monitor not found", status: 404 });
-        }
-      } else {
-        const monitors = await monitorsCollection.find({}).toArray();
-        res.send({ message: "success", status: 200, data: monitors });
-      }
+      const monitors = await monitorsCollection.find({}).toArray();
+      res.send({ message: "success", status: 200, data: monitors });
     }
   } finally {
   }

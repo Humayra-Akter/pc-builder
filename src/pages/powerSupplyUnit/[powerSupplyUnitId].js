@@ -107,7 +107,7 @@ const PowerSupplyUnitDetail = ({ powerSupplyUnits }) => {
                 justifyContent: "space-between",
               }}
             >
-              <p style={{ color: "yellow" }}> Brand : </p>{" "}
+              <small style={{ color: "yellow" }}> Brand : </small>{" "}
               {powerSupplyUnits?.key_features.brand}
             </p>
             <p
@@ -122,7 +122,7 @@ const PowerSupplyUnitDetail = ({ powerSupplyUnits }) => {
               }}
             >
               {" "}
-              <p style={{ color: "yellow" }}>Model : </p>
+              <small style={{ color: "yellow" }}>Model : </small>
               {powerSupplyUnits?.key_features.model}
             </p>
             <p
@@ -137,7 +137,7 @@ const PowerSupplyUnitDetail = ({ powerSupplyUnits }) => {
               }}
             >
               {" "}
-              <p style={{ color: "yellow" }}> Specification : </p>
+              <small style={{ color: "yellow" }}> Specification : </small>
               {powerSupplyUnits?.key_features.specification}
             </p>
             <p
@@ -152,7 +152,7 @@ const PowerSupplyUnitDetail = ({ powerSupplyUnits }) => {
               }}
             >
               {" "}
-              <p style={{ color: "yellow" }}> Wattage : </p>
+              <small style={{ color: "yellow" }}> Wattage : </small>
               {powerSupplyUnits?.key_features.wattage}
             </p>{" "}
             <p
@@ -167,7 +167,7 @@ const PowerSupplyUnitDetail = ({ powerSupplyUnits }) => {
               }}
             >
               {" "}
-              <p style={{ color: "yellow" }}> Modular : </p>
+              <small style={{ color: "yellow" }}> Modular : </small>
               {powerSupplyUnits?.key_features.modular}
             </p>
             <p
@@ -182,7 +182,7 @@ const PowerSupplyUnitDetail = ({ powerSupplyUnits }) => {
               }}
             >
               {" "}
-              <p style={{ color: "yellow" }}> Fan : </p>
+              <small style={{ color: "yellow" }}> Fan : </small>
               {powerSupplyUnits?.key_features.fan}
             </p>{" "}
             <p
@@ -197,7 +197,7 @@ const PowerSupplyUnitDetail = ({ powerSupplyUnits }) => {
               }}
             >
               {" "}
-              <p style={{ color: "yellow" }}> Efficiency : </p>
+              <small style={{ color: "yellow" }}> Efficiency : </small>
               {powerSupplyUnits?.key_features.efficiency}
             </p>
             <p
@@ -212,7 +212,7 @@ const PowerSupplyUnitDetail = ({ powerSupplyUnits }) => {
               }}
             >
               {" "}
-              <p style={{ color: "yellow" }}> Certification : </p>
+              <small style={{ color: "yellow" }}> Certification : </small>
               {powerSupplyUnits?.key_features.certification}
             </p>
             <div
