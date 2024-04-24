@@ -1,4 +1,4 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`pc-builder`](https://github.com/Humayra-Akter/pc-builder).
+This is a [Next.js](https://pc-builder-sage-pi.vercel.app/) project bootstrapped with [`pc-builder`](https://github.com/Humayra-Akter/pc-builder).
 
 ## Getting Started
 

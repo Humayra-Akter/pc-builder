@@ -1,7 +1,6 @@
 import { useRouter } from "next/router";
 import { Button, Result } from "antd";
 import Link from "next/link";
-import { useEffect } from "react";
 
 const ErrorPage = () => {
   const router = useRouter();

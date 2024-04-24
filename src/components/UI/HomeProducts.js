@@ -13,9 +13,9 @@ import { useEffect } from "react";
 const HomeProducts = ({ allProcessors }) => {
   const { Meta } = Card;
 
- useEffect(() => {
-   AOS.init();
- }, []);
+  useEffect(() => {
+    AOS.init();
+  }, []);
 
   return (
     <>
@@ -40,7 +40,7 @@ const HomeProducts = ({ allProcessors }) => {
       >
         {allProcessors?.map((processors) => (
           <div
-            data-aos="zoom-in-down"
+            // data-aos="zoom-in-down"
             style={{
               display: "flex",
               gap: "30px",

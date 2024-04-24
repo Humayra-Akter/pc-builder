@@ -45,7 +45,7 @@ const AllProcessors = ({ allProcessors }) => {
       >
         {allProcessors?.map((processors) => (
           <Col
-            data-aos="zoom-in-down"
+            // data-aos="zoom-in-down"
             key={processors.id}
             className="gutter-row"
             span={8}

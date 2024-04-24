@@ -46,7 +46,7 @@ const AllRams = ({ allRams }) => {
       >
         {allRams?.map((rams) => (
           <Col
-            data-aos="zoom-in-down"
+            // data-aos="zoom-in-down"
             key={rams.id}
             className="gutter-row"
             span={8}

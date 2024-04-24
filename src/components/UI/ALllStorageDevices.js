@@ -46,7 +46,7 @@ const ALllStorageDevices = ({ allStorageDevices }) => {
       >
         {allStorageDevices?.map((storageDevices) => (
           <Col
-            data-aos="fade"
+            // data-aos="fade"
             key={storageDevices.id}
             className="gutter-row"
             span={8}

@@ -46,7 +46,7 @@ const AllMonitors = ({ allMonitors }) => {
       >
         {allMonitors?.map((monitors) => (
           <Col
-            data-aos="zoom-in-down"
+            // data-aos="zoom-in-down"
             key={monitors.id}
             className="gutter-row"
             span={8}

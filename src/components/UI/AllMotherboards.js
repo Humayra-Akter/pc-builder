@@ -18,9 +18,9 @@ const AllMotherboards = ({ allMotherboards }) => {
   const { cart, addToCart, incrementQuantity } = useCartContext();
   const { Meta } = Card;
 
-   useEffect(() => {
-     AOS.init();
-   }, []);
+  useEffect(() => {
+    AOS.init();
+  }, []);
 
   return (
     <>
@@ -47,7 +47,7 @@ const AllMotherboards = ({ allMotherboards }) => {
       >
         {allMotherboards?.map((motherboards) => (
           <Col
-            data-aos="zoom-in-down"
+            // data-aos="zoom-in-down"
             key={motherboards.id}
             className="gutter-row"
             span={8}

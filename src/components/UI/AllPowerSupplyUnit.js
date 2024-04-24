@@ -46,7 +46,7 @@ const AllPowerSupplyUnit = ({ allPowerSupplyUnits }) => {
       >
         {allPowerSupplyUnits?.map((powerSupplyUnits) => (
           <Col
-            data-aos="zoom-in-down"
+            // data-aos="zoom-in-down"
             key={powerSupplyUnits.id}
             className="gutter-row"
             span={8}
